@@ -1,0 +1,382 @@
+{
+    "UserId": "04e43148-5bd2-4858-9506-6acf299e0308",
+    "ParticipationId": "677b33ca-ef8a-4fff-80b6-fffabdec8a5f",
+    "MatchId": "d2165fc2-08a3-476d-afb7-f9b7ea7343d6",
+    "UserName": "KaiYogurt",
+    "CreatedOn": "2025-10-12T14:06:59.544518+00:00",
+    "GenesisBuildModel": {
+        "Id": "ca8b3948-3577-4576-8b90-ccdd6383dbf6",
+        "Bor": {
+            "SPow": null,
+            "Id": "49773419-0fab-48d2-b593-c0be54b61eac",
+            "UNC": 4,
+            "Sta": 1,
+            "IsBa": null,
+            "LiMa": 5,
+            "Los": 0,
+            "LPM": 4,
+            "LCa": null,
+            "LoPs": 0,
+            "Vic": 0,
+            "ViMa": null,
+            "Rec": null,
+            "Tur": 0,
+            "Go": 10,
+            "FuGo": null,
+            "GoSp": 0,
+            "FrRo": 0,
+            "FuRo": null,
+            "Rold": 0,
+            "TrTT": 0,
+            "TiMi": null,
+            "Ti": 1,
+            "BoCa": 99,
+            "Mins": {
+                "Size": {
+                    "x": 5,
+                    "y": 1
+                },
+                "Items": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ]
+            },
+            "MiSC": 3,
+            "MSBo": [],
+            "MiSh": [
+                {
+                    "Own": 1,
+                    "Enu": 559,
+                    "Loc": 0,
+                    "Poi": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "Exp": 0,
+                    "Lvl": 1,
+                    "Hp": {
+                        "Perm": 1,
+                        "Temp": 0,
+                        "Max": null
+                    },
+                    "At": {
+                        "Perm": 3,
+                        "Temp": 0,
+                        "Max": null
+                    },
+                    "Mana": 0,
+                    "Cou": null,
+                    "CoBr": null,
+                    "LaPP": null,
+                    "Perk": null,
+                    "PeBo": false,
+                    "PeDu": null,
+                    "PeDM": null,
+                    "PeMu": null,
+                    "PeDr": 0,
+                    "Abil": [
+                        {
+                            "Enu": 591,
+                            "Lvl": 1,
+                            "Nat": true,
+                            "Dur": 0,
+                            "TrCo": 0,
+                            "Char": null,
+                            "Dis": false,
+                            "AIML": false,
+                            "IgRe": false,
+                            "Grop": 0
+                        }
+                    ],
+                    "AbDi": false,
+                    "Cosm": 0,
+                    "Dead": false,
+                    "Dest": false,
+                    "DeBy": null,
+                    "Link": null,
+                    "Pow": null,
+                    "SeV": null,
+                    "Rwds": 0,
+                    "Rwrd": false,
+                    "MiMs": null,
+                    "SpMe": null,
+                    "Tri": null,
+                    "AtkC": 0,
+                    "HrtC": 0,
+                    "SpCT": 0,
+                    "OlTs": null,
+                    "Id": {
+                        "BoId": "49773419-0fab-48d2-b593-c0be54b61eac",
+                        "Uni": 1
+                    },
+                    "Pri": 3,
+                    "Fro": false,
+                    "WFro": false,
+                    "AFro": false
+                },
+                {
+                    "Own": 1,
+                    "Enu": 39,
+                    "Loc": 0,
+                    "Poi": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "Exp": 0,
+                    "Lvl": 1,
+                    "Hp": {
+                        "Perm": 1,
+                        "Temp": 0,
+                        "Max": null
+                    },
+                    "At": {
+                        "Perm": 2,
+                        "Temp": 0,
+                        "Max": null
+                    },
+                    "Mana": 0,
+                    "Cou": null,
+                    "CoBr": null,
+                    "LaPP": null,
+                    "Perk": null,
+                    "PeBo": false,
+                    "PeDu": null,
+                    "PeDM": null,
+                    "PeMu": null,
+                    "PeDr": 0,
+                    "Abil": [
+                        {
+                            "Enu": 34,
+                            "Lvl": 1,
+                            "Nat": true,
+                            "Dur": 0,
+                            "TrCo": 0,
+                            "Char": null,
+                            "Dis": false,
+                            "AIML": false,
+                            "IgRe": false,
+                            "Grop": 0
+                        }
+                    ],
+                    "AbDi": false,
+                    "Cosm": 0,
+                    "Dead": false,
+                    "Dest": false,
+                    "DeBy": null,
+                    "Link": null,
+                    "Pow": null,
+                    "SeV": null,
+                    "Rwds": 0,
+                    "Rwrd": false,
+                    "MiMs": null,
+                    "SpMe": null,
+                    "Tri": null,
+                    "AtkC": 0,
+                    "HrtC": 0,
+                    "SpCT": 0,
+                    "OlTs": null,
+                    "Id": {
+                        "BoId": "49773419-0fab-48d2-b593-c0be54b61eac",
+                        "Uni": 2
+                    },
+                    "Pri": 3,
+                    "Fro": false,
+                    "WFro": false,
+                    "AFro": false
+                },
+                {
+                    "Own": 1,
+                    "Enu": 32,
+                    "Loc": 0,
+                    "Poi": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "Exp": 0,
+                    "Lvl": 1,
+                    "Hp": {
+                        "Perm": 3,
+                        "Temp": 0,
+                        "Max": null
+                    },
+                    "At": {
+                        "Perm": 2,
+                        "Temp": 0,
+                        "Max": null
+                    },
+                    "Mana": 0,
+                    "Cou": null,
+                    "CoBr": null,
+                    "LaPP": null,
+                    "Perk": null,
+                    "PeBo": false,
+                    "PeDu": null,
+                    "PeDM": null,
+                    "PeMu": null,
+                    "PeDr": 0,
+                    "Abil": [
+                        {
+                            "Enu": 27,
+                            "Lvl": 1,
+                            "Nat": true,
+                            "Dur": 0,
+                            "TrCo": 0,
+                            "Char": null,
+                            "Dis": false,
+                            "AIML": false,
+                            "IgRe": false,
+                            "Grop": 0
+                        }
+                    ],
+                    "AbDi": false,
+                    "Cosm": 0,
+                    "Dead": false,
+                    "Dest": false,
+                    "DeBy": null,
+                    "Link": null,
+                    "Pow": null,
+                    "SeV": null,
+                    "Rwds": 0,
+                    "Rwrd": false,
+                    "MiMs": null,
+                    "SpMe": null,
+                    "Tri": null,
+                    "AtkC": 0,
+                    "HrtC": 0,
+                    "SpCT": 0,
+                    "OlTs": null,
+                    "Id": {
+                        "BoId": "49773419-0fab-48d2-b593-c0be54b61eac",
+                        "Uni": 3
+                    },
+                    "Pri": 3,
+                    "Fro": false,
+                    "WFro": false,
+                    "AFro": false
+                }
+            ],
+            "SpSC": 1,
+            "SpSh": [
+                {
+                    "Pow": null,
+                    "Sto": null,
+                    "Con": null,
+                    "Reli": null,
+                    "Buff": false,
+                    "Link": null,
+                    "Enu": 40,
+                    "Id": {
+                        "BoId": "49773419-0fab-48d2-b593-c0be54b61eac",
+                        "Uni": 4
+                    },
+                    "Pri": 3,
+                    "Fro": false,
+                    "WFro": false,
+                    "AFro": false
+                }
+            ],
+            "Adj": null,
+            "Nou": null,
+            "Trum": 0,
+            "PrOu": 0,
+            "PrEn": null,
+            "PrES": null,
+            "PrES2": null,
+            "MiPl": 0,
+            "MiSu": 0,
+            "MSFL": 0,
+            "SpPl": [],
+            "SpCo": null,
+            "Mode": 0,
+            "Cosm": 0,
+            "CoMa": null,
+            "Back": 4,
+            "Masc": 0,
+            "Entr": 0,
+            "Awar": null,
+            "Pack": 0,
+            "Pcks": false,
+            "Taut": null,
+            "Deck": null,
+            "Rel": {
+                "Size": {
+                    "x": 2,
+                    "y": 1
+                },
+                "Items": [
+                    null,
+                    null
+                ]
+            },
+            "Bul": {
+                "Size": {
+                    "x": 0,
+                    "y": 0
+                },
+                "Items": null
+            },
+            "Choi": null,
+            "FuCh": null,
+            "Hash": 0,
+            "Diff": 0,
+            "ShRe": null,
+            "Clon": false,
+            "Wacky": null,
+            "WMPs": null,
+            "WMPb": false
+        },
+        "AvAd": [
+            "Sour",
+            "Confused",
+            "Silver"
+        ],
+        "AvNo": [
+            "Bulls",
+            "Monks",
+            "Lollipops"
+        ],
+        "ChCo": 0
+    },
+    "GenesisModeModel": "{\"Name\":\"POOKSTERS\",\"Opponents\":[{\"UserId\":\"139bc3dc-844a-4fba-b91c-88cd4511dc0c\",\"ParticipationId\":\"f8cca21d-8852-4ba3-a8db-1d4fc5f1b2dd\",\"DisplayName\":\"DBZtrunks\",\"Pack\":5,\"Rank\":1862,\"Lives\":5,\"Minions\":[null,null,null,null,null],\"Relics\":[null,null],\"Outcome\":0},{\"UserId\":\"17cfabeb-aebf-4b3f-bbe1-526e6c3f098f\",\"ParticipationId\":\"ec6ccacb-6bb9-4220-9455-beff67f6c039\",\"DisplayName\":\"preppypug\",\"Rank\":1540,\"Lives\":5,\"Minions\":[null,null,null,null,null],\"Relics\":[null,null],\"Outcome\":0},{\"UserId\":\"5c96ea6c-bc2d-4bc5-ab2e-35409c38c245\",\"ParticipationId\":\"6cefd1f1-638d-41ca-a659-12f0a576788b\",\"DisplayName\":\"NilisgayLOL\",\"Rank\":1800,\"Lives\":5,\"Minions\":[null,null,null,null,null],\"Relics\":[null,null],\"Outcome\":0},{\"UserId\":\"6f5f93be-7702-408f-bd2c-d6592c47c623\",\"ParticipationId\":\"79ec62e9-c251-4b7b-83ec-b109ab459489\",\"DisplayName\":\"ProfNinja\",\"Pack\":1,\"Rank\":1838,\"Lives\":5,\"Minions\":[null,null,null,null,null],\"Relics\":[null,null],\"Outcome\":0}],\"NextOpponentId\":\"79ec62e9-c251-4b7b-83ec-b109ab459489\",\"NextOpponentClone\":false,\"TurnEndTime\":\"2025-10-12T14:07:39.538772Z\",\"MaxLives\":5,\"CurrentTurn\":1,\"ActivePlayerCount\":5,\"MaxPlayerCount\":16,\"MatchPack\":1,\"TurnDuration\":105,\"SpectatorMode\":2,\"Settings\":{\"MatchName\":\"POOKSTERS\",\"TurnDuration\":105,\"Players\":5,\"CustomRules\":true,\"SpectatorMode\":2,\"NextOpponent\":true}}",
+    "Outcome": 3,
+    "Mode": 0,
+    "LastTurn": 1,
+    "Actions": [
+        {
+            "Type": 4,
+            "Turn": 1,
+            "Request": "{\"Data\":{\"BuildId\":\"ca8b3948-3577-4576-8b90-ccdd6383dbf6\"},\"Version\":42}",
+            "Response": "{\"Event\":{\"Event\":{\"Owner\":1},\"Owner\":1},\"Data\":{\"Seed\":549080947,\"Hash\":-792347511}}",
+            "Build": null,
+            "Battle": null,
+            "Mode": null,
+            "CreatedOn": "2025-10-12T14:07:34.155401+00:00",
+            "BuildChangeCount": 1
+        },
+        {
+            "Type": 3,
+            "Turn": 1,
+            "Request": null,
+            "Response": null,
+            "Build": null,
+            "Battle": null,
+            "Mode": null,
+            "CreatedOn": "2025-10-12T14:07:38.459733+00:00",
+            "BuildChangeCount": 2
+        },
+        {
+            "Type": 0,
+            "Turn": 1,
+            "Request": null,
+            "Response": null,
+            "Build": "{\"Id\":\"ca8b3948-3577-4576-8b90-ccdd6383dbf6\",\"Bor\":{\"Id\":\"49773419-0fab-48d2-b593-c0be54b61eac\",\"UNC\":4,\"Sta\":5,\"LiMa\":5,\"Los\":1,\"LPM\":4,\"LoPs\":6,\"Tur\":1,\"Go\":10,\"Ti\":1,\"BoCa\":99,\"Mins\":{\"Size\":{\"x\":5,\"y\":1},\"Items\":[null,null,null,null,null]},\"MiSC\":3,\"MSBo\":[],\"MiSh\":[{\"Own\":1,\"Enu\":559,\"Lvl\":1,\"Hp\":{\"Perm\":1},\"At\":{\"Perm\":3},\"Abil\":[{\"Enu\":591,\"Lvl\":1,\"Nat\":true}],\"Id\":{\"BoId\":\"49773419-0fab-48d2-b593-c0be54b61eac\",\"Uni\":1},\"Pri\":3},{\"Own\":1,\"Enu\":39,\"Lvl\":1,\"Hp\":{\"Perm\":1},\"At\":{\"Perm\":2},\"Abil\":[{\"Enu\":34,\"Lvl\":1,\"Nat\":true}],\"Id\":{\"BoId\":\"49773419-0fab-48d2-b593-c0be54b61eac\",\"Uni\":2},\"Pri\":3},{\"Own\":1,\"Enu\":32,\"Lvl\":1,\"Hp\":{\"Perm\":3},\"At\":{\"Perm\":2},\"Abil\":[{\"Enu\":27,\"Lvl\":1,\"Nat\":true}],\"Id\":{\"BoId\":\"49773419-0fab-48d2-b593-c0be54b61eac\",\"Uni\":3},\"Pri\":3}],\"SpSC\":1,\"SpSh\":[{\"Enu\":40,\"Id\":{\"BoId\":\"49773419-0fab-48d2-b593-c0be54b61eac\",\"Uni\":4},\"Pri\":3}],\"PrOu\":2,\"PrEn\":[92,88,3],\"PrES\":[3,88,92],\"SpPl\":[],\"Back\":4,\"Rel\":{\"Size\":{\"x\":2,\"y\":1},\"Items\":[null,null]},\"Bul\":{},\"Hash\":-792347511},\"AvAd\":[\"Sour\",\"Confused\",\"Silver\"],\"AvNo\":[\"Bulls\",\"Monks\",\"Lollipops\"],\"ChCo\":3}",
+            "Battle": "{\"Id\":\"45084000-f874-4483-9d31-21ff15c1d109\",\"Seed\":-76843728,\"Outcome\":2,\"ResolvedOn\":\"2025-10-12T14:07:41.2443789+00:00\",\"User\":{\"Id\":\"04e43148-5bd2-4858-9506-6acf299e0308\",\"DisplayName\":\"KaiYogurt\"},\"UserBoard\":{\"Id\":\"49773419-0fab-48d2-b593-c0be54b61eac\",\"UNC\":4,\"Sta\":2,\"LiMa\":5,\"LPM\":4,\"LoPs\":5,\"Tur\":1,\"Go\":10,\"Ti\":1,\"BoCa\":99,\"Mins\":{\"Size\":{\"x\":5,\"y\":1},\"Items\":[null,null,null,null,null]},\"MiSC\":3,\"MSBo\":[],\"MiSh\":[{\"Own\":1,\"Enu\":559,\"Lvl\":1,\"Hp\":{\"Perm\":1},\"At\":{\"Perm\":3},\"Abil\":[{\"Enu\":591,\"Lvl\":1,\"Nat\":true}],\"Id\":{\"BoId\":\"49773419-0fab-48d2-b593-c0be54b61eac\",\"Uni\":1},\"Pri\":3},{\"Own\":1,\"Enu\":39,\"Lvl\":1,\"Hp\":{\"Perm\":1},\"At\":{\"Perm\":2},\"Abil\":[{\"Enu\":34,\"Lvl\":1,\"Nat\":true}],\"Id\":{\"BoId\":\"49773419-0fab-48d2-b593-c0be54b61eac\",\"Uni\":2},\"Pri\":3},{\"Own\":1,\"Enu\":32,\"Lvl\":1,\"Hp\":{\"Perm\":3},\"At\":{\"Perm\":2},\"Abil\":[{\"Enu\":27,\"Lvl\":1,\"Nat\":true}],\"Id\":{\"BoId\":\"49773419-0fab-48d2-b593-c0be54b61eac\",\"Uni\":3},\"Pri\":3}],\"SpSC\":1,\"SpSh\":[{\"Enu\":40,\"Id\":{\"BoId\":\"49773419-0fab-48d2-b593-c0be54b61eac\",\"Uni\":4},\"Pri\":3}],\"PrOu\":0,\"SpPl\":[],\"Back\":4,\"Rel\":{\"Size\":{\"x\":2,\"y\":1},\"Items\":[null,null]},\"Bul\":{},\"Hash\":-792347511},\"Opponent\":{\"Id\":\"6f5f93be-7702-408f-bd2c-d6592c47c623\",\"DisplayName\":\"ProfNinja\"},\"OpponentBoard\":{\"Id\":\"95b814af-206c-476e-a431-aa185233c198\",\"UNC\":7,\"Sta\":4,\"LiMa\":5,\"LPM\":4,\"Tur\":1,\"GoSp\":10,\"Rold\":1,\"Ti\":1,\"BoCa\":99,\"Mins\":{\"Size\":{\"x\":5,\"y\":1},\"Items\":[null,null,{\"Own\":1,\"Enu\":92,\"Loc\":1,\"Poi\":{\"x\":2},\"Lvl\":1,\"Hp\":{\"Perm\":2},\"At\":{\"Perm\":2},\"Abil\":[{\"Enu\":96,\"Lvl\":1,\"Nat\":true}],\"Id\":{\"BoId\":\"95b814af-206c-476e-a431-aa185233c198\",\"Uni\":5},\"Pri\":3},{\"Own\":1,\"Enu\":88,\"Loc\":1,\"Poi\":{\"x\":3},\"Lvl\":1,\"Hp\":{\"Perm\":2},\"At\":{\"Perm\":2},\"Abil\":[{\"Enu\":112,\"Lvl\":1,\"Nat\":true}],\"Id\":{\"BoId\":\"95b814af-206c-476e-a431-aa185233c198\",\"Uni\":7},\"Pri\":3},{\"Own\":1,\"Enu\":3,\"Loc\":1,\"Poi\":{\"x\":4},\"Lvl\":1,\"Hp\":{\"Perm\":2},\"At\":{\"Perm\":3},\"Abil\":[{\"Enu\":43,\"Lvl\":1,\"Nat\":true}],\"Id\":{\"BoId\":\"95b814af-206c-476e-a431-aa185233c198\",\"Uni\":3},\"Pri\":3}]},\"MiSC\":3,\"MSBo\":[],\"MiSh\":[{\"Own\":1,\"Enu\":141,\"Lvl\":1,\"Hp\":{\"Perm\":3},\"At\":{\"Perm\":1},\"Abil\":[{\"Enu\":153,\"Lvl\":1,\"Nat\":true}],\"Id\":{\"BoId\":\"95b814af-206c-476e-a431-aa185233c198\",\"Uni\":6},\"Pri\":3}],\"SpSC\":1,\"SpSh\":[{\"Id\":{\"BoId\":\"95b814af-206c-476e-a431-aa185233c198\",\"Uni\":4},\"Pri\":3,\"Fro\":true,\"WFro\":true}],\"Adj\":\"Wrinkled\",\"Nou\":\"Husbands\",\"PrOu\":0,\"MiSu\":3,\"SpPl\":[],\"CoMa\":{\"Dictionary\":{\"Pig\":93,\"Bass\":53,\"Crow\":53,\"Mouse\":93,\"Stoat\":53,\"Parrot\":74,\"Pigeon\":91,\"Dolphin\":53,\"Hamster\":53,\"Microbe\":19,\"Pillbug\":53,\"Crocodile\":47,\"GuineaPig\":53,\"Chinchilla\":53}},\"Back\":32,\"Masc\":20,\"Entr\":4,\"Awar\":{\"Type\":10,\"PercentPosition\":0.0402,\"Year\":2025,\"Month\":9},\"Pack\":1,\"Rel\":{\"Size\":{\"x\":2,\"y\":1},\"Items\":[null,null]},\"Bul\":{},\"Hash\":1516958739},\"EndResult\":2038355539}",
+            "Mode": null,
+            "CreatedOn": "2025-10-12T14:07:41.244969+00:00",
+            "BuildChangeCount": 3
+        }
+    ]
+}

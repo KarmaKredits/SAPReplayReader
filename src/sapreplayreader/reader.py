@@ -12,34 +12,16 @@ import os
 
 import json
 import time
+import api_calls
+#from . import api_calls  # import module so tests can monkeypatch api_client.fetch_replay
 
-from . import api_client  # import module so tests can monkeypatch api_client.fetch_replay
-
-
-def read_replay(path: str, *, auth: Optional[Dict] = None) -> Dict:
-    """Read a replay from a local path or fetch from an HTTP(S) API.
-
-    If `path` is a URL (http/https) this will POST and return the parsed JSON
-    via the API client. For local files it attempts to read the JSON and
-    returns an empty dict on failure (keeps previous placeholder behavior).
-    """
-    parsed = urlparse(path)
-    if parsed.scheme in ("http", "https"):
-        return api_client.fetch_replay(path, auth=auth)
-
-    # Local file fallback
-    try:
-        with open(path, "r", encoding="utf-8") as fh:
-            return json.load(fh)
-    except (FileNotFoundError, json.JSONDecodeError):
-        return {}
-
-# from api_client import download_replay # needed if process_from_df calls it here
-# from api_client import login # needed if process_from_df calls it here
+#from api_calls import download_replay # needed if process_from_df calls it here
+#from api_calls import login # needed if process_from_df calls it here
+# from api_calls import download_replay, login, process_from_df
 
 # import os
 # import requests
-# from . import api_client
+
 
 def get_replay(pid: str):
     output_directory = "Replays"
@@ -50,7 +32,7 @@ def get_replay(pid: str):
     try:
         with open(full_path, 'r') as file:
             data = json.load(file)
-            print('Replay Loaded!')
+            # print('Replay Loaded!')
     except FileNotFoundError:
         print(f"Error: The file '{output_filename}' was not found.")
     except json.JSONDecodeError:
@@ -145,12 +127,14 @@ def update_process_db(file_names: list):
     return None
 
 # get replay from opponent perspective; opponent Pids from all existing replay files
-def extract_pids():
-    new_pids = []
+def extract_pids(list_of_pids: list = [] ):
+    new_pids_list = []
+    if list_of_pids == []:
+        list_of_pids = read_replay_filenames()
     old_pids = read_replay_filenames()
-    total = len(old_pids)
+    total = len(list_of_pids)
     cnt=0
-    for pid in old_pids:
+    for pid in list_of_pids:
         cnt+=1
         print("Extract:",cnt,"/",total)
         replay = get_replay(pid)
@@ -159,11 +143,11 @@ def extract_pids():
             opponents = gmm["Opponents"]
             for opponent in opponents:
                 opp_pid = opponent["ParticipationId"]
-                if opp_pid in (new_pids + old_pids):
+                if opp_pid in (new_pids_list + old_pids + list_of_pids):
                     pass
                 else:
-                    new_pids.append(opponent["ParticipationId"])
-    return new_pids
+                    new_pids_list.append(opponent["ParticipationId"])
+    return new_pids_list
 
 # adds new pids to the process db from pid list; doesnt download replays
 def add_to_pid_df(pids: list):
@@ -205,37 +189,38 @@ def add_to_pid_df(pids: list):
 # [] need to add opponent pids to summary db and update this.
 def get_summary(pid: str):
     replay = get_replay(pid)
-    oppidlist = []
-    oppnamelist = []
-    opppacklist = []
-    oppdecklist = []
-    oppranklist = []
-    opppidlist = []
+    opp_uid_list = []
+    opp_name_list = []
+    opp_pack_list = []
+    opp_deck_list = []
+    opp_rank_list = []
+    opp_pid_list = []
     # will be null for customs, mode 1
     GMMexists = False
     if replay["GenesisModeModel"] != None:
         GMMexists=True
         GenesisModeModel = json.loads(replay["GenesisModeModel"])
 
-        print(len(GenesisModeModel["Opponents"]))
+        #print(len(GenesisModeModel["Opponents"]))
         for opponent in GenesisModeModel["Opponents"]:
-            oppidlist.append(opponent["UserId"])
-            oppnamelist.append(opponent["DisplayName"])
-            oppranklist.append(opponent["Rank"]) 
+            opp_uid_list.append(opponent["UserId"])
+            opp_name_list.append(opponent["DisplayName"])
+            opp_rank_list.append(opponent["Rank"]) 
             #need to check pack value for customs
             
-            opppacklist.append(opponent["Pack"] if ("Pack" in opponent) else None)
-            #oppranklist.append(opponent["ParticipationId"]) 
-            #oppdecklist[i] = []
-    lastactionresponse = json.loads(replay["Actions"][-1]["Response"])
+            opp_pack_list.append(opponent["Pack"] if ("Pack" in opponent) else None)
+            opp_pid_list.append(opponent["ParticipationId"]) 
+            #opp_deck_list[i] = []
+
+    lastactionresponse = json.loads(replay["Actions"][-1]["Response"]) if replay["Actions"][-1]["Response"] not in [None,""] else {}
 
     d = {
         "matchid": [replay["MatchId"]],
         "datestart": [replay["CreatedOn"]],
         "dateend": [replay["Actions"][-1]["CreatedOn"]],
-        "version": [json.loads(replay['Actions'][0]['Request'])["Version"]],
+        "version": [json.loads(replay['Actions'][0]['Request'])["Version"]] if replay['Actions'][0]['Request'] not in [None,""] else None,
         "turns": [replay["LastTurn"]],
-        "outcome": [replay["Outcome"]], #0=draw, 1=win, 2=loss
+        "outcome": [replay["Outcome"]], #0=draw, 1=win, 2=loss, 3=abandoned
         "gamemode": [replay["Mode"]], #0=vs, 1=arena
         "versus": 1 if GMMexists else 0, #0=arena 
         "rankedgame": [0 if ("Name" in GenesisModeModel) else 1] if GMMexists else None, #find alternate ranked info
@@ -244,14 +229,174 @@ def get_summary(pid: str):
         "username": [replay["UserName"]],
         "userpack": [replay["GenesisBuildModel"]["Bor"]["Pack"]], #["Deck"]
         "userrank": [lastactionresponse["NewRank"]["OldValue"] if ("NewRank" in lastactionresponse) else None], #only shows in ranked
-        "oppidlist": [str(oppidlist)],
-        "oppnamelist": [str(oppnamelist)],
-        "oppranklist": [str(oppranklist)],
-        "opppacklist": [str(opppacklist)]
-        #,"opppidlist": [str(opppidlist)]
+        "pid": pid,
+        "opp_uidlist": [str(opp_uid_list)],
+        "opp_namelist": [str(opp_name_list)],
+        "opp_ranklist": [str(opp_rank_list)],
+        "opp_packlist": [str(opp_pack_list)],
+        "opp_pidlist": [str(opp_pid_list)]
+        
     }
     return pd.DataFrame(data=d)
 
+    """
+    Actions:
+    Action Type: str
+    BuildCount: #
+    Time: timestamp str
+    Freeze; 
+    Order (pre action from request)
+    Turn: #
+    """
+def extract_actions(pid: str):
+    replay = get_replay(pid)
+    actions = replay["Actions"]
+    action_type_names = {
+        0: "GAME READY",
+        1: "GAME MODE",
+        2: "GAME WATCH",
+        3: "UNKNOWN TYPE 3",
+        4: "START TURN",
+        5: "ROLL",
+        6: "BUY PET", # PLAY MINION
+        7: "COMBINE PET", # STACK MINION
+        8: "BUY FOOD", # PLAY SPELL
+        9: "SELL PET", # SELL MINION
+        10: "CHOOSE",
+        11: "END TURN",
+        12: "NAME BOARD"
+    }
+
+    action_list = []
+    for action in actions:
+        request = None
+        response = None
+        mode = None
+        battle = None
+        freeze = None
+        order = None
+        action_type = action["ActionType"]
+        if action_type == 0: # GAME READY (battle info)
+            build = json.loads(action["Build"])
+            battle = json.loads(action["Battle"])
+        elif action_type == 1: # GAME MODE (Opp board)
+            mode = json.loads(action["Mode"])
+        elif action_type == 2: # # GAME WATCH (result if end)
+            # could be empty dict
+            if len(action["Response"]) > 3:
+                response = json.loads(action["Response"])
+            else:
+                response = action["Response"] # could be empty dict
+        elif action_type in [4,5,6,7,8,9,10,11]:
+            request = json.loads(action["Request"])
+            response = json.loads(action["Response"])
+        elif action_type == 12: # NAME BOARD (first turn only)
+            request = json.loads(action["Request"])
+        else:
+            print("Unknown Action Type:",action_type)
+            print(json.dumps(action))
+
+        if request and "BoardFreezes" in request:
+            freeze = request["BoardFreezes"]
+        if request and "BoardOrders" in request:
+            order = request["BoardOrders"]
+
+        build_count = action["BuildChangeCount"]
+        time_stamp = action["CreatedOn"]
+        turn = action["Turn"]
+        action_list.append({
+            "Action Type": action_type_names[action_type],
+            "BuildCount": build_count,
+            "Time": time_stamp,
+            "Freeze": freeze,
+            "Order": order,
+            "Turn": turn
+        })
+    return action_list
+
+# Use when a new pid list has been scraped from discord
+# may need to move list location before execution
+def etl_newlist_download(filelist: list):
+    print("==========================")
+    print("etl_newlist_download")
+    print("read pid file")
+    pid_list = read_pid_file(filelist)
+    pid_set = list(set(pid_list))
+    #print(pid_set)
+    print("add_to_pid_df")
+    time.sleep(2)
+    add_to_pid_df(pid_set)
+    print("process_from_df")
+    time.sleep(2)
+    api_calls.process_from_df()
+    print("Done")
+
+    print("extract opponent pids")
+    time.sleep(2)   
+    new_opp_pid_set = extract_pids()
+
+    print("add_to_pid_df for opp pids")
+    time.sleep(2)   
+    add_to_pid_df(new_opp_pid_set)
+    print("process_from_df for opp pids")
+    time.sleep(2)
+    api_calls.process_from_df()
+    print("Done")
+
+    return None
+
+
+# check summary for unprocecssed opp pids
+def check_summary_for_opp_pids():
+    print("==========================")
+    print("check_summary_for_opp_pids")
+    # read summary df
+    try:
+        summary_df = pd.read_csv('summary.csv',)
+    except FileNotFoundError:
+        print("No summary.csv file found.")
+        return None
+
+    opppidlist_list = []
+    opppidlist_str = ''
+    opp_pids = []
+    existing_pids = summary_df['pid'].tolist()
+    for index, row in summary_df.iterrows():
+        opppidlist_str = row['opp_pid_list']
+        if pd.isna(opppidlist_str) or opppidlist_str == '[]':
+            continue
+        # Convert string representation of list back to actual list
+        opppidlist_list = eval(opppidlist_str)
+        for opp_pid in opppidlist_list:
+            if opp_pid not in opp_pids and opp_pid not in existing_pids:
+                opp_pids.append(opp_pid)
+
+    print(f"Extracted {len(opp_pids)} unique opponent PIDs from summary.")
+    print("add_to_pid_df")
+    time.sleep(2)
+    add_to_pid_df(opp_pids)
+    print("process_from_df")
+    time.sleep(2)
+    api_calls.process_from_df()
+    print("Done")
+    return None
+
+
+def generate_summarydb_from_files():
+    print("---- GENERATING SUMMARY DB FROM FILES ----")
+    files = read_replay_filenames()
+    summary_df = get_summary(files[0])
+    total = len(files)
+    cnt = 0
+    for file in files:
+        cnt += 1
+        if (file == files[0]):
+            pass
+        else:
+            print(file,' | ',cnt,'/',total)
+            summary_df = pd.concat([summary_df, get_summary(file)], ignore_index=True)
+    summary_df.to_csv('summary.csv',index=False)
+    print("---- SUMMARY DB GENERATED AND SAVED ----")
 
 
 if __name__ == "__main__":
@@ -263,45 +408,34 @@ if __name__ == "__main__":
     # pid_df.to_csv('pid_df.csv', index=False)
     #pid_df = read_pid_df('pid_df.csv')
 
+    # RUN AFTER SCRAPING NEW PID LIST FROM DISCORD
+    #etl_newlist_download("pids_full.txt")
 
-    pid_list = read_pid_file("pids_full.txt")
-    pid_set = list(set(pid_list))
-    print(pid_set)
-    print("add_to_pid_df")
-    time.sleep(5)
-    add_to_pid_df(pid_set)
-    print("process_from_df")
-    time.sleep(5)
-    api_client.process_from_df()
+    # RUN AFTER ETL_NEWLIST_DOWNLOAD to capture opponent pids
+    #check_summary_for_opp_pids()
 
+    # RUN to download all unprocessed replays from pid_df
+    #api_calls.process_from_df()
 
+ 
+    # GENERATE SUMMARY DB FROM ALL REPLAY FILES
+    generate_summarydb_from_files()
 
-
-    # # summary df
-    # files = read_replay_filenames()
-    # print(files[0])
-    # summary_df = get_summary(files[0])
-    # total = len(files)
+    # add corresponding pids to summary db from existing replays
+    # file_names = read_replay_filenames()
+    # summary_db = pd.read_csv('summary.csv')
     # cnt = 0
-    # for file in files:
+    # total = len(file_names)
+    # for file in file_names:
     #     cnt += 1
-    #     if (file == files[0]):
-    #         pass
-    #     else:
-    #         print(file,' | ',cnt,'/',total)
-    #         summary_df = pd.concat([summary_df, get_summary(file)], ignore_index=True)
-    # summary_df.to_csv('summary.csv',index=False)
-    # print("Done")
+    #     percent = round((cnt/total)*100)
+    #     print(f"{file} |\t {cnt}/{total} |\t {percent}%")
+    #     replay = get_replay(file)
+    #     replay_matchid = replay["MatchId"]
+    #     replay_userid = replay["UserId"]
+    #     summary_db.loc[(summary_db['matchid'] == replay_matchid) & (summary_db['userid'] == replay_userid) & summary_db['pid'].isna(), 'pid'] = file
+    # summary_db.to_csv('summary.csv',index=False)
 
-
-    """
-    Actions:
-    Action Type: str
-    BuildCount: #
-    Time: timestamp str
-    SubAction: Freeze; Order (pre action from request)
-    Turn: #
-    """
 
     """
     Unit index

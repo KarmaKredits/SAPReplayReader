@@ -1,0 +1,415 @@
+{
+    "UserId": "772f3d41-f79f-429d-84fd-4876ac821910",
+    "ParticipationId": "bfcc9588-c518-4825-ba3a-7fab4f5b3df5",
+    "MatchId": "c0d98512-0393-46b1-949d-0b43dd35d4ff",
+    "UserName": "mmmnkey",
+    "CreatedOn": "2025-11-08T13:23:36.906214+00:00",
+    "GenesisBuildModel": {
+        "Id": "ca0ad58b-cc05-48dc-ae0f-59266068304b",
+        "Bor": {
+            "SPow": null,
+            "Id": "48fddfd4-63e7-42a0-a1bc-87da3ff6406a",
+            "UNC": 4,
+            "Sta": 1,
+            "IsBa": null,
+            "LiMa": 6,
+            "Los": 0,
+            "LPM": 4,
+            "LCa": null,
+            "LoPs": 0,
+            "Vic": 0,
+            "ViMa": null,
+            "Rec": null,
+            "Tur": 0,
+            "Go": 10,
+            "FuGo": null,
+            "GoSp": 0,
+            "FrRo": 0,
+            "FuRo": null,
+            "Rold": 0,
+            "TrTT": 0,
+            "TiMi": null,
+            "Ti": 1,
+            "BoCa": 99,
+            "Mins": {
+                "Size": {
+                    "x": 5,
+                    "y": 1
+                },
+                "Items": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ]
+            },
+            "MiSC": 3,
+            "MSBo": [],
+            "MiSh": [
+                {
+                    "Own": 1,
+                    "Enu": 624,
+                    "Loc": 0,
+                    "Poi": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "Exp": 0,
+                    "Lvl": 1,
+                    "Hp": {
+                        "Perm": 2,
+                        "Temp": 0,
+                        "Max": null
+                    },
+                    "At": {
+                        "Perm": 3,
+                        "Temp": 0,
+                        "Max": null
+                    },
+                    "Mana": 0,
+                    "Cou": null,
+                    "CoBr": null,
+                    "LaPP": null,
+                    "Perk": null,
+                    "PeBo": false,
+                    "PeDu": null,
+                    "PeDM": null,
+                    "PeMu": null,
+                    "PeDr": 0,
+                    "Abil": [
+                        {
+                            "Enu": 658,
+                            "Lvl": 1,
+                            "Nat": true,
+                            "Dur": 0,
+                            "TrCo": 0,
+                            "Char": null,
+                            "Dis": false,
+                            "AIML": false,
+                            "IgRe": false,
+                            "Grop": 0
+                        }
+                    ],
+                    "AbDi": false,
+                    "Cosm": 27,
+                    "Dead": false,
+                    "Dest": false,
+                    "DeBy": null,
+                    "Link": null,
+                    "Pow": null,
+                    "SeV": null,
+                    "Rwds": 0,
+                    "Rwrd": false,
+                    "MiMs": null,
+                    "SpMe": null,
+                    "Tri": null,
+                    "AtkC": 0,
+                    "HrtC": 0,
+                    "SpCT": 0,
+                    "OlTs": null,
+                    "Id": {
+                        "BoId": "48fddfd4-63e7-42a0-a1bc-87da3ff6406a",
+                        "Uni": 1
+                    },
+                    "Pri": 3,
+                    "Fro": false,
+                    "WFro": false,
+                    "AFro": false
+                },
+                {
+                    "Own": 1,
+                    "Enu": 621,
+                    "Loc": 0,
+                    "Poi": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "Exp": 0,
+                    "Lvl": 1,
+                    "Hp": {
+                        "Perm": 3,
+                        "Temp": 0,
+                        "Max": null
+                    },
+                    "At": {
+                        "Perm": 2,
+                        "Temp": 0,
+                        "Max": null
+                    },
+                    "Mana": 0,
+                    "Cou": null,
+                    "CoBr": null,
+                    "LaPP": null,
+                    "Perk": null,
+                    "PeBo": false,
+                    "PeDu": null,
+                    "PeDM": null,
+                    "PeMu": null,
+                    "PeDr": 0,
+                    "Abil": [
+                        {
+                            "Enu": 655,
+                            "Lvl": 1,
+                            "Nat": true,
+                            "Dur": 0,
+                            "TrCo": 0,
+                            "Char": null,
+                            "Dis": false,
+                            "AIML": false,
+                            "IgRe": false,
+                            "Grop": 0
+                        }
+                    ],
+                    "AbDi": false,
+                    "Cosm": 27,
+                    "Dead": false,
+                    "Dest": false,
+                    "DeBy": null,
+                    "Link": null,
+                    "Pow": null,
+                    "SeV": null,
+                    "Rwds": 0,
+                    "Rwrd": false,
+                    "MiMs": null,
+                    "SpMe": null,
+                    "Tri": null,
+                    "AtkC": 0,
+                    "HrtC": 0,
+                    "SpCT": 0,
+                    "OlTs": null,
+                    "Id": {
+                        "BoId": "48fddfd4-63e7-42a0-a1bc-87da3ff6406a",
+                        "Uni": 2
+                    },
+                    "Pri": 3,
+                    "Fro": false,
+                    "WFro": false,
+                    "AFro": false
+                },
+                {
+                    "Own": 1,
+                    "Enu": 624,
+                    "Loc": 0,
+                    "Poi": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "Exp": 0,
+                    "Lvl": 1,
+                    "Hp": {
+                        "Perm": 2,
+                        "Temp": 0,
+                        "Max": null
+                    },
+                    "At": {
+                        "Perm": 3,
+                        "Temp": 0,
+                        "Max": null
+                    },
+                    "Mana": 0,
+                    "Cou": null,
+                    "CoBr": null,
+                    "LaPP": null,
+                    "Perk": null,
+                    "PeBo": false,
+                    "PeDu": null,
+                    "PeDM": null,
+                    "PeMu": null,
+                    "PeDr": 0,
+                    "Abil": [
+                        {
+                            "Enu": 658,
+                            "Lvl": 1,
+                            "Nat": true,
+                            "Dur": 0,
+                            "TrCo": 0,
+                            "Char": null,
+                            "Dis": false,
+                            "AIML": false,
+                            "IgRe": false,
+                            "Grop": 0
+                        }
+                    ],
+                    "AbDi": false,
+                    "Cosm": 27,
+                    "Dead": false,
+                    "Dest": false,
+                    "DeBy": null,
+                    "Link": null,
+                    "Pow": null,
+                    "SeV": null,
+                    "Rwds": 0,
+                    "Rwrd": false,
+                    "MiMs": null,
+                    "SpMe": null,
+                    "Tri": null,
+                    "AtkC": 0,
+                    "HrtC": 0,
+                    "SpCT": 0,
+                    "OlTs": null,
+                    "Id": {
+                        "BoId": "48fddfd4-63e7-42a0-a1bc-87da3ff6406a",
+                        "Uni": 3
+                    },
+                    "Pri": 3,
+                    "Fro": false,
+                    "WFro": false,
+                    "AFro": false
+                }
+            ],
+            "SpSC": 1,
+            "SpSh": [
+                {
+                    "Pow": null,
+                    "Sto": null,
+                    "Con": null,
+                    "Reli": null,
+                    "Buff": false,
+                    "Link": null,
+                    "Enu": 157,
+                    "Id": {
+                        "BoId": "48fddfd4-63e7-42a0-a1bc-87da3ff6406a",
+                        "Uni": 4
+                    },
+                    "Pri": 3,
+                    "Fro": false,
+                    "WFro": false,
+                    "AFro": false
+                }
+            ],
+            "Adj": null,
+            "Nou": null,
+            "Trum": 0,
+            "PrOu": 0,
+            "PrEn": null,
+            "PrES": null,
+            "PrES2": null,
+            "MiPl": 0,
+            "MiSu": 0,
+            "MSFL": 0,
+            "SpPl": [],
+            "SpCo": null,
+            "Mode": 0,
+            "Cosm": 27,
+            "CoMa": null,
+            "Back": 11,
+            "Masc": 15,
+            "Entr": 0,
+            "Awar": null,
+            "Pack": 6,
+            "Pcks": false,
+            "Taut": null,
+            "Deck": null,
+            "Rel": {
+                "Size": {
+                    "x": 2,
+                    "y": 1
+                },
+                "Items": [
+                    null,
+                    null
+                ]
+            },
+            "Bul": {
+                "Size": {
+                    "x": 0,
+                    "y": 0
+                },
+                "Items": null
+            },
+            "Choi": null,
+            "FuCh": null,
+            "Hash": 0,
+            "Diff": 0,
+            "ShRe": null,
+            "Clon": false,
+            "Wacky": null,
+            "WMPs": null,
+            "WMPb": false
+        },
+        "AvAd": [
+            "Rolling",
+            "Chunky",
+            "Unknown"
+        ],
+        "AvNo": [
+            "Pets",
+            "Scallywags",
+            "Fungi"
+        ],
+        "ChCo": 0
+    },
+    "GenesisModeModel": "{\"Name\":\"PONDS\",\"Opponents\":[{\"UserId\":\"95ac54d7-a5b1-4857-8892-3634fb3d5762\",\"ParticipationId\":\"f5d7efc4-0cf3-4cb6-ab11-7d5ac7b4772c\",\"DisplayName\":\"HIQ\",\"Rank\":1500,\"Lives\":6,\"Minions\":[null,null,null,null,null],\"Relics\":[null,null],\"Outcome\":0},{\"UserId\":\"afaca36a-9879-4d67-b4dd-e623ef54fafc\",\"ParticipationId\":\"a86fbcb8-a584-4564-8fe8-fdf8d1eec98a\",\"DisplayName\":\"grippypug\",\"Pack\":2,\"Rank\":1500,\"Lives\":6,\"Minions\":[null,null,null,null,null],\"Relics\":[null,null],\"Outcome\":0}],\"TurnEndTime\":\"2025-11-08T13:24:16.9018093Z\",\"MaxLives\":6,\"CurrentTurn\":1,\"ActivePlayerCount\":3,\"MaxPlayerCount\":16,\"MatchPack\":0,\"TurnDuration\":105,\"SpectatorMode\":2,\"Settings\":{\"MatchName\":\"PONDS\",\"TurnDuration\":105,\"Players\":8,\"SpectatorMode\":2}}",
+    "Outcome": 3,
+    "Mode": 0,
+    "LastTurn": 1,
+    "Actions": [
+        {
+            "Type": 4,
+            "Turn": 1,
+            "Request": "{\"Data\":{\"BuildId\":\"ca0ad58b-cc05-48dc-ae0f-59266068304b\"},\"Version\":43}",
+            "Response": "{\"Event\":{\"Event\":{\"Owner\":1},\"Owner\":1},\"Data\":{\"Seed\":1605997236,\"Hash\":540710912}}",
+            "Build": null,
+            "Battle": null,
+            "Mode": null,
+            "CreatedOn": "2025-11-08T13:23:38.129982+00:00",
+            "BuildChangeCount": 1
+        },
+        {
+            "Type": 6,
+            "Turn": 1,
+            "Request": "{\"MinionId\":{\"BoId\":\"48fddfd4-63e7-42a0-a1bc-87da3ff6406a\",\"Uni\":3},\"Point\":{\"x\":2},\"Data\":{\"BuildId\":\"ca0ad58b-cc05-48dc-ae0f-59266068304b\",\"BoardHash\":540710912},\"Version\":43}",
+            "Response": "{\"Event\":{\"MinionId\":{\"BoId\":\"48fddfd4-63e7-42a0-a1bc-87da3ff6406a\",\"Uni\":3},\"Point\":{\"x\":2},\"Owner\":1},\"Data\":{\"Seed\":1608103831,\"Hash\":1177221136}}",
+            "Build": null,
+            "Battle": null,
+            "Mode": null,
+            "CreatedOn": "2025-11-08T13:23:45.42413+00:00",
+            "BuildChangeCount": 2
+        },
+        {
+            "Type": 8,
+            "Turn": 1,
+            "Request": "{\"SpellId\":{\"BoId\":\"48fddfd4-63e7-42a0-a1bc-87da3ff6406a\",\"Uni\":4},\"Aim\":{\"BoId\":\"48fddfd4-63e7-42a0-a1bc-87da3ff6406a\",\"Uni\":3},\"Data\":{\"BuildId\":\"ca0ad58b-cc05-48dc-ae0f-59266068304b\",\"BoardHash\":1177221136},\"Version\":43}",
+            "Response": "{\"Event\":{\"Event\":{\"Spell\":{\"Pow\":0,\"Sto\":false,\"Enu\":157,\"Id\":{\"BoId\":\"48fddfd4-63e7-42a0-a1bc-87da3ff6406a\",\"Uni\":4},\"Pri\":3},\"Target\":{\"BoId\":\"48fddfd4-63e7-42a0-a1bc-87da3ff6406a\",\"Uni\":3},\"Owner\":1},\"Owner\":1},\"Data\":{\"Seed\":1605107424,\"Hash\":-1973496482}}",
+            "Build": null,
+            "Battle": null,
+            "Mode": null,
+            "CreatedOn": "2025-11-08T13:23:46.67299+00:00",
+            "BuildChangeCount": 3
+        },
+        {
+            "Type": 6,
+            "Turn": 1,
+            "Request": "{\"MinionId\":{\"BoId\":\"48fddfd4-63e7-42a0-a1bc-87da3ff6406a\",\"Uni\":1},\"Point\":{\"x\":2},\"Data\":{\"BuildId\":\"ca0ad58b-cc05-48dc-ae0f-59266068304b\",\"BoardHash\":-1973496482},\"Version\":43}",
+            "Response": "{\"Event\":{\"MinionId\":{\"BoId\":\"48fddfd4-63e7-42a0-a1bc-87da3ff6406a\",\"Uni\":1},\"Point\":{\"x\":2},\"Owner\":1},\"Data\":{\"Seed\":1190297507,\"Hash\":1233370121}}",
+            "Build": null,
+            "Battle": null,
+            "Mode": null,
+            "CreatedOn": "2025-11-08T13:23:47.682024+00:00",
+            "BuildChangeCount": 4
+        },
+        {
+            "Type": 5,
+            "Turn": 1,
+            "Request": "{\"Data\":{\"BuildId\":\"ca0ad58b-cc05-48dc-ae0f-59266068304b\",\"BoardHash\":1233370121},\"Version\":43}",
+            "Response": "{\"Event\":{\"Event\":{\"Owner\":1},\"Owner\":1},\"Data\":{\"Seed\":1357531108,\"Hash\":1273804981}}",
+            "Build": null,
+            "Battle": null,
+            "Mode": null,
+            "CreatedOn": "2025-11-08T13:23:48.341876+00:00",
+            "BuildChangeCount": 5
+        },
+        {
+            "Type": 3,
+            "Turn": 1,
+            "Request": null,
+            "Response": null,
+            "Build": null,
+            "Battle": null,
+            "Mode": null,
+            "CreatedOn": "2025-11-08T13:23:50.214031+00:00",
+            "BuildChangeCount": 6
+        }
+    ]
+}

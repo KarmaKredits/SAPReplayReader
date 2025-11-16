@@ -13,8 +13,7 @@ import os
 # 
 DISCORDAUTH = os.getenv("DISCORDAUTH")
 
-increment_file = 'pids_increment.txt'
-full_file = 'pids_full.txt'
+
 
 def retrieve_messages():
     headers = {
@@ -22,14 +21,14 @@ def retrieve_messages():
         }
     offsetnum=0
     #min_id=1431492467097600000&content=pid&author_type=user&sort_by=timestamp&sort_order=desc&offset=0
-    min_id = 1431492467097600000
+    min_id = 1433666794291200000
     r = requests.get(f'https://discord.com/api/v9/guilds/920457253541273670/messages/search?min_id={min_id}&content=pid&author_type=user&sort_by=timestamp&sort_order=desc&offset={offsetnum}', headers=headers)
     data=[]
 
     jsonn = json.loads(r.text)
     regex = '{"Pid":"(.+)","T":\d+}'
     #data.append(jsonn)
-
+    max_messages = jsonn['total_results'] if 'total_results' in jsonn else 0
     while ('errors' not in jsonn and len(jsonn)>0):
         if ('messages' not in jsonn):
             print(jsonn)
@@ -46,8 +45,8 @@ def retrieve_messages():
         print("Pid len:",len(data))
         print("offset:",offsetnum)        
 
-        if offsetnum>199:
-            break
+        if offsetnum>max_messages:
+            break # break to prevent too many requests in one go
         time.sleep(2)
         r = requests.get(f'https://discord.com/api/v9/guilds/920457253541273670/messages/search?content=pid&sort_by=timestamp&sort_order=desc&offset={offsetnum}', headers=headers)
         jsonn = json.loads(r.text)
@@ -58,8 +57,12 @@ def retrieve_messages():
 
 # with open(increment_file, 'w') as file:
 #     file.write('')
-    
-dataAll = retrieve_messages()
-print('pull Done')
-with open(full_file, 'w') as file:
-    file.write(json.dumps(dataAll))
+
+if __name__ == "__main__":
+    increment_file = 'pids_increment.txt'
+    full_file = 'pids_full.txt'
+    dataAll = retrieve_messages()
+    print('pull Done')
+    with open(full_file, 'w') as file:
+        file.write(json.dumps(dataAll))
+    print(f'Wrote full pid list to {full_file}')

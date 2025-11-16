@@ -17,7 +17,7 @@ from dotenv import load_dotenv
 import json
 import pandas as pd
 import time
-#from reader import read_pid_file
+
 
 load_dotenv()
 
@@ -134,7 +134,10 @@ def process_from_df(api_version: int = API_VERSION,reprocess: int = 0):
             replay = download_replay(pid=pid_df.at[i,"pid"],auth=TOKEN,api_version=api_version)
             if replay != None:
                 # set version
-                ver = json.loads(replay['Actions'][0]['Request'])["Version"]
+                if replay['Actions'][0]['Request'] not in [None,""]:
+                    ver = json.loads(replay['Actions'][0]['Request'])["Version"]
+                else:
+                    ver = API_VERSION
 
                 pid_df.at[i,["version","gamedate","processed","failure"]] = [ver,replay["CreatedOn"],1,0]
 
@@ -148,6 +151,7 @@ def process_from_df(api_version: int = API_VERSION,reprocess: int = 0):
             time.sleep(1)
         #break
     #pid_df.to_csv('pid_df.csv', index=False)
+    print("----process_from_df() COMPLETE----")
     return None
 
 # DUPLICATE from api_client.py but needed here to avoid circular import
@@ -194,49 +198,3 @@ if __name__== "__main__":
     # # time.sleep(5)
     # process_from_df()
 
-
-def get_oauth2_token(token_url: str, client_id: str, client_secret: str) -> str:
-    """Obtain an OAuth2 token via client credentials flow (compat helper)."""
-    resp = requests.post(
-        token_url,
-        data={"grant_type": "client_credentials"},
-        auth=(client_id, client_secret),
-        timeout=10,
-    )
-    resp.raise_for_status()
-    body = resp.json()
-    token = body.get("access_token")
-    if not token:
-        raise RuntimeError("No access_token in token response")
-    return token
-
-
-def fetch_replay(url: str, *, auth: Optional[Dict] = None, timeout: int = 30) -> Dict:
-    """Fetch replay JSON from the given full URL.
-
-    This is a lightweight compatibility wrapper used by `read_replay`.
-    It supports a simple auth dict with 'type' == 'apikey' or 'oauth2' or
-    a raw 'headers' dict. For more advanced use, callers can use
-    `download_replay` which calls the Teamwood playback endpoint.
-    """
-    headers = {"Accept": "application/json"}
-    if auth:
-        atype = auth.get("type")
-        if atype == "apikey":
-            header = auth.get("header", "Authorization")
-            headers[header] = auth.get("value", "")
-        elif atype == "oauth2":
-            token_url = auth.get("token_url")
-            client_id = auth.get("client_id")
-            client_secret = auth.get("client_secret")
-            token = get_oauth2_token(token_url, client_id, client_secret)
-            token_header = auth.get("token_header", "Authorization")
-            headers[token_header] = f"Bearer {token}"
-        else:
-            raw = auth.get("headers") if isinstance(auth, dict) else None
-            if isinstance(raw, dict):
-                headers.update(raw)
-
-    resp = requests.post(url, headers=headers, timeout=timeout)
-    resp.raise_for_status()
-    return resp.json()

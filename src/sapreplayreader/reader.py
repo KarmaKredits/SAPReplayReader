@@ -266,7 +266,14 @@ def extract_actions(pid: str):
         11: "END TURN",
         12: "NAME BOARD"
     }
-
+    outcome_names = {
+        1: "Win",
+        2: "Loss",
+        3: "Draw"
+    }
+    maxlives = json.loads(replay.get("GenesisModeModel", None)).get("MaxLives", None) if replay.get("GenesisModeModel", None) else None
+    lives = maxlives
+    previous_turn_outcome = None
     action_list = []
     for action in actions:
         request = None
@@ -275,12 +282,17 @@ def extract_actions(pid: str):
         battle = None
         freeze = None
         order = None
-        action_type = action["ActionType"]
+        action_type = action["Type"]
         if action_type == 0: # GAME READY (battle info)
             build = json.loads(action["Build"])
             battle = json.loads(action["Battle"])
+            previous_turn_outcome = battle.get("Outcome", None)
+            lives -= 1 if previous_turn_outcome == 2 else 0
+            if turn == 2 and lives < maxlives:
+                lives += 1
         elif action_type == 1: # GAME MODE (Opp board)
             mode = json.loads(action["Mode"])
+            
         elif action_type == 2: # # GAME WATCH (result if end)
             # could be empty dict
             if len(action["Response"]) > 3:
@@ -310,7 +322,10 @@ def extract_actions(pid: str):
             "Time": time_stamp,
             "Freeze": freeze,
             "Order": order,
-            "Turn": turn
+            "Turn": turn,
+            "PreviousResult": outcome_names[previous_turn_outcome] if previous_turn_outcome is not None else None,
+            #"PreviousResult": previous_turn_outcome,
+            "Lives": lives
         })
     return action_list
 
@@ -400,13 +415,12 @@ def generate_summarydb_from_files():
 
 
 if __name__ == "__main__":
-    #test_pid = "1877d5c7-bd77-4a0b-92d2-cacae2c459ca"
-    # pid_list = read_pid_file("pids-copy.txt")
-    # pid_set = list(set(pid_list))
+    """
+    ==== Proceedures ====
+    1. etl_newlist_download("pids_full.txt")
+    2. check_summary_for_opp_pids()
 
-
-    # pid_df.to_csv('pid_df.csv', index=False)
-    #pid_df = read_pid_df('pid_df.csv')
+    """
 
     # RUN AFTER SCRAPING NEW PID LIST FROM DISCORD
     #etl_newlist_download("pids_full.txt")
@@ -419,22 +433,16 @@ if __name__ == "__main__":
 
  
     # GENERATE SUMMARY DB FROM ALL REPLAY FILES
-    generate_summarydb_from_files()
+    # generate_summarydb_from_files()
 
-    # add corresponding pids to summary db from existing replays
-    # file_names = read_replay_filenames()
-    # summary_db = pd.read_csv('summary.csv')
-    # cnt = 0
-    # total = len(file_names)
-    # for file in file_names:
-    #     cnt += 1
-    #     percent = round((cnt/total)*100)
-    #     print(f"{file} |\t {cnt}/{total} |\t {percent}%")
-    #     replay = get_replay(file)
-    #     replay_matchid = replay["MatchId"]
-    #     replay_userid = replay["UserId"]
-    #     summary_db.loc[(summary_db['matchid'] == replay_matchid) & (summary_db['userid'] == replay_userid) & summary_db['pid'].isna(), 'pid'] = file
-    # summary_db.to_csv('summary.csv',index=False)
+
+    """ other """
+    test_actions = extract_actions("17a5fc19-0ae7-461c-97d1-c3eb623513d8")
+    for action in test_actions:
+        print(action)
+    actions_df = pd.DataFrame(test_actions) 
+    print(actions_df)
+    actions_df.to_csv('action_test.csv',index=False)
 
 
     """

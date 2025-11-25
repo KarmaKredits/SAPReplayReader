@@ -423,13 +423,13 @@ if __name__ == "__main__":
     """
 
     # RUN AFTER SCRAPING NEW PID LIST FROM DISCORD
-    #etl_newlist_download("pids_full.txt")
+    # etl_newlist_download("pids_full.txt")
 
     # RUN AFTER ETL_NEWLIST_DOWNLOAD to capture opponent pids
     #check_summary_for_opp_pids()
 
     # RUN to download all unprocessed replays from pid_df
-    #api_calls.process_from_df()
+    api_calls.process_from_df()
 
  
     # GENERATE SUMMARY DB FROM ALL REPLAY FILES
@@ -437,12 +437,12 @@ if __name__ == "__main__":
 
 
     """ other """
-    test_actions = extract_actions("17a5fc19-0ae7-461c-97d1-c3eb623513d8")
-    for action in test_actions:
-        print(action)
-    actions_df = pd.DataFrame(test_actions) 
-    print(actions_df)
-    actions_df.to_csv('action_test.csv',index=False)
+    # test_actions = extract_actions("17a5fc19-0ae7-461c-97d1-c3eb623513d8")
+    # for action in test_actions:
+    #     print(action)
+    # actions_df = pd.DataFrame(test_actions) 
+    # print(actions_df)
+    # actions_df.to_csv('action_test.csv',index=False)
 
 
     """

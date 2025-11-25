@@ -28,7 +28,8 @@ def retrieve_messages():
     jsonn = json.loads(r.text)
     regex = '{"Pid":"(.+)","T":\d+}'
     #data.append(jsonn)
-    max_messages = jsonn['total_results'] if 'total_results' in jsonn else 0
+    # max_messages = jsonn['total_results'] if 'total_results' in jsonn else 0
+    max_messages = 250
     while ('errors' not in jsonn and len(jsonn)>0):
         if ('messages' not in jsonn):
             print(jsonn)

@@ -135,7 +135,10 @@ def process_from_df(api_version: int = API_VERSION,reprocess: int = 0):
             if replay != None:
                 # set version
                 if replay['Actions'][0]['Request'] not in [None,""]:
-                    ver = json.loads(replay['Actions'][0]['Request'])["Version"]
+                    if "Version" in json.loads(replay['Actions'][0]['Request']):
+                        ver = json.loads(replay['Actions'][0]['Request'])["Version"]
+                    else:
+                        ver = API_VERSION
                 else:
                     ver = API_VERSION
 

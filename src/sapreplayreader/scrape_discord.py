@@ -12,7 +12,7 @@ load_dotenv()
 import os 
 # 
 DISCORDAUTH = os.getenv("DISCORDAUTH")
-max_messages = 280
+max_messages = 630
 
 
 def retrieve_messages():

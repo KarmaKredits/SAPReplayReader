@@ -21,7 +21,7 @@ import time
 
 load_dotenv()
 
-API_VERSION = 43
+API_VERSION = 44
 
 
 def login(email: Optional[str] = None, password: Optional[str] = None, api_version: int = API_VERSION, timeout: int = 20) -> Dict:
@@ -43,6 +43,7 @@ def login(email: Optional[str] = None, password: Optional[str] = None, api_versi
     headers = {"Content-Type": "application/json; utf-8", "Accept": "application/json"}
 
     resp = requests.post(url, json=payload, headers=headers, timeout=timeout)
+    
     resp.raise_for_status()
     return resp.json()
 

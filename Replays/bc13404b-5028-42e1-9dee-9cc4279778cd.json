@@ -1,0 +1,761 @@
+{
+    "UserId": "9fe7d3b3-dbde-4301-be99-a20fa1abf493",
+    "ParticipationId": "bc13404b-5028-42e1-9dee-9cc4279778cd",
+    "MatchId": "3eb6c20d-72b5-47ad-8398-3d060f64aea4",
+    "UserName": "MajorMinecraft",
+    "CreatedOn": "2025-12-13T17:57:10.304505+00:00",
+    "GenesisBuildModel": {
+        "Id": "7be326dc-8bce-4704-8b67-b89e62d93d26",
+        "Bor": {
+            "SPow": null,
+            "Id": "90bd2e39-bfe2-469d-b6c5-72c7a8af11da",
+            "UNC": 4,
+            "Sta": 1,
+            "IsBa": null,
+            "LiMa": 6,
+            "Los": 0,
+            "LPM": 4,
+            "LCa": null,
+            "LoPs": 0,
+            "Vic": 0,
+            "ViMa": null,
+            "Rec": null,
+            "Tur": 0,
+            "Go": 10,
+            "GoGa": 0,
+            "FuGo": null,
+            "GoSp": 0,
+            "FrRo": 0,
+            "FuRo": null,
+            "Rold": 0,
+            "TrTT": 0,
+            "TiMi": null,
+            "Ti": 1,
+            "BoCa": 99,
+            "Mins": {
+                "Size": {
+                    "x": 5,
+                    "y": 1
+                },
+                "Items": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ]
+            },
+            "MiSC": 3,
+            "MSBo": [],
+            "MiSh": [
+                {
+                    "Own": 1,
+                    "Enu": 189,
+                    "Loc": 0,
+                    "Poi": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "Exp": 0,
+                    "Lvl": 1,
+                    "Hp": {
+                        "Perm": 4,
+                        "Temp": 0,
+                        "Max": null
+                    },
+                    "At": {
+                        "Perm": 1,
+                        "Temp": 0,
+                        "Max": null
+                    },
+                    "Mana": 0,
+                    "Cou": null,
+                    "CoBr": null,
+                    "LaPP": null,
+                    "Perk": null,
+                    "PeBo": false,
+                    "PeDu": null,
+                    "PeDM": null,
+                    "PeMu": null,
+                    "PeDr": 0,
+                    "Abil": [
+                        {
+                            "Enu": 209,
+                            "Lvl": 1,
+                            "Nat": true,
+                            "Dur": 0,
+                            "TrCo": 0,
+                            "Char": null,
+                            "Dis": false,
+                            "DisT": false,
+                            "AIML": false,
+                            "IgRe": false,
+                            "Grop": 0
+                        }
+                    ],
+                    "AbDi": false,
+                    "Cosm": 69,
+                    "Dead": false,
+                    "Dest": false,
+                    "DeBy": null,
+                    "Link": null,
+                    "Pow": null,
+                    "SeV": null,
+                    "Rwds": 0,
+                    "Rwrd": false,
+                    "MiMs": null,
+                    "SpMe": null,
+                    "Tri": null,
+                    "AtkC": 0,
+                    "HrtC": 0,
+                    "SpCT": 0,
+                    "OlTs": null,
+                    "LastTargetsThisTurn": null,
+                    "Id": {
+                        "BoId": "90bd2e39-bfe2-469d-b6c5-72c7a8af11da",
+                        "Uni": 1
+                    },
+                    "Pri": 3,
+                    "Fro": false,
+                    "WFro": false,
+                    "AFro": false
+                },
+                {
+                    "Own": 1,
+                    "Enu": 187,
+                    "Loc": 0,
+                    "Poi": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "Exp": 0,
+                    "Lvl": 1,
+                    "Hp": {
+                        "Perm": 3,
+                        "Temp": 0,
+                        "Max": null
+                    },
+                    "At": {
+                        "Perm": 2,
+                        "Temp": 0,
+                        "Max": null
+                    },
+                    "Mana": 0,
+                    "Cou": null,
+                    "CoBr": null,
+                    "LaPP": null,
+                    "Perk": null,
+                    "PeBo": false,
+                    "PeDu": null,
+                    "PeDM": null,
+                    "PeMu": null,
+                    "PeDr": 0,
+                    "Abil": [
+                        {
+                            "Enu": 207,
+                            "Lvl": 1,
+                            "Nat": true,
+                            "Dur": 0,
+                            "TrCo": 0,
+                            "Char": null,
+                            "Dis": false,
+                            "DisT": false,
+                            "AIML": false,
+                            "IgRe": false,
+                            "Grop": 0
+                        }
+                    ],
+                    "AbDi": false,
+                    "Cosm": 69,
+                    "Dead": false,
+                    "Dest": false,
+                    "DeBy": null,
+                    "Link": null,
+                    "Pow": null,
+                    "SeV": null,
+                    "Rwds": 0,
+                    "Rwrd": false,
+                    "MiMs": null,
+                    "SpMe": null,
+                    "Tri": null,
+                    "AtkC": 0,
+                    "HrtC": 0,
+                    "SpCT": 0,
+                    "OlTs": null,
+                    "LastTargetsThisTurn": null,
+                    "Id": {
+                        "BoId": "90bd2e39-bfe2-469d-b6c5-72c7a8af11da",
+                        "Uni": 2
+                    },
+                    "Pri": 3,
+                    "Fro": false,
+                    "WFro": false,
+                    "AFro": false
+                },
+                {
+                    "Own": 1,
+                    "Enu": 232,
+                    "Loc": 0,
+                    "Poi": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "Exp": 0,
+                    "Lvl": 1,
+                    "Hp": {
+                        "Perm": 2,
+                        "Temp": 0,
+                        "Max": null
+                    },
+                    "At": {
+                        "Perm": 2,
+                        "Temp": 0,
+                        "Max": null
+                    },
+                    "Mana": 0,
+                    "Cou": null,
+                    "CoBr": null,
+                    "LaPP": null,
+                    "Perk": null,
+                    "PeBo": false,
+                    "PeDu": null,
+                    "PeDM": null,
+                    "PeMu": null,
+                    "PeDr": 0,
+                    "Abil": [
+                        {
+                            "Enu": 258,
+                            "Lvl": 1,
+                            "Nat": true,
+                            "Dur": 0,
+                            "TrCo": 0,
+                            "Char": null,
+                            "Dis": false,
+                            "DisT": false,
+                            "AIML": false,
+                            "IgRe": false,
+                            "Grop": 0
+                        }
+                    ],
+                    "AbDi": false,
+                    "Cosm": 69,
+                    "Dead": false,
+                    "Dest": false,
+                    "DeBy": null,
+                    "Link": null,
+                    "Pow": null,
+                    "SeV": null,
+                    "Rwds": 0,
+                    "Rwrd": false,
+                    "MiMs": null,
+                    "SpMe": null,
+                    "Tri": null,
+                    "AtkC": 0,
+                    "HrtC": 0,
+                    "SpCT": 0,
+                    "OlTs": null,
+                    "LastTargetsThisTurn": null,
+                    "Id": {
+                        "BoId": "90bd2e39-bfe2-469d-b6c5-72c7a8af11da",
+                        "Uni": 3
+                    },
+                    "Pri": 3,
+                    "Fro": false,
+                    "WFro": false,
+                    "AFro": false
+                }
+            ],
+            "SpSC": 1,
+            "SpSh": [
+                {
+                    "Pow": null,
+                    "Sto": null,
+                    "Con": null,
+                    "Reli": null,
+                    "Buff": false,
+                    "Link": null,
+                    "Enu": 33,
+                    "Id": {
+                        "BoId": "90bd2e39-bfe2-469d-b6c5-72c7a8af11da",
+                        "Uni": 4
+                    },
+                    "Pri": 3,
+                    "Fro": false,
+                    "WFro": false,
+                    "AFro": false
+                }
+            ],
+            "Adj": null,
+            "Nou": null,
+            "Trum": 0,
+            "PrOu": 0,
+            "PrEn": null,
+            "PrES": null,
+            "PrES2": null,
+            "MiPl": 0,
+            "MiSu": 0,
+            "MSFL": 0,
+            "SpPl": [],
+            "SpCo": null,
+            "Mode": 0,
+            "Cosm": 69,
+            "CoMa": null,
+            "Back": 27,
+            "Masc": 2,
+            "Entr": 2,
+            "Awar": {
+                "Type": 10,
+                "Position": null,
+                "PercentPosition": 0.0209,
+                "Season": null,
+                "Year": 2025,
+                "Month": 8,
+                "Color": null,
+                "Text": null
+            },
+            "Pack": 5,
+            "Pcks": false,
+            "Taut": null,
+            "Deck": null,
+            "Rel": {
+                "Size": {
+                    "x": 2,
+                    "y": 1
+                },
+                "Items": [
+                    null,
+                    null
+                ]
+            },
+            "Bul": {
+                "Size": {
+                    "x": 0,
+                    "y": 0
+                },
+                "Items": null
+            },
+            "Choi": null,
+            "FuCh": null,
+            "Hash": 0,
+            "Diff": 0,
+            "ShRe": null,
+            "Clon": false,
+            "Wacky": null,
+            "WMPs": null,
+            "WMPb": false
+        },
+        "AvAd": [
+            "Fragile",
+            "Boring",
+            "Uninspired"
+        ],
+        "AvNo": [
+            "Bludgers",
+            "Cucumbers",
+            "Drivers"
+        ],
+        "ChCo": 0
+    },
+    "GenesisModeModel": "{\"Opponents\":[{\"UserId\":\"b0cdf473-3218-4e74-ba9d-f5db74f0a6eb\",\"ParticipationId\":\"b71abf0c-a210-4528-bdb9-599b549ffb5b\",\"DisplayName\":\"Thimeson\",\"Pack\":5,\"Rank\":1721,\"Lives\":6,\"Minions\":[null,null,null,null,null],\"Relics\":[null,null],\"Outcome\":0}],\"TurnEndTime\":\"2025-12-13T17:57:50.2994951Z\",\"MaxLives\":6,\"CurrentTurn\":1,\"ActivePlayerCount\":2,\"MaxPlayerCount\":2,\"TurnDuration\":90,\"Rank\":1721}",
+    "Outcome": 2,
+    "Mode": 0,
+    "LastTurn": 8,
+    "Actions": [
+        {
+            "Type": 4,
+            "Turn": 1,
+            "Request": "{\"Data\":{\"BuildId\":\"7be326dc-8bce-4704-8b67-b89e62d93d26\"},\"Version\":43}",
+            "Response": "{\"Event\":{\"Event\":{\"Owner\":1},\"Owner\":1},\"Data\":{\"Seed\":2051417625,\"Hash\":-1136475244}}",
+            "Build": null,
+            "Battle": null,
+            "Mode": null,
+            "CreatedOn": "2025-12-13T17:57:10.908461+00:00",
+            "BuildChangeCount": 1
+        },
+        {
+            "Type": 11,
+            "Turn": 1,
+            "Request": "{\"Data\":{\"BuildId\":\"7be326dc-8bce-4704-8b67-b89e62d93d26\",\"BoardHash\":-1136475244},\"Version\":43}",
+            "Response": "{\"Event\":{\"Event\":{\"Owner\":1},\"Owner\":1},\"NewBoardState\":3,\"Data\":{\"Seed\":571265518,\"Hash\":-1952146679}}",
+            "Build": null,
+            "Battle": null,
+            "Mode": null,
+            "CreatedOn": "2025-12-13T17:57:50.390545+00:00",
+            "BuildChangeCount": 2
+        },
+        {
+            "Type": 12,
+            "Turn": 1,
+            "Request": "{\"Adjective\":\"Uninspired\",\"Noun\":\"Drivers\",\"Data\":{\"BuildId\":\"7be326dc-8bce-4704-8b67-b89e62d93d26\",\"BoardHash\":-1952146679},\"Version\":43}",
+            "Response": null,
+            "Build": null,
+            "Battle": null,
+            "Mode": null,
+            "CreatedOn": "2025-12-13T17:57:50.453269+00:00",
+            "BuildChangeCount": 3
+        },
+        {
+            "Type": 0,
+            "Turn": 1,
+            "Request": null,
+            "Response": null,
+            "Build": "{\"Id\":\"7be326dc-8bce-4704-8b67-b89e62d93d26\",\"Bor\":{\"Id\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"UNC\":4,\"Sta\":5,\"LiMa\":6,\"Los\":1,\"LPM\":4,\"LoPs\":1,\"Tur\":1,\"Go\":10,\"Ti\":1,\"BoCa\":99,\"Mins\":{\"Size\":{\"x\":5,\"y\":1},\"Items\":[null,null,null,null,null]},\"MiSC\":3,\"MSBo\":[],\"MiSh\":[{\"Own\":1,\"Enu\":189,\"Lvl\":1,\"Hp\":{\"Perm\":4},\"At\":{\"Perm\":1},\"Abil\":[{\"Enu\":209,\"Lvl\":1,\"Nat\":true}],\"Cosm\":69,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":1},\"Pri\":3},{\"Own\":1,\"Enu\":187,\"Lvl\":1,\"Hp\":{\"Perm\":3},\"At\":{\"Perm\":2},\"Abil\":[{\"Enu\":207,\"Lvl\":1,\"Nat\":true}],\"Cosm\":69,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":2},\"Pri\":3},{\"Own\":1,\"Enu\":232,\"Lvl\":1,\"Hp\":{\"Perm\":2},\"At\":{\"Perm\":2},\"Abil\":[{\"Enu\":258,\"Lvl\":1,\"Nat\":true}],\"Cosm\":69,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":3},\"Pri\":3}],\"SpSC\":1,\"SpSh\":[{\"Enu\":33,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":4},\"Pri\":3}],\"Adj\":\"Uninspired\",\"Nou\":\"Drivers\",\"PrOu\":2,\"PrEn\":[260,239,272],\"PrES2\":[{\"Enu\":272,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":1}},{\"Enu\":239,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":2}},{\"Enu\":260,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":3}}],\"SpPl\":[],\"Cosm\":69,\"Back\":27,\"Masc\":2,\"Entr\":2,\"Awar\":{\"Type\":10,\"PercentPosition\":0.0209,\"Year\":2025,\"Month\":8},\"Pack\":5,\"Rel\":{\"Size\":{\"x\":2,\"y\":1},\"Items\":[null,null]},\"Bul\":{},\"Hash\":-1952146679},\"ChCo\":4}",
+            "Battle": "{\"Id\":\"f0f98078-9493-4b01-870e-e7aaaae5e283\",\"Seed\":695473863,\"Outcome\":2,\"ResolvedOn\":\"2025-12-13T17:57:50.513343+00:00\",\"User\":{\"Id\":\"9fe7d3b3-dbde-4301-be99-a20fa1abf493\",\"DisplayName\":\"MajorMinecraft\"},\"UserBoard\":{\"Id\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"UNC\":4,\"Sta\":4,\"LiMa\":6,\"LPM\":4,\"Tur\":1,\"Go\":10,\"Ti\":1,\"BoCa\":99,\"Mins\":{\"Size\":{\"x\":5,\"y\":1},\"Items\":[null,null,null,null,null]},\"MiSC\":3,\"MSBo\":[],\"MiSh\":[{\"Own\":1,\"Enu\":189,\"Lvl\":1,\"Hp\":{\"Perm\":4},\"At\":{\"Perm\":1},\"Abil\":[{\"Enu\":209,\"Lvl\":1,\"Nat\":true}],\"Cosm\":69,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":1},\"Pri\":3},{\"Own\":1,\"Enu\":187,\"Lvl\":1,\"Hp\":{\"Perm\":3},\"At\":{\"Perm\":2},\"Abil\":[{\"Enu\":207,\"Lvl\":1,\"Nat\":true}],\"Cosm\":69,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":2},\"Pri\":3},{\"Own\":1,\"Enu\":232,\"Lvl\":1,\"Hp\":{\"Perm\":2},\"At\":{\"Perm\":2},\"Abil\":[{\"Enu\":258,\"Lvl\":1,\"Nat\":true}],\"Cosm\":69,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":3},\"Pri\":3}],\"SpSC\":1,\"SpSh\":[{\"Enu\":33,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":4},\"Pri\":3}],\"Adj\":\"Uninspired\",\"Nou\":\"Drivers\",\"PrOu\":0,\"SpPl\":[],\"Cosm\":69,\"Back\":27,\"Masc\":2,\"Entr\":2,\"Awar\":{\"Type\":10,\"PercentPosition\":0.0209,\"Year\":2025,\"Month\":8},\"Pack\":5,\"Rel\":{\"Size\":{\"x\":2,\"y\":1},\"Items\":[null,null]},\"Bul\":{},\"Hash\":-1952146679},\"Opponent\":{\"Id\":\"b0cdf473-3218-4e74-ba9d-f5db74f0a6eb\",\"DisplayName\":\"Thimeson\"},\"OpponentBoard\":{\"Id\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"UNC\":4,\"Sta\":4,\"LiMa\":6,\"LPM\":4,\"Tur\":1,\"FuGo\":1,\"GoSp\":10,\"Ti\":1,\"BoCa\":99,\"Mins\":{\"Size\":{\"x\":5,\"y\":1},\"Items\":[{\"Own\":1,\"Enu\":260,\"Loc\":1,\"Lvl\":1,\"Hp\":{\"Perm\":1},\"At\":{\"Perm\":3},\"Abil\":[{\"Enu\":285,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":3},\"Pri\":3},null,{\"Own\":1,\"Enu\":239,\"Loc\":1,\"Poi\":{\"x\":2},\"Lvl\":1,\"Hp\":{\"Perm\":4},\"At\":{\"Perm\":1},\"Abil\":[{\"Enu\":265,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":2},\"Pri\":3},null,{\"Own\":1,\"Enu\":272,\"Loc\":1,\"Poi\":{\"x\":4},\"Lvl\":1,\"Hp\":{\"Perm\":2},\"At\":{\"Perm\":1},\"Abil\":[{\"Enu\":298,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":1},\"Pri\":3}]},\"MiSC\":3,\"MSBo\":[],\"MiSh\":[],\"SpSC\":1,\"SpSh\":[{\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":4},\"Pri\":3,\"Fro\":true}],\"Adj\":\"Elderly\",\"Nou\":\"Icecubes\",\"PrOu\":0,\"MiSu\":3,\"SpPl\":[],\"Cosm\":96,\"Back\":27,\"Masc\":17,\"Entr\":6,\"Awar\":{\"Type\":10,\"PercentPosition\":0.0035,\"Year\":2025,\"Month\":11},\"Pack\":5,\"Rel\":{\"Size\":{\"x\":2,\"y\":1},\"Items\":[null,null]},\"Bul\":{},\"Hash\":-1258111601},\"EndResult\":1326862264}",
+            "Mode": null,
+            "CreatedOn": "2025-12-13T17:57:50.514987+00:00",
+            "BuildChangeCount": 4
+        },
+        {
+            "Type": 1,
+            "Turn": 1,
+            "Request": null,
+            "Response": null,
+            "Build": null,
+            "Battle": null,
+            "Mode": "{\"Opponents\":[{\"UserId\":\"b0cdf473-3218-4e74-ba9d-f5db74f0a6eb\",\"ParticipationId\":\"b71abf0c-a210-4528-bdb9-599b549ffb5b\",\"DisplayName\":\"Thimeson\",\"Pack\":5,\"Rank\":1721,\"BoardAdjective\":\"Elderly\",\"BoardNoun\":\"Icecubes\",\"Lives\":6,\"Minions\":[{\"Own\":1,\"Enu\":260,\"Loc\":1,\"Lvl\":1,\"Hp\":{\"Perm\":1},\"At\":{\"Perm\":3},\"Abil\":[{\"Enu\":285,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":3},\"Pri\":3},null,{\"Own\":1,\"Enu\":239,\"Loc\":1,\"Poi\":{\"x\":2},\"Lvl\":1,\"Hp\":{\"Perm\":4},\"At\":{\"Perm\":1},\"Abil\":[{\"Enu\":265,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":2},\"Pri\":3},null,{\"Own\":1,\"Enu\":272,\"Loc\":1,\"Poi\":{\"x\":4},\"Lvl\":1,\"Hp\":{\"Perm\":2},\"At\":{\"Perm\":1},\"Abil\":[{\"Enu\":298,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":1},\"Pri\":3}],\"Relics\":[null,null],\"Outcome\":1}],\"TurnEndTime\":\"2025-12-13T17:58:50.5155332Z\",\"MaxLives\":6,\"CurrentTurn\":2,\"ActivePlayerCount\":2,\"MaxPlayerCount\":2,\"TurnDuration\":90,\"Rank\":1721}",
+            "CreatedOn": "2025-12-13T17:57:50.521668+00:00",
+            "BuildChangeCount": 5
+        },
+        {
+            "Type": 2,
+            "Turn": 1,
+            "Request": null,
+            "Response": "{}",
+            "Build": null,
+            "Battle": null,
+            "Mode": null,
+            "CreatedOn": "2025-12-13T17:57:57.760724+00:00",
+            "BuildChangeCount": 6
+        },
+        {
+            "Type": 4,
+            "Turn": 2,
+            "Request": "{\"Data\":{\"BuildId\":\"7be326dc-8bce-4704-8b67-b89e62d93d26\",\"BoardHash\":-1952146679},\"Version\":43}",
+            "Response": "{\"Event\":{\"Event\":{\"Owner\":1},\"Owner\":1},\"Data\":{\"Seed\":443040976,\"Hash\":-1242617294}}",
+            "Build": null,
+            "Battle": null,
+            "Mode": null,
+            "CreatedOn": "2025-12-13T17:58:03.757649+00:00",
+            "BuildChangeCount": 7
+        },
+        {
+            "Type": 11,
+            "Turn": 2,
+            "Request": "{\"Data\":{\"BuildId\":\"7be326dc-8bce-4704-8b67-b89e62d93d26\",\"BoardHash\":-1242617294},\"Version\":43}",
+            "Response": "{\"Event\":{\"Event\":{\"Owner\":1},\"Owner\":1},\"NewBoardState\":4,\"Data\":{\"Seed\":1651858142,\"Hash\":-2017205969}}",
+            "Build": null,
+            "Battle": null,
+            "Mode": null,
+            "CreatedOn": "2025-12-13T17:58:50.596928+00:00",
+            "BuildChangeCount": 8
+        },
+        {
+            "Type": 0,
+            "Turn": 2,
+            "Request": null,
+            "Response": null,
+            "Build": "{\"Id\":\"7be326dc-8bce-4704-8b67-b89e62d93d26\",\"Bor\":{\"Id\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"UNC\":8,\"Sta\":5,\"LiMa\":6,\"Los\":2,\"LPM\":4,\"LoPs\":2,\"Tur\":2,\"Go\":10,\"Ti\":1,\"BoCa\":99,\"Mins\":{\"Size\":{\"x\":5,\"y\":1},\"Items\":[null,null,null,null,null]},\"MiSC\":3,\"MSBo\":[],\"MiSh\":[{\"Own\":1,\"Enu\":233,\"Lvl\":1,\"Hp\":{\"Perm\":1},\"At\":{\"Perm\":2},\"Abil\":[{\"Enu\":259,\"Lvl\":1,\"Nat\":true}],\"Cosm\":69,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":5},\"Pri\":3},{\"Own\":1,\"Enu\":272,\"Lvl\":1,\"Hp\":{\"Perm\":2},\"At\":{\"Perm\":1},\"Abil\":[{\"Enu\":298,\"Lvl\":1,\"Nat\":true}],\"Cosm\":69,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":6},\"Pri\":3},{\"Own\":1,\"Enu\":189,\"Lvl\":1,\"Hp\":{\"Perm\":4},\"At\":{\"Perm\":1},\"Abil\":[{\"Enu\":209,\"Lvl\":1,\"Nat\":true}],\"Cosm\":69,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":7},\"Pri\":3}],\"SpSC\":1,\"SpSh\":[{\"Enu\":33,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":8},\"Pri\":3}],\"Adj\":\"Uninspired\",\"Nou\":\"Drivers\",\"PrOu\":2,\"PrEn\":[260,239,272,260,260],\"PrES2\":[{\"Enu\":260,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":1}},{\"Enu\":260,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":2}},{\"Enu\":272,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":3}},{\"Enu\":239,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":4}},{\"Enu\":260,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":5}}],\"SpPl\":[],\"Cosm\":69,\"Back\":27,\"Masc\":2,\"Entr\":2,\"Awar\":{\"Type\":10,\"PercentPosition\":0.0209,\"Year\":2025,\"Month\":8},\"Pack\":5,\"Rel\":{\"Size\":{\"x\":2,\"y\":1},\"Items\":[null,null]},\"Bul\":{},\"Hash\":-2017205969},\"ChCo\":9}",
+            "Battle": "{\"Id\":\"a37218b7-5548-40ba-a457-7999cb67552c\",\"Seed\":1189108373,\"Outcome\":2,\"ResolvedOn\":\"2025-12-13T17:58:50.6553456+00:00\",\"User\":{\"Id\":\"9fe7d3b3-dbde-4301-be99-a20fa1abf493\",\"DisplayName\":\"MajorMinecraft\"},\"UserBoard\":{\"Id\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"UNC\":8,\"Sta\":4,\"LiMa\":6,\"Los\":1,\"LPM\":4,\"LoPs\":1,\"Tur\":2,\"Go\":10,\"Ti\":1,\"BoCa\":99,\"Mins\":{\"Size\":{\"x\":5,\"y\":1},\"Items\":[null,null,null,null,null]},\"MiSC\":3,\"MSBo\":[],\"MiSh\":[{\"Own\":1,\"Enu\":233,\"Lvl\":1,\"Hp\":{\"Perm\":1},\"At\":{\"Perm\":2},\"Abil\":[{\"Enu\":259,\"Lvl\":1,\"Nat\":true}],\"Cosm\":69,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":5},\"Pri\":3},{\"Own\":1,\"Enu\":272,\"Lvl\":1,\"Hp\":{\"Perm\":2},\"At\":{\"Perm\":1},\"Abil\":[{\"Enu\":298,\"Lvl\":1,\"Nat\":true}],\"Cosm\":69,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":6},\"Pri\":3},{\"Own\":1,\"Enu\":189,\"Lvl\":1,\"Hp\":{\"Perm\":4},\"At\":{\"Perm\":1},\"Abil\":[{\"Enu\":209,\"Lvl\":1,\"Nat\":true}],\"Cosm\":69,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":7},\"Pri\":3}],\"SpSC\":1,\"SpSh\":[{\"Enu\":33,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":8},\"Pri\":3}],\"Adj\":\"Uninspired\",\"Nou\":\"Drivers\",\"PrOu\":2,\"PrEn\":[260,239,272],\"PrES2\":[{\"Enu\":272,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":1}},{\"Enu\":239,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":2}},{\"Enu\":260,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":3}}],\"SpPl\":[],\"Cosm\":69,\"Back\":27,\"Masc\":2,\"Entr\":2,\"Awar\":{\"Type\":10,\"PercentPosition\":0.0209,\"Year\":2025,\"Month\":8},\"Pack\":5,\"Rel\":{\"Size\":{\"x\":2,\"y\":1},\"Items\":[null,null]},\"Bul\":{},\"Hash\":-2017205969},\"Opponent\":{\"Id\":\"b0cdf473-3218-4e74-ba9d-f5db74f0a6eb\",\"DisplayName\":\"Thimeson\"},\"OpponentBoard\":{\"Id\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"UNC\":10,\"Sta\":4,\"LiMa\":6,\"LPM\":4,\"Vic\":1,\"Tur\":2,\"FuGo\":1,\"GoSp\":11,\"Rold\":1,\"Ti\":1,\"BoCa\":99,\"Mins\":{\"Size\":{\"x\":5,\"y\":1},\"Items\":[{\"Own\":1,\"Enu\":260,\"Loc\":1,\"Lvl\":1,\"Hp\":{\"Perm\":1},\"At\":{\"Perm\":3},\"Abil\":[{\"Enu\":285,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":3},\"Pri\":3},{\"Own\":1,\"Enu\":239,\"Loc\":1,\"Poi\":{\"x\":1},\"Exp\":1,\"Lvl\":1,\"Hp\":{\"Perm\":5},\"At\":{\"Perm\":2},\"Abil\":[{\"Enu\":265,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":5},\"Pri\":3},{\"Own\":1,\"Enu\":272,\"Loc\":1,\"Poi\":{\"x\":2},\"Lvl\":1,\"Hp\":{\"Perm\":2},\"At\":{\"Perm\":1},\"Abil\":[{\"Enu\":298,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":1},\"Pri\":3},{\"Own\":1,\"Enu\":260,\"Loc\":1,\"Poi\":{\"x\":3},\"Lvl\":1,\"Hp\":{\"Perm\":1},\"At\":{\"Perm\":3},\"Abil\":[{\"Enu\":285,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":6},\"Pri\":3},{\"Own\":1,\"Enu\":260,\"Loc\":1,\"Poi\":{\"x\":4},\"Lvl\":1,\"Hp\":{\"Perm\":1},\"At\":{\"Perm\":3},\"Abil\":[{\"Enu\":285,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":10},\"Pri\":3}]},\"MiSC\":3,\"MSBo\":[],\"MiSh\":[{\"Own\":1,\"Enu\":233,\"Lvl\":1,\"Hp\":{\"Perm\":1},\"At\":{\"Perm\":2},\"Abil\":[{\"Enu\":259,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":8},\"Pri\":3},{\"Own\":1,\"Enu\":272,\"Lvl\":1,\"Hp\":{\"Perm\":2},\"At\":{\"Perm\":1},\"Abil\":[{\"Enu\":298,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":9},\"Pri\":3}],\"SpSC\":1,\"SpSh\":[{\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":4},\"Pri\":3,\"WFro\":true}],\"Adj\":\"Elderly\",\"Nou\":\"Icecubes\",\"PrOu\":1,\"PrEn\":[],\"PrES2\":[{\"Enu\":260,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":3}},{\"Enu\":239,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":2}},{\"Enu\":272,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":1}}],\"MiSu\":3,\"SpPl\":[],\"Cosm\":96,\"Back\":27,\"Masc\":17,\"Entr\":6,\"Awar\":{\"Type\":10,\"PercentPosition\":0.0035,\"Year\":2025,\"Month\":11},\"Pack\":5,\"Rel\":{\"Size\":{\"x\":2,\"y\":1},\"Items\":[null,null]},\"Bul\":{},\"Hash\":888080853},\"EndResult\":-1701159725}",
+            "Mode": null,
+            "CreatedOn": "2025-12-13T17:58:50.657038+00:00",
+            "BuildChangeCount": 9
+        },
+        {
+            "Type": 1,
+            "Turn": 2,
+            "Request": null,
+            "Response": null,
+            "Build": null,
+            "Battle": null,
+            "Mode": "{\"Opponents\":[{\"UserId\":\"b0cdf473-3218-4e74-ba9d-f5db74f0a6eb\",\"ParticipationId\":\"b71abf0c-a210-4528-bdb9-599b549ffb5b\",\"DisplayName\":\"Thimeson\",\"Pack\":5,\"Rank\":1721,\"BoardAdjective\":\"Elderly\",\"BoardNoun\":\"Icecubes\",\"Lives\":6,\"Minions\":[{\"Own\":1,\"Enu\":260,\"Loc\":1,\"Lvl\":1,\"Hp\":{\"Perm\":1},\"At\":{\"Perm\":3},\"Abil\":[{\"Enu\":285,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":3},\"Pri\":3},{\"Own\":1,\"Enu\":239,\"Loc\":1,\"Poi\":{\"x\":1},\"Exp\":1,\"Lvl\":1,\"Hp\":{\"Perm\":5},\"At\":{\"Perm\":2},\"Abil\":[{\"Enu\":265,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":5},\"Pri\":3},{\"Own\":1,\"Enu\":272,\"Loc\":1,\"Poi\":{\"x\":2},\"Lvl\":1,\"Hp\":{\"Perm\":2},\"At\":{\"Perm\":1},\"Abil\":[{\"Enu\":298,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":1},\"Pri\":3},{\"Own\":1,\"Enu\":260,\"Loc\":1,\"Poi\":{\"x\":3},\"Lvl\":1,\"Hp\":{\"Perm\":1},\"At\":{\"Perm\":3},\"Abil\":[{\"Enu\":285,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":6},\"Pri\":3},{\"Own\":1,\"Enu\":260,\"Loc\":1,\"Poi\":{\"x\":4},\"Lvl\":1,\"Hp\":{\"Perm\":1},\"At\":{\"Perm\":3},\"Abil\":[{\"Enu\":285,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":10},\"Pri\":3}],\"Relics\":[null,null],\"Outcome\":1}],\"TurnEndTime\":\"2025-12-13T18:00:20.6577447Z\",\"MaxLives\":6,\"CurrentTurn\":3,\"ActivePlayerCount\":2,\"MaxPlayerCount\":2,\"TurnDuration\":90,\"Rank\":1721}",
+            "CreatedOn": "2025-12-13T17:58:50.663908+00:00",
+            "BuildChangeCount": 10
+        },
+        {
+            "Type": 2,
+            "Turn": 2,
+            "Request": null,
+            "Response": "{}",
+            "Build": null,
+            "Battle": null,
+            "Mode": null,
+            "CreatedOn": "2025-12-13T17:58:57.90057+00:00",
+            "BuildChangeCount": 11
+        },
+        {
+            "Type": 4,
+            "Turn": 3,
+            "Request": "{\"Data\":{\"BuildId\":\"7be326dc-8bce-4704-8b67-b89e62d93d26\",\"BoardHash\":-2017205969},\"Version\":43}",
+            "Response": "{\"Event\":{\"Event\":{\"Owner\":1},\"Owner\":1},\"Data\":{\"Seed\":1722565135,\"Hash\":-84952205}}",
+            "Build": null,
+            "Battle": null,
+            "Mode": null,
+            "CreatedOn": "2025-12-13T17:59:03.875192+00:00",
+            "BuildChangeCount": 12
+        },
+        {
+            "Type": 11,
+            "Turn": 3,
+            "Request": "{\"Data\":{\"BuildId\":\"7be326dc-8bce-4704-8b67-b89e62d93d26\",\"BoardHash\":-84952205},\"Version\":43}",
+            "Response": "{\"Event\":{\"Event\":{\"Owner\":1},\"Owner\":1},\"NewBoardState\":4,\"Data\":{\"Seed\":1201771344,\"Hash\":2121522698}}",
+            "Build": null,
+            "Battle": null,
+            "Mode": null,
+            "CreatedOn": "2025-12-13T18:00:20.736924+00:00",
+            "BuildChangeCount": 13
+        },
+        {
+            "Type": 0,
+            "Turn": 3,
+            "Request": null,
+            "Response": null,
+            "Build": "{\"Id\":\"7be326dc-8bce-4704-8b67-b89e62d93d26\",\"Bor\":{\"Id\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"UNC\":12,\"Sta\":5,\"LiMa\":6,\"Los\":3,\"LPM\":4,\"LoPs\":2,\"Rec\":1,\"Tur\":3,\"Go\":10,\"Ti\":2,\"BoCa\":99,\"Mins\":{\"Size\":{\"x\":5,\"y\":1},\"Items\":[null,null,null,null,null]},\"MiSC\":3,\"MSBo\":[],\"MiSh\":[{\"Own\":1,\"Enu\":234,\"Lvl\":1,\"Hp\":{\"Perm\":4},\"At\":{\"Perm\":3},\"Abil\":[{\"Enu\":260,\"Lvl\":1,\"Nat\":true}],\"Cosm\":69,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":9},\"Pri\":3},{\"Own\":1,\"Enu\":203,\"Lvl\":1,\"Hp\":{\"Perm\":2},\"At\":{\"Perm\":1},\"Abil\":[{\"Enu\":226,\"Lvl\":1,\"Nat\":true}],\"Cosm\":69,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":10},\"Pri\":3},{\"Own\":1,\"Enu\":177,\"Lvl\":1,\"Hp\":{\"Perm\":2},\"At\":{\"Perm\":5},\"Abil\":[{\"Enu\":192,\"Lvl\":1,\"Nat\":true}],\"Cosm\":69,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":11},\"Pri\":3}],\"SpSC\":1,\"SpSh\":[{\"Enu\":176,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":12},\"Pri\":3}],\"Adj\":\"Uninspired\",\"Nou\":\"Drivers\",\"PrOu\":2,\"PrEn\":[239,260,247,272,258],\"PrES2\":[{\"Enu\":258,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":1}},{\"Enu\":272,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":2}},{\"Enu\":247,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":3}},{\"Enu\":260,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":4}},{\"Enu\":239,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":5}}],\"SpPl\":[],\"Cosm\":69,\"Back\":27,\"Masc\":2,\"Entr\":2,\"Awar\":{\"Type\":10,\"PercentPosition\":0.0209,\"Year\":2025,\"Month\":8},\"Pack\":5,\"Rel\":{\"Size\":{\"x\":2,\"y\":1},\"Items\":[null,null]},\"Bul\":{},\"Hash\":2121522698},\"ChCo\":14}",
+            "Battle": "{\"Id\":\"e52e3991-9e48-4dd2-bc39-eb10bc6efcdc\",\"Seed\":-1432026213,\"Outcome\":2,\"ResolvedOn\":\"2025-12-13T18:00:24.3063836+00:00\",\"User\":{\"Id\":\"9fe7d3b3-dbde-4301-be99-a20fa1abf493\",\"DisplayName\":\"MajorMinecraft\"},\"UserBoard\":{\"Id\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"UNC\":12,\"Sta\":4,\"LiMa\":6,\"Los\":2,\"LPM\":4,\"LoPs\":1,\"Rec\":1,\"Tur\":3,\"Go\":10,\"Ti\":2,\"BoCa\":99,\"Mins\":{\"Size\":{\"x\":5,\"y\":1},\"Items\":[null,null,null,null,null]},\"MiSC\":3,\"MSBo\":[],\"MiSh\":[{\"Own\":1,\"Enu\":234,\"Lvl\":1,\"Hp\":{\"Perm\":4},\"At\":{\"Perm\":3},\"Abil\":[{\"Enu\":260,\"Lvl\":1,\"Nat\":true}],\"Cosm\":69,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":9},\"Pri\":3},{\"Own\":1,\"Enu\":203,\"Lvl\":1,\"Hp\":{\"Perm\":2},\"At\":{\"Perm\":1},\"Abil\":[{\"Enu\":226,\"Lvl\":1,\"Nat\":true}],\"Cosm\":69,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":10},\"Pri\":3},{\"Own\":1,\"Enu\":177,\"Lvl\":1,\"Hp\":{\"Perm\":2},\"At\":{\"Perm\":5},\"Abil\":[{\"Enu\":192,\"Lvl\":1,\"Nat\":true}],\"Cosm\":69,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":11},\"Pri\":3}],\"SpSC\":1,\"SpSh\":[{\"Enu\":176,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":12},\"Pri\":3}],\"Adj\":\"Uninspired\",\"Nou\":\"Drivers\",\"PrOu\":2,\"PrEn\":[260,239,272,260,260],\"PrES2\":[{\"Enu\":260,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":1}},{\"Enu\":260,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":2}},{\"Enu\":272,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":3}},{\"Enu\":239,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":4}},{\"Enu\":260,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":5}}],\"SpPl\":[],\"Cosm\":69,\"Back\":27,\"Masc\":2,\"Entr\":2,\"Awar\":{\"Type\":10,\"PercentPosition\":0.0209,\"Year\":2025,\"Month\":8},\"Pack\":5,\"Rel\":{\"Size\":{\"x\":2,\"y\":1},\"Items\":[null,null]},\"Bul\":{},\"Hash\":2121522698},\"Opponent\":{\"Id\":\"b0cdf473-3218-4e74-ba9d-f5db74f0a6eb\",\"DisplayName\":\"Thimeson\"},\"OpponentBoard\":{\"Id\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"UNC\":20,\"Sta\":4,\"LiMa\":6,\"LPM\":4,\"Vic\":2,\"Tur\":3,\"FuGo\":1,\"GoSp\":11,\"Rold\":1,\"Ti\":2,\"BoCa\":99,\"Mins\":{\"Size\":{\"x\":5,\"y\":1},\"Items\":[{\"Own\":1,\"Enu\":239,\"Loc\":1,\"Exp\":1,\"Lvl\":1,\"Hp\":{\"Perm\":5},\"At\":{\"Perm\":2},\"Abil\":[{\"Enu\":265,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":5},\"Pri\":3},{\"Own\":1,\"Enu\":260,\"Loc\":1,\"Poi\":{\"x\":1},\"Exp\":2,\"Lvl\":2,\"Hp\":{\"Perm\":3},\"At\":{\"Perm\":5},\"Abil\":[{\"Enu\":285,\"Lvl\":2,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":10},\"Pri\":3},{\"Own\":1,\"Enu\":247,\"Loc\":1,\"Poi\":{\"x\":2},\"Lvl\":1,\"Hp\":{\"Perm\":3},\"At\":{\"Perm\":3},\"Perk\":7,\"Abil\":[{\"Enu\":272,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Rwrd\":true,\"SpCT\":1,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":16},\"Pri\":3},{\"Own\":1,\"Enu\":272,\"Loc\":1,\"Poi\":{\"x\":3},\"Lvl\":1,\"Hp\":{\"Perm\":2},\"At\":{\"Perm\":1},\"Abil\":[{\"Enu\":298,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":1},\"Pri\":3},{\"Own\":1,\"Enu\":258,\"Loc\":1,\"Poi\":{\"x\":4},\"Lvl\":1,\"Hp\":{\"Perm\":2},\"At\":{\"Perm\":3},\"Abil\":[{\"Enu\":283,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":19},\"Pri\":3}]},\"MiSC\":3,\"MSBo\":[],\"MiSh\":[{\"Own\":1,\"Enu\":189,\"Lvl\":1,\"Hp\":{\"Perm\":4},\"At\":{\"Perm\":1},\"Abil\":[{\"Enu\":209,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":18},\"Pri\":3},{\"Own\":1,\"Enu\":184,\"Lvl\":1,\"Hp\":{\"Perm\":2},\"At\":{\"Perm\":3},\"Abil\":[{\"Enu\":204,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":17},\"Pri\":3}],\"SpSC\":1,\"SpSh\":[],\"Adj\":\"Elderly\",\"Nou\":\"Icecubes\",\"PrOu\":1,\"PrEn\":[],\"PrES2\":[{\"Enu\":260,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":3}},{\"Enu\":239,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":5}},{\"Enu\":272,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":1}},{\"Enu\":260,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":6}},{\"Enu\":260,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":10}}],\"MiSu\":2,\"SpPl\":[20],\"Cosm\":96,\"Back\":27,\"Masc\":17,\"Entr\":6,\"Awar\":{\"Type\":10,\"PercentPosition\":0.0035,\"Year\":2025,\"Month\":11},\"Pack\":5,\"Rel\":{\"Size\":{\"x\":2,\"y\":1},\"Items\":[null,null]},\"Bul\":{},\"Hash\":-689427812},\"EndResult\":-725981827}",
+            "Mode": null,
+            "CreatedOn": "2025-12-13T18:00:24.309084+00:00",
+            "BuildChangeCount": 14
+        },
+        {
+            "Type": 1,
+            "Turn": 3,
+            "Request": null,
+            "Response": null,
+            "Build": null,
+            "Battle": null,
+            "Mode": "{\"Opponents\":[{\"UserId\":\"b0cdf473-3218-4e74-ba9d-f5db74f0a6eb\",\"ParticipationId\":\"b71abf0c-a210-4528-bdb9-599b549ffb5b\",\"DisplayName\":\"Thimeson\",\"Pack\":5,\"Rank\":1721,\"BoardAdjective\":\"Elderly\",\"BoardNoun\":\"Icecubes\",\"Lives\":6,\"Minions\":[{\"Own\":1,\"Enu\":239,\"Loc\":1,\"Exp\":1,\"Lvl\":1,\"Hp\":{\"Perm\":5},\"At\":{\"Perm\":2},\"Abil\":[{\"Enu\":265,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":5},\"Pri\":3},{\"Own\":1,\"Enu\":260,\"Loc\":1,\"Poi\":{\"x\":1},\"Exp\":2,\"Lvl\":2,\"Hp\":{\"Perm\":3},\"At\":{\"Perm\":5},\"Abil\":[{\"Enu\":285,\"Lvl\":2,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":10},\"Pri\":3},{\"Own\":1,\"Enu\":247,\"Loc\":1,\"Poi\":{\"x\":2},\"Lvl\":1,\"Hp\":{\"Perm\":3},\"At\":{\"Perm\":3},\"Perk\":7,\"Abil\":[{\"Enu\":272,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Rwrd\":true,\"SpCT\":1,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":16},\"Pri\":3},{\"Own\":1,\"Enu\":272,\"Loc\":1,\"Poi\":{\"x\":3},\"Lvl\":1,\"Hp\":{\"Perm\":2},\"At\":{\"Perm\":1},\"Abil\":[{\"Enu\":298,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":1},\"Pri\":3},{\"Own\":1,\"Enu\":258,\"Loc\":1,\"Poi\":{\"x\":4},\"Lvl\":1,\"Hp\":{\"Perm\":2},\"At\":{\"Perm\":3},\"Abil\":[{\"Enu\":283,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":19},\"Pri\":3}],\"Relics\":[null,null],\"Outcome\":1}],\"TurnEndTime\":\"2025-12-13T18:01:54.3098024Z\",\"MaxLives\":6,\"CurrentTurn\":4,\"ActivePlayerCount\":2,\"MaxPlayerCount\":2,\"TurnDuration\":90,\"Rank\":1721}",
+            "CreatedOn": "2025-12-13T18:00:24.31825+00:00",
+            "BuildChangeCount": 15
+        },
+        {
+            "Type": 2,
+            "Turn": 3,
+            "Request": null,
+            "Response": "{}",
+            "Build": null,
+            "Battle": null,
+            "Mode": null,
+            "CreatedOn": "2025-12-13T18:00:31.728893+00:00",
+            "BuildChangeCount": 16
+        },
+        {
+            "Type": 4,
+            "Turn": 4,
+            "Request": "{\"Data\":{\"BuildId\":\"7be326dc-8bce-4704-8b67-b89e62d93d26\",\"BoardHash\":2121522698},\"Version\":43}",
+            "Response": "{\"Event\":{\"Event\":{\"Owner\":1},\"Owner\":1},\"Data\":{\"Seed\":883069011,\"Hash\":189574527}}",
+            "Build": null,
+            "Battle": null,
+            "Mode": null,
+            "CreatedOn": "2025-12-13T18:00:37.70013+00:00",
+            "BuildChangeCount": 17
+        },
+        {
+            "Type": 11,
+            "Turn": 4,
+            "Request": "{\"Data\":{\"BuildId\":\"7be326dc-8bce-4704-8b67-b89e62d93d26\",\"BoardHash\":189574527},\"Version\":43}",
+            "Response": "{\"Event\":{\"Event\":{\"Owner\":1},\"Owner\":1},\"NewBoardState\":4,\"Data\":{\"Seed\":946095575,\"Hash\":-1731017342}}",
+            "Build": null,
+            "Battle": null,
+            "Mode": null,
+            "CreatedOn": "2025-12-13T18:01:54.392601+00:00",
+            "BuildChangeCount": 18
+        },
+        {
+            "Type": 0,
+            "Turn": 4,
+            "Request": null,
+            "Response": null,
+            "Build": "{\"Id\":\"7be326dc-8bce-4704-8b67-b89e62d93d26\",\"Bor\":{\"Id\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"UNC\":16,\"Sta\":5,\"LiMa\":6,\"Los\":4,\"LPM\":4,\"LoPs\":3,\"Rec\":1,\"Tur\":4,\"Go\":10,\"Ti\":2,\"BoCa\":99,\"Mins\":{\"Size\":{\"x\":5,\"y\":1},\"Items\":[null,null,null,null,null]},\"MiSC\":3,\"MSBo\":[],\"MiSh\":[{\"Own\":1,\"Enu\":220,\"Lvl\":1,\"Hp\":{\"Perm\":2},\"At\":{\"Perm\":2},\"Abil\":[{\"Enu\":246,\"Lvl\":1,\"Nat\":true}],\"Cosm\":69,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":15},\"Pri\":3},{\"Own\":1,\"Enu\":189,\"Lvl\":1,\"Hp\":{\"Perm\":4},\"At\":{\"Perm\":1},\"Abil\":[{\"Enu\":209,\"Lvl\":1,\"Nat\":true}],\"Cosm\":69,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":14},\"Pri\":3},{\"Own\":1,\"Enu\":239,\"Lvl\":1,\"Hp\":{\"Perm\":4},\"At\":{\"Perm\":1},\"Abil\":[{\"Enu\":265,\"Lvl\":1,\"Nat\":true}],\"Cosm\":69,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":13},\"Pri\":3}],\"SpSC\":1,\"SpSh\":[{\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":16},\"Pri\":3}],\"Adj\":\"Uninspired\",\"Nou\":\"Drivers\",\"PrOu\":2,\"PrEn\":[263,260,247,239,258],\"PrES2\":[{\"Enu\":258,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":1}},{\"Enu\":239,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":2}},{\"Enu\":247,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":3}},{\"Enu\":260,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":4}},{\"Enu\":263,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":5}}],\"SpPl\":[],\"Cosm\":69,\"Back\":27,\"Masc\":2,\"Entr\":2,\"Awar\":{\"Type\":10,\"PercentPosition\":0.0209,\"Year\":2025,\"Month\":8},\"Pack\":5,\"Rel\":{\"Size\":{\"x\":2,\"y\":1},\"Items\":[null,null]},\"Bul\":{},\"Hash\":-1731017342},\"ChCo\":19}",
+            "Battle": "{\"Id\":\"f06c92c3-687e-4d4a-92dc-cdcebeedcefe\",\"Seed\":19821228,\"Outcome\":2,\"ResolvedOn\":\"2025-12-13T18:01:54.4455657+00:00\",\"User\":{\"Id\":\"9fe7d3b3-dbde-4301-be99-a20fa1abf493\",\"DisplayName\":\"MajorMinecraft\"},\"UserBoard\":{\"Id\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"UNC\":16,\"Sta\":4,\"LiMa\":6,\"Los\":3,\"LPM\":4,\"LoPs\":2,\"Rec\":1,\"Tur\":4,\"Go\":10,\"Ti\":2,\"BoCa\":99,\"Mins\":{\"Size\":{\"x\":5,\"y\":1},\"Items\":[null,null,null,null,null]},\"MiSC\":3,\"MSBo\":[],\"MiSh\":[{\"Own\":1,\"Enu\":220,\"Lvl\":1,\"Hp\":{\"Perm\":2},\"At\":{\"Perm\":2},\"Abil\":[{\"Enu\":246,\"Lvl\":1,\"Nat\":true}],\"Cosm\":69,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":15},\"Pri\":3},{\"Own\":1,\"Enu\":189,\"Lvl\":1,\"Hp\":{\"Perm\":4},\"At\":{\"Perm\":1},\"Abil\":[{\"Enu\":209,\"Lvl\":1,\"Nat\":true}],\"Cosm\":69,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":14},\"Pri\":3},{\"Own\":1,\"Enu\":239,\"Lvl\":1,\"Hp\":{\"Perm\":4},\"At\":{\"Perm\":1},\"Abil\":[{\"Enu\":265,\"Lvl\":1,\"Nat\":true}],\"Cosm\":69,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":13},\"Pri\":3}],\"SpSC\":1,\"SpSh\":[{\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":16},\"Pri\":3}],\"Adj\":\"Uninspired\",\"Nou\":\"Drivers\",\"PrOu\":2,\"PrEn\":[239,260,247,272,258],\"PrES2\":[{\"Enu\":258,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":1}},{\"Enu\":272,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":2}},{\"Enu\":247,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":3}},{\"Enu\":260,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":4}},{\"Enu\":239,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":5}}],\"SpPl\":[],\"Cosm\":69,\"Back\":27,\"Masc\":2,\"Entr\":2,\"Awar\":{\"Type\":10,\"PercentPosition\":0.0209,\"Year\":2025,\"Month\":8},\"Pack\":5,\"Rel\":{\"Size\":{\"x\":2,\"y\":1},\"Items\":[null,null]},\"Bul\":{},\"Hash\":-1731017342},\"Opponent\":{\"Id\":\"b0cdf473-3218-4e74-ba9d-f5db74f0a6eb\",\"DisplayName\":\"Thimeson\"},\"OpponentBoard\":{\"Id\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"UNC\":36,\"Sta\":4,\"LiMa\":6,\"LPM\":4,\"Vic\":3,\"Tur\":4,\"GoSp\":12,\"Rold\":3,\"Ti\":2,\"BoCa\":99,\"Mins\":{\"Size\":{\"x\":5,\"y\":1},\"Items\":[{\"Own\":1,\"Enu\":263,\"Loc\":1,\"Lvl\":1,\"Hp\":{\"Perm\":3},\"At\":{\"Perm\":3},\"Abil\":[{\"Enu\":288,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":26},\"Pri\":3},{\"Own\":1,\"Enu\":260,\"Loc\":1,\"Poi\":{\"x\":1},\"Exp\":2,\"Lvl\":2,\"Hp\":{\"Perm\":3},\"At\":{\"Perm\":5},\"Abil\":[{\"Enu\":285,\"Lvl\":2,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":10},\"Pri\":3},{\"Own\":1,\"Enu\":247,\"Loc\":1,\"Poi\":{\"x\":2},\"Lvl\":1,\"Hp\":{\"Perm\":5},\"At\":{\"Perm\":5},\"Perk\":7,\"Abil\":[{\"Enu\":272,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Rwrd\":true,\"SpCT\":2,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":16},\"Pri\":3},{\"Own\":1,\"Enu\":239,\"Loc\":1,\"Poi\":{\"x\":3},\"Exp\":1,\"Lvl\":1,\"Hp\":{\"Perm\":5},\"At\":{\"Perm\":2},\"Abil\":[{\"Enu\":265,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":5},\"Pri\":3},{\"Own\":1,\"Enu\":258,\"Loc\":1,\"Poi\":{\"x\":4},\"Lvl\":1,\"Hp\":{\"Perm\":2},\"At\":{\"Perm\":3},\"Abil\":[{\"Enu\":283,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":19},\"Pri\":3}]},\"MiSC\":3,\"MSBo\":[],\"MiSh\":[{\"Own\":1,\"Enu\":220,\"Lvl\":1,\"Hp\":{\"Perm\":2},\"At\":{\"Perm\":2},\"Abil\":[{\"Enu\":246,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":34},\"Pri\":3},{\"Own\":1,\"Enu\":177,\"Lvl\":1,\"Hp\":{\"Perm\":2},\"At\":{\"Perm\":5},\"Abil\":[{\"Enu\":192,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":35},\"Pri\":3},{\"Own\":1,\"Enu\":239,\"Lvl\":1,\"Hp\":{\"Perm\":4},\"At\":{\"Perm\":1},\"Abil\":[{\"Enu\":265,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":33},\"Pri\":3,\"Fro\":true}],\"SpSC\":1,\"SpSh\":[],\"Adj\":\"Elderly\",\"Nou\":\"Icecubes\",\"PrOu\":1,\"PrEn\":[],\"PrES2\":[{\"Enu\":239,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":5}},{\"Enu\":260,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":10}},{\"Enu\":247,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":16}},{\"Enu\":272,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":1}},{\"Enu\":258,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":19}}],\"MiSu\":1,\"SpPl\":[0,0],\"Cosm\":96,\"Back\":27,\"Masc\":17,\"Entr\":6,\"Awar\":{\"Type\":10,\"PercentPosition\":0.0035,\"Year\":2025,\"Month\":11},\"Pack\":5,\"Rel\":{\"Size\":{\"x\":2,\"y\":1},\"Items\":[null,null]},\"Bul\":{},\"Hash\":-1653111699},\"EndResult\":1735265158}",
+            "Mode": null,
+            "CreatedOn": "2025-12-13T18:01:54.448331+00:00",
+            "BuildChangeCount": 19
+        },
+        {
+            "Type": 1,
+            "Turn": 4,
+            "Request": null,
+            "Response": null,
+            "Build": null,
+            "Battle": null,
+            "Mode": "{\"Opponents\":[{\"UserId\":\"b0cdf473-3218-4e74-ba9d-f5db74f0a6eb\",\"ParticipationId\":\"b71abf0c-a210-4528-bdb9-599b549ffb5b\",\"DisplayName\":\"Thimeson\",\"Pack\":5,\"Rank\":1721,\"BoardAdjective\":\"Elderly\",\"BoardNoun\":\"Icecubes\",\"Lives\":6,\"Minions\":[{\"Own\":1,\"Enu\":263,\"Loc\":1,\"Lvl\":1,\"Hp\":{\"Perm\":3},\"At\":{\"Perm\":3},\"Abil\":[{\"Enu\":288,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":26},\"Pri\":3},{\"Own\":1,\"Enu\":260,\"Loc\":1,\"Poi\":{\"x\":1},\"Exp\":2,\"Lvl\":2,\"Hp\":{\"Perm\":3},\"At\":{\"Perm\":5},\"Abil\":[{\"Enu\":285,\"Lvl\":2,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":10},\"Pri\":3},{\"Own\":1,\"Enu\":247,\"Loc\":1,\"Poi\":{\"x\":2},\"Lvl\":1,\"Hp\":{\"Perm\":5},\"At\":{\"Perm\":5},\"Perk\":7,\"Abil\":[{\"Enu\":272,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Rwrd\":true,\"SpCT\":2,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":16},\"Pri\":3},{\"Own\":1,\"Enu\":239,\"Loc\":1,\"Poi\":{\"x\":3},\"Exp\":1,\"Lvl\":1,\"Hp\":{\"Perm\":5},\"At\":{\"Perm\":2},\"Abil\":[{\"Enu\":265,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":5},\"Pri\":3},{\"Own\":1,\"Enu\":258,\"Loc\":1,\"Poi\":{\"x\":4},\"Lvl\":1,\"Hp\":{\"Perm\":2},\"At\":{\"Perm\":3},\"Abil\":[{\"Enu\":283,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":19},\"Pri\":3}],\"Relics\":[null,null],\"Outcome\":1}],\"TurnEndTime\":\"2025-12-13T18:03:24.4490624Z\",\"MaxLives\":6,\"CurrentTurn\":5,\"ActivePlayerCount\":2,\"MaxPlayerCount\":2,\"TurnDuration\":90,\"Rank\":1721}",
+            "CreatedOn": "2025-12-13T18:01:54.456077+00:00",
+            "BuildChangeCount": 20
+        },
+        {
+            "Type": 2,
+            "Turn": 4,
+            "Request": null,
+            "Response": "{}",
+            "Build": null,
+            "Battle": null,
+            "Mode": null,
+            "CreatedOn": "2025-12-13T18:02:01.894857+00:00",
+            "BuildChangeCount": 21
+        },
+        {
+            "Type": 4,
+            "Turn": 5,
+            "Request": "{\"Data\":{\"BuildId\":\"7be326dc-8bce-4704-8b67-b89e62d93d26\",\"BoardHash\":-1731017342},\"Version\":43}",
+            "Response": "{\"Event\":{\"Event\":{\"Owner\":1},\"Owner\":1},\"Data\":{\"Seed\":1345505330,\"Hash\":930116393}}",
+            "Build": null,
+            "Battle": null,
+            "Mode": null,
+            "CreatedOn": "2025-12-13T18:02:07.907549+00:00",
+            "BuildChangeCount": 22
+        },
+        {
+            "Type": 11,
+            "Turn": 5,
+            "Request": "{\"Data\":{\"BuildId\":\"7be326dc-8bce-4704-8b67-b89e62d93d26\",\"BoardHash\":930116393},\"Version\":43}",
+            "Response": "{\"Event\":{\"Event\":{\"Owner\":1},\"Owner\":1},\"NewBoardState\":4,\"Data\":{\"Seed\":2122899099,\"Hash\":-517205123}}",
+            "Build": null,
+            "Battle": null,
+            "Mode": null,
+            "CreatedOn": "2025-12-13T18:03:24.538465+00:00",
+            "BuildChangeCount": 23
+        },
+        {
+            "Type": 0,
+            "Turn": 5,
+            "Request": null,
+            "Response": null,
+            "Build": "{\"Id\":\"7be326dc-8bce-4704-8b67-b89e62d93d26\",\"Bor\":{\"Id\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"UNC\":22,\"Sta\":5,\"LiMa\":6,\"Los\":5,\"LPM\":4,\"LoPs\":4,\"Rec\":1,\"Tur\":5,\"Go\":10,\"Ti\":3,\"BoCa\":99,\"Mins\":{\"Size\":{\"x\":5,\"y\":1},\"Items\":[null,null,null,null,null]},\"MiSC\":4,\"MSBo\":[],\"MiSh\":[{\"Own\":1,\"Enu\":245,\"Lvl\":1,\"Hp\":{\"Perm\":4},\"At\":{\"Perm\":2},\"Abil\":[{\"Enu\":270,\"Lvl\":1,\"Nat\":true}],\"Cosm\":69,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":19},\"Pri\":3},{\"Own\":1,\"Enu\":203,\"Lvl\":1,\"Hp\":{\"Perm\":2},\"At\":{\"Perm\":1},\"Abil\":[{\"Enu\":226,\"Lvl\":1,\"Nat\":true}],\"Cosm\":69,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":17},\"Pri\":3},{\"Own\":1,\"Enu\":177,\"Lvl\":1,\"Hp\":{\"Perm\":2},\"At\":{\"Perm\":5},\"Abil\":[{\"Enu\":192,\"Lvl\":1,\"Nat\":true}],\"Cosm\":69,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":18},\"Pri\":3},{\"Own\":1,\"Enu\":258,\"Lvl\":1,\"Hp\":{\"Perm\":2},\"At\":{\"Perm\":3},\"Abil\":[{\"Enu\":283,\"Lvl\":1,\"Nat\":true}],\"Cosm\":69,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":20},\"Pri\":3}],\"SpSC\":2,\"SpSh\":[{\"Enu\":1,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":21},\"Pri\":3},{\"Enu\":109,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":22},\"Pri\":3}],\"Adj\":\"Uninspired\",\"Nou\":\"Drivers\",\"PrOu\":2,\"PrEn\":[245,258,260,192,247],\"PrES2\":[{\"Enu\":247,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":1}},{\"Enu\":192,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":2}},{\"Enu\":260,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":3}},{\"Enu\":258,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":4}},{\"Enu\":245,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":5}}],\"SpPl\":[],\"Cosm\":69,\"Back\":27,\"Masc\":2,\"Entr\":2,\"Awar\":{\"Type\":10,\"PercentPosition\":0.0209,\"Year\":2025,\"Month\":8},\"Pack\":5,\"Rel\":{\"Size\":{\"x\":2,\"y\":1},\"Items\":[null,null]},\"Bul\":{},\"Hash\":-517205123},\"ChCo\":24}",
+            "Battle": "{\"Id\":\"056681b9-6413-46e3-abb7-dac937910027\",\"Seed\":-177463777,\"Outcome\":2,\"ResolvedOn\":\"2025-12-13T18:03:28.3150112+00:00\",\"User\":{\"Id\":\"9fe7d3b3-dbde-4301-be99-a20fa1abf493\",\"DisplayName\":\"MajorMinecraft\"},\"UserBoard\":{\"Id\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"UNC\":22,\"Sta\":4,\"LiMa\":6,\"Los\":4,\"LPM\":4,\"LoPs\":3,\"Rec\":1,\"Tur\":5,\"Go\":10,\"Ti\":3,\"BoCa\":99,\"Mins\":{\"Size\":{\"x\":5,\"y\":1},\"Items\":[null,null,null,null,null]},\"MiSC\":4,\"MSBo\":[],\"MiSh\":[{\"Own\":1,\"Enu\":245,\"Lvl\":1,\"Hp\":{\"Perm\":4},\"At\":{\"Perm\":2},\"Abil\":[{\"Enu\":270,\"Lvl\":1,\"Nat\":true}],\"Cosm\":69,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":19},\"Pri\":3},{\"Own\":1,\"Enu\":203,\"Lvl\":1,\"Hp\":{\"Perm\":2},\"At\":{\"Perm\":1},\"Abil\":[{\"Enu\":226,\"Lvl\":1,\"Nat\":true}],\"Cosm\":69,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":17},\"Pri\":3},{\"Own\":1,\"Enu\":177,\"Lvl\":1,\"Hp\":{\"Perm\":2},\"At\":{\"Perm\":5},\"Abil\":[{\"Enu\":192,\"Lvl\":1,\"Nat\":true}],\"Cosm\":69,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":18},\"Pri\":3},{\"Own\":1,\"Enu\":258,\"Lvl\":1,\"Hp\":{\"Perm\":2},\"At\":{\"Perm\":3},\"Abil\":[{\"Enu\":283,\"Lvl\":1,\"Nat\":true}],\"Cosm\":69,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":20},\"Pri\":3}],\"SpSC\":2,\"SpSh\":[{\"Enu\":1,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":21},\"Pri\":3},{\"Enu\":109,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":22},\"Pri\":3}],\"Adj\":\"Uninspired\",\"Nou\":\"Drivers\",\"PrOu\":2,\"PrEn\":[263,260,247,239,258],\"PrES2\":[{\"Enu\":258,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":1}},{\"Enu\":239,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":2}},{\"Enu\":247,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":3}},{\"Enu\":260,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":4}},{\"Enu\":263,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":5}}],\"SpPl\":[],\"Cosm\":69,\"Back\":27,\"Masc\":2,\"Entr\":2,\"Awar\":{\"Type\":10,\"PercentPosition\":0.0209,\"Year\":2025,\"Month\":8},\"Pack\":5,\"Rel\":{\"Size\":{\"x\":2,\"y\":1},\"Items\":[null,null]},\"Bul\":{},\"Hash\":-517205123},\"Opponent\":{\"Id\":\"b0cdf473-3218-4e74-ba9d-f5db74f0a6eb\",\"DisplayName\":\"Thimeson\"},\"OpponentBoard\":{\"Id\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"UNC\":64,\"Sta\":4,\"LiMa\":6,\"LPM\":4,\"Vic\":4,\"Tur\":5,\"GoSp\":13,\"Rold\":4,\"Ti\":3,\"BoCa\":99,\"Mins\":{\"Size\":{\"x\":5,\"y\":1},\"Items\":[{\"Own\":1,\"Enu\":245,\"Loc\":1,\"Exp\":1,\"Lvl\":1,\"Hp\":{\"Perm\":5},\"At\":{\"Perm\":3},\"Abil\":[{\"Enu\":270,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":44},\"Pri\":3},{\"Own\":1,\"Enu\":258,\"Loc\":1,\"Poi\":{\"x\":1},\"Lvl\":1,\"Hp\":{\"Perm\":2},\"At\":{\"Perm\":3},\"Abil\":[{\"Enu\":283,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":19},\"Pri\":3},{\"Own\":1,\"Enu\":260,\"Loc\":1,\"Poi\":{\"x\":2},\"Exp\":2,\"Lvl\":2,\"Hp\":{\"Perm\":3},\"At\":{\"Perm\":5},\"Abil\":[{\"Enu\":285,\"Lvl\":2,\"Nat\":true,\"TrCo\":1}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":10},\"Pri\":3},{\"Own\":1,\"Enu\":192,\"Loc\":1,\"Poi\":{\"x\":3},\"Lvl\":1,\"Hp\":{\"Perm\":8},\"At\":{\"Perm\":2},\"Abil\":[{\"Enu\":212,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Rwrd\":true,\"HrtC\":1,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":43},\"Pri\":3},{\"Own\":1,\"Enu\":247,\"Loc\":1,\"Poi\":{\"x\":4},\"Lvl\":1,\"Hp\":{\"Perm\":6},\"At\":{\"Perm\":7},\"Perk\":7,\"Abil\":[{\"Enu\":272,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Rwrd\":true,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":16},\"Pri\":3}]},\"MiSC\":4,\"MSBo\":[],\"MiSh\":[{\"Own\":1,\"Enu\":245,\"Lvl\":1,\"Hp\":{\"Perm\":4},\"At\":{\"Perm\":2},\"Abil\":[{\"Enu\":270,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":54},\"Pri\":3,\"Fro\":true,\"WFro\":true},{\"Own\":1,\"Enu\":228,\"Lvl\":1,\"Hp\":{\"Perm\":3},\"At\":{\"Perm\":2},\"Abil\":[{\"Enu\":254,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":62},\"Pri\":3},{\"Own\":1,\"Enu\":264,\"Lvl\":1,\"Hp\":{\"Perm\":3},\"At\":{\"Perm\":3},\"Abil\":[{\"Enu\":289,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":63},\"Pri\":3},{\"Own\":1,\"Enu\":191,\"Lvl\":1,\"Hp\":{\"Perm\":4},\"At\":{\"Perm\":1},\"Abil\":[{\"Enu\":211,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":64},\"Pri\":3}],\"SpSC\":2,\"SpSh\":[{\"Enu\":1,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":60},\"Pri\":3,\"Fro\":true,\"WFro\":true},{\"Enu\":72,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":61},\"Pri\":3,\"Fro\":true,\"WFro\":true}],\"Adj\":\"Elderly\",\"Nou\":\"Icecubes\",\"PrOu\":1,\"PrEn\":[],\"PrES2\":[{\"Enu\":263,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":26}},{\"Enu\":260,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":10}},{\"Enu\":247,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":16}},{\"Enu\":239,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":5}},{\"Enu\":258,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":19}}],\"MiSu\":2,\"SpPl\":[],\"Cosm\":96,\"Back\":27,\"Masc\":17,\"Entr\":6,\"Awar\":{\"Type\":10,\"PercentPosition\":0.0035,\"Year\":2025,\"Month\":11},\"Pack\":5,\"Rel\":{\"Size\":{\"x\":2,\"y\":1},\"Items\":[null,null]},\"Bul\":{},\"Hash\":-831606317},\"EndResult\":-909604771}",
+            "Mode": null,
+            "CreatedOn": "2025-12-13T18:03:28.317607+00:00",
+            "BuildChangeCount": 24
+        },
+        {
+            "Type": 1,
+            "Turn": 5,
+            "Request": null,
+            "Response": null,
+            "Build": null,
+            "Battle": null,
+            "Mode": "{\"Opponents\":[{\"UserId\":\"b0cdf473-3218-4e74-ba9d-f5db74f0a6eb\",\"ParticipationId\":\"b71abf0c-a210-4528-bdb9-599b549ffb5b\",\"DisplayName\":\"Thimeson\",\"Pack\":5,\"Rank\":1721,\"BoardAdjective\":\"Elderly\",\"BoardNoun\":\"Icecubes\",\"Lives\":6,\"Minions\":[{\"Own\":1,\"Enu\":245,\"Loc\":1,\"Exp\":1,\"Lvl\":1,\"Hp\":{\"Perm\":5},\"At\":{\"Perm\":3},\"Abil\":[{\"Enu\":270,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":44},\"Pri\":3},{\"Own\":1,\"Enu\":258,\"Loc\":1,\"Poi\":{\"x\":1},\"Lvl\":1,\"Hp\":{\"Perm\":2},\"At\":{\"Perm\":3},\"Abil\":[{\"Enu\":283,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":19},\"Pri\":3},{\"Own\":1,\"Enu\":260,\"Loc\":1,\"Poi\":{\"x\":2},\"Exp\":2,\"Lvl\":2,\"Hp\":{\"Perm\":3},\"At\":{\"Perm\":5},\"Abil\":[{\"Enu\":285,\"Lvl\":2,\"Nat\":true,\"TrCo\":1}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":10},\"Pri\":3},{\"Own\":1,\"Enu\":192,\"Loc\":1,\"Poi\":{\"x\":3},\"Lvl\":1,\"Hp\":{\"Perm\":8},\"At\":{\"Perm\":2},\"Abil\":[{\"Enu\":212,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Rwrd\":true,\"HrtC\":1,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":43},\"Pri\":3},{\"Own\":1,\"Enu\":247,\"Loc\":1,\"Poi\":{\"x\":4},\"Lvl\":1,\"Hp\":{\"Perm\":6},\"At\":{\"Perm\":7},\"Perk\":7,\"Abil\":[{\"Enu\":272,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Rwrd\":true,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":16},\"Pri\":3}],\"Relics\":[null,null],\"Outcome\":1}],\"TurnEndTime\":\"2025-12-13T18:04:58.3184816Z\",\"MaxLives\":6,\"CurrentTurn\":6,\"ActivePlayerCount\":2,\"MaxPlayerCount\":2,\"TurnDuration\":90,\"Rank\":1721}",
+            "CreatedOn": "2025-12-13T18:03:28.327296+00:00",
+            "BuildChangeCount": 25
+        },
+        {
+            "Type": 2,
+            "Turn": 5,
+            "Request": null,
+            "Response": "{}",
+            "Build": null,
+            "Battle": null,
+            "Mode": null,
+            "CreatedOn": "2025-12-13T18:03:35.756469+00:00",
+            "BuildChangeCount": 26
+        },
+        {
+            "Type": 4,
+            "Turn": 6,
+            "Request": "{\"Data\":{\"BuildId\":\"7be326dc-8bce-4704-8b67-b89e62d93d26\",\"BoardHash\":-517205123},\"Version\":43}",
+            "Response": "{\"Event\":{\"Event\":{\"Owner\":1},\"Owner\":1},\"Data\":{\"Seed\":2025699985,\"Hash\":242518455}}",
+            "Build": null,
+            "Battle": null,
+            "Mode": null,
+            "CreatedOn": "2025-12-13T18:03:41.74398+00:00",
+            "BuildChangeCount": 27
+        },
+        {
+            "Type": 11,
+            "Turn": 6,
+            "Request": "{\"Data\":{\"BuildId\":\"7be326dc-8bce-4704-8b67-b89e62d93d26\",\"BoardHash\":242518455},\"Version\":43}",
+            "Response": "{\"Event\":{\"Event\":{\"Owner\":1},\"Owner\":1},\"NewBoardState\":4,\"Data\":{\"Seed\":845289021,\"Hash\":2083388609}}",
+            "Build": null,
+            "Battle": null,
+            "Mode": null,
+            "CreatedOn": "2025-12-13T18:04:58.40403+00:00",
+            "BuildChangeCount": 28
+        },
+        {
+            "Type": 0,
+            "Turn": 6,
+            "Request": null,
+            "Response": null,
+            "Build": "{\"Id\":\"7be326dc-8bce-4704-8b67-b89e62d93d26\",\"Bor\":{\"Id\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"UNC\":28,\"Sta\":5,\"LiMa\":6,\"Los\":6,\"LPM\":4,\"LoPs\":5,\"Rec\":1,\"Tur\":6,\"Go\":10,\"Ti\":3,\"BoCa\":99,\"Mins\":{\"Size\":{\"x\":5,\"y\":1},\"Items\":[null,null,null,null,null]},\"MiSC\":4,\"MSBo\":[],\"MiSh\":[{\"Own\":1,\"Enu\":245,\"Lvl\":1,\"Hp\":{\"Perm\":4},\"At\":{\"Perm\":2},\"Abil\":[{\"Enu\":270,\"Lvl\":1,\"Nat\":true}],\"Cosm\":69,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":23},\"Pri\":3},{\"Own\":1,\"Enu\":173,\"Lvl\":1,\"Hp\":{\"Perm\":4},\"At\":{\"Perm\":3},\"Abil\":[{\"Enu\":188,\"Lvl\":1,\"Nat\":true}],\"Cosm\":69,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":25},\"Pri\":3},{\"Own\":1,\"Enu\":184,\"Lvl\":1,\"Hp\":{\"Perm\":2},\"At\":{\"Perm\":3},\"Abil\":[{\"Enu\":204,\"Lvl\":1,\"Nat\":true}],\"Cosm\":69,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":24},\"Pri\":3},{\"Own\":1,\"Enu\":232,\"Lvl\":1,\"Hp\":{\"Perm\":2},\"At\":{\"Perm\":2},\"Abil\":[{\"Enu\":258,\"Lvl\":1,\"Nat\":true}],\"Cosm\":69,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":26},\"Pri\":3}],\"SpSC\":2,\"SpSh\":[{\"Enu\":109,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":27},\"Pri\":3},{\"Enu\":24,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":28},\"Pri\":3}],\"Adj\":\"Uninspired\",\"Nou\":\"Drivers\",\"PrOu\":2,\"PrEn\":[245,245,260,192,247],\"PrES2\":[{\"Enu\":247,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":1}},{\"Enu\":192,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":2}},{\"Enu\":260,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":3}},{\"Enu\":245,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":4}},{\"Enu\":245,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":5}}],\"SpPl\":[],\"Cosm\":69,\"Back\":27,\"Masc\":2,\"Entr\":2,\"Awar\":{\"Type\":10,\"PercentPosition\":0.0209,\"Year\":2025,\"Month\":8},\"Pack\":5,\"Rel\":{\"Size\":{\"x\":2,\"y\":1},\"Items\":[null,null]},\"Bul\":{},\"Hash\":2083388609},\"ChCo\":29}",
+            "Battle": "{\"Id\":\"8b766531-5bab-4e9a-894f-993fd86e7f03\",\"Seed\":732140517,\"Outcome\":2,\"ResolvedOn\":\"2025-12-13T18:04:58.461863+00:00\",\"User\":{\"Id\":\"9fe7d3b3-dbde-4301-be99-a20fa1abf493\",\"DisplayName\":\"MajorMinecraft\"},\"UserBoard\":{\"Id\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"UNC\":28,\"Sta\":4,\"LiMa\":6,\"Los\":5,\"LPM\":4,\"LoPs\":4,\"Rec\":1,\"Tur\":6,\"Go\":10,\"Ti\":3,\"BoCa\":99,\"Mins\":{\"Size\":{\"x\":5,\"y\":1},\"Items\":[null,null,null,null,null]},\"MiSC\":4,\"MSBo\":[],\"MiSh\":[{\"Own\":1,\"Enu\":245,\"Lvl\":1,\"Hp\":{\"Perm\":4},\"At\":{\"Perm\":2},\"Abil\":[{\"Enu\":270,\"Lvl\":1,\"Nat\":true}],\"Cosm\":69,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":23},\"Pri\":3},{\"Own\":1,\"Enu\":173,\"Lvl\":1,\"Hp\":{\"Perm\":4},\"At\":{\"Perm\":3},\"Abil\":[{\"Enu\":188,\"Lvl\":1,\"Nat\":true}],\"Cosm\":69,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":25},\"Pri\":3},{\"Own\":1,\"Enu\":184,\"Lvl\":1,\"Hp\":{\"Perm\":2},\"At\":{\"Perm\":3},\"Abil\":[{\"Enu\":204,\"Lvl\":1,\"Nat\":true}],\"Cosm\":69,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":24},\"Pri\":3},{\"Own\":1,\"Enu\":232,\"Lvl\":1,\"Hp\":{\"Perm\":2},\"At\":{\"Perm\":2},\"Abil\":[{\"Enu\":258,\"Lvl\":1,\"Nat\":true}],\"Cosm\":69,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":26},\"Pri\":3}],\"SpSC\":2,\"SpSh\":[{\"Enu\":109,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":27},\"Pri\":3},{\"Enu\":24,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":28},\"Pri\":3}],\"Adj\":\"Uninspired\",\"Nou\":\"Drivers\",\"PrOu\":2,\"PrEn\":[245,258,260,192,247],\"PrES2\":[{\"Enu\":247,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":1}},{\"Enu\":192,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":2}},{\"Enu\":260,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":3}},{\"Enu\":258,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":4}},{\"Enu\":245,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":5}}],\"SpPl\":[],\"Cosm\":69,\"Back\":27,\"Masc\":2,\"Entr\":2,\"Awar\":{\"Type\":10,\"PercentPosition\":0.0209,\"Year\":2025,\"Month\":8},\"Pack\":5,\"Rel\":{\"Size\":{\"x\":2,\"y\":1},\"Items\":[null,null]},\"Bul\":{},\"Hash\":2083388609},\"Opponent\":{\"Id\":\"b0cdf473-3218-4e74-ba9d-f5db74f0a6eb\",\"DisplayName\":\"Thimeson\"},\"OpponentBoard\":{\"Id\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"UNC\":79,\"Sta\":4,\"LiMa\":6,\"LPM\":4,\"Vic\":5,\"Tur\":6,\"FuGo\":3,\"GoSp\":11,\"Rold\":2,\"Ti\":3,\"BoCa\":99,\"Mins\":{\"Size\":{\"x\":5,\"y\":1},\"Items\":[{\"Own\":1,\"Enu\":245,\"Loc\":1,\"Exp\":1,\"Lvl\":1,\"Hp\":{\"Perm\":6},\"At\":{\"Perm\":4},\"Abil\":[{\"Enu\":270,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"SpCT\":1,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":44},\"Pri\":3},{\"Own\":1,\"Enu\":245,\"Loc\":1,\"Poi\":{\"x\":1},\"Lvl\":1,\"Hp\":{\"Perm\":4},\"At\":{\"Perm\":2},\"Abil\":[{\"Enu\":270,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":54},\"Pri\":3,\"WFro\":true},{\"Own\":1,\"Enu\":260,\"Loc\":1,\"Poi\":{\"x\":2},\"Exp\":2,\"Lvl\":2,\"Hp\":{\"Perm\":3},\"At\":{\"Perm\":5},\"Abil\":[{\"Enu\":285,\"Lvl\":2,\"Nat\":true,\"TrCo\":1}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":10},\"Pri\":3},{\"Own\":1,\"Enu\":192,\"Loc\":1,\"Poi\":{\"x\":3},\"Lvl\":1,\"Hp\":{\"Perm\":6},\"At\":{\"Perm\":3},\"Abil\":[{\"Enu\":212,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Rwrd\":true,\"HrtC\":1,\"SpCT\":1,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":43},\"Pri\":3},{\"Own\":1,\"Enu\":247,\"Loc\":1,\"Poi\":{\"x\":4},\"Lvl\":1,\"Hp\":{\"Perm\":8},\"At\":{\"Perm\":10},\"Perk\":7,\"Abil\":[{\"Enu\":272,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Rwrd\":true,\"SpCT\":1,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":16},\"Pri\":3}]},\"MiSC\":4,\"MSBo\":[],\"MiSh\":[{\"Own\":1,\"Enu\":226,\"Lvl\":1,\"Hp\":{\"Perm\":2},\"At\":{\"Perm\":5},\"Abil\":[{\"Enu\":252,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":75},\"Pri\":3},{\"Own\":1,\"Enu\":210,\"Lvl\":1,\"Hp\":{\"Perm\":3},\"At\":{\"Perm\":1},\"Abil\":[{\"Enu\":236,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":76},\"Pri\":3},{\"Own\":1,\"Enu\":187,\"Lvl\":1,\"Hp\":{\"Perm\":3},\"At\":{\"Perm\":2},\"Abil\":[{\"Enu\":207,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":74},\"Pri\":3},{\"Own\":1,\"Enu\":184,\"Lvl\":1,\"Hp\":{\"Perm\":2},\"At\":{\"Perm\":3},\"Abil\":[{\"Enu\":204,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":77},\"Pri\":3}],\"SpSC\":2,\"SpSh\":[{\"Enu\":109,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":78},\"Pri\":3},{\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":79},\"Pri\":3}],\"Adj\":\"Elderly\",\"Nou\":\"Icecubes\",\"PrOu\":1,\"PrEn\":[],\"PrES2\":[{\"Enu\":245,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":44}},{\"Enu\":258,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":19}},{\"Enu\":260,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":10}},{\"Enu\":192,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":43}},{\"Enu\":247,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":16}}],\"MiSu\":1,\"SpPl\":[72,1],\"Cosm\":96,\"Back\":27,\"Masc\":17,\"Entr\":6,\"Awar\":{\"Type\":10,\"PercentPosition\":0.0035,\"Year\":2025,\"Month\":11},\"Pack\":5,\"Rel\":{\"Size\":{\"x\":2,\"y\":1},\"Items\":[null,null]},\"Bul\":{},\"Hash\":371158843},\"EndResult\":225191323}",
+            "Mode": null,
+            "CreatedOn": "2025-12-13T18:04:58.464529+00:00",
+            "BuildChangeCount": 29
+        },
+        {
+            "Type": 1,
+            "Turn": 6,
+            "Request": null,
+            "Response": null,
+            "Build": null,
+            "Battle": null,
+            "Mode": "{\"Opponents\":[{\"UserId\":\"b0cdf473-3218-4e74-ba9d-f5db74f0a6eb\",\"ParticipationId\":\"b71abf0c-a210-4528-bdb9-599b549ffb5b\",\"DisplayName\":\"Thimeson\",\"Pack\":5,\"Rank\":1721,\"BoardAdjective\":\"Elderly\",\"BoardNoun\":\"Icecubes\",\"Lives\":6,\"Minions\":[{\"Own\":1,\"Enu\":245,\"Loc\":1,\"Exp\":1,\"Lvl\":1,\"Hp\":{\"Perm\":6},\"At\":{\"Perm\":4},\"Abil\":[{\"Enu\":270,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"SpCT\":1,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":44},\"Pri\":3},{\"Own\":1,\"Enu\":245,\"Loc\":1,\"Poi\":{\"x\":1},\"Lvl\":1,\"Hp\":{\"Perm\":4},\"At\":{\"Perm\":2},\"Abil\":[{\"Enu\":270,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":54},\"Pri\":3,\"WFro\":true},{\"Own\":1,\"Enu\":260,\"Loc\":1,\"Poi\":{\"x\":2},\"Exp\":2,\"Lvl\":2,\"Hp\":{\"Perm\":3},\"At\":{\"Perm\":5},\"Abil\":[{\"Enu\":285,\"Lvl\":2,\"Nat\":true,\"TrCo\":1}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":10},\"Pri\":3},{\"Own\":1,\"Enu\":192,\"Loc\":1,\"Poi\":{\"x\":3},\"Lvl\":1,\"Hp\":{\"Perm\":6},\"At\":{\"Perm\":3},\"Abil\":[{\"Enu\":212,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Rwrd\":true,\"HrtC\":1,\"SpCT\":1,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":43},\"Pri\":3},{\"Own\":1,\"Enu\":247,\"Loc\":1,\"Poi\":{\"x\":4},\"Lvl\":1,\"Hp\":{\"Perm\":8},\"At\":{\"Perm\":10},\"Perk\":7,\"Abil\":[{\"Enu\":272,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Rwrd\":true,\"SpCT\":1,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":16},\"Pri\":3}],\"Relics\":[null,null],\"Outcome\":1}],\"TurnEndTime\":\"2025-12-13T18:06:28.4653352Z\",\"MaxLives\":6,\"CurrentTurn\":7,\"ActivePlayerCount\":2,\"MaxPlayerCount\":2,\"TurnDuration\":90,\"Rank\":1721}",
+            "CreatedOn": "2025-12-13T18:04:58.473208+00:00",
+            "BuildChangeCount": 30
+        },
+        {
+            "Type": 2,
+            "Turn": 6,
+            "Request": null,
+            "Response": "{}",
+            "Build": null,
+            "Battle": null,
+            "Mode": null,
+            "CreatedOn": "2025-12-13T18:05:05.916347+00:00",
+            "BuildChangeCount": 31
+        },
+        {
+            "Type": 4,
+            "Turn": 7,
+            "Request": "{\"Data\":{\"BuildId\":\"7be326dc-8bce-4704-8b67-b89e62d93d26\",\"BoardHash\":2083388609},\"Version\":43}",
+            "Response": "{\"Event\":{\"Event\":{\"Owner\":1},\"Owner\":1},\"Data\":{\"Seed\":49468066,\"Hash\":1436989221}}",
+            "Build": null,
+            "Battle": null,
+            "Mode": null,
+            "CreatedOn": "2025-12-13T18:05:11.996139+00:00",
+            "BuildChangeCount": 32
+        },
+        {
+            "Type": 11,
+            "Turn": 7,
+            "Request": "{\"Data\":{\"BuildId\":\"7be326dc-8bce-4704-8b67-b89e62d93d26\",\"BoardHash\":1436989221},\"Version\":43}",
+            "Response": "{\"Event\":{\"Event\":{\"Owner\":1},\"Owner\":1},\"NewBoardState\":4,\"Data\":{\"Seed\":1848442815,\"Hash\":1849045291}}",
+            "Build": null,
+            "Battle": null,
+            "Mode": null,
+            "CreatedOn": "2025-12-13T18:06:28.544117+00:00",
+            "BuildChangeCount": 33
+        },
+        {
+            "Type": 0,
+            "Turn": 7,
+            "Request": null,
+            "Response": null,
+            "Build": "{\"Id\":\"7be326dc-8bce-4704-8b67-b89e62d93d26\",\"Bor\":{\"Id\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"UNC\":34,\"Sta\":5,\"LiMa\":6,\"Los\":7,\"LPM\":4,\"LoPs\":6,\"Rec\":1,\"Tur\":7,\"Go\":10,\"Ti\":4,\"BoCa\":99,\"Mins\":{\"Size\":{\"x\":5,\"y\":1},\"Items\":[null,null,null,null,null]},\"MiSC\":4,\"MSBo\":[],\"MiSh\":[{\"Own\":1,\"Enu\":224,\"Lvl\":1,\"Hp\":{\"Perm\":5},\"At\":{\"Perm\":5},\"Abil\":[{\"Enu\":250,\"Lvl\":1,\"Nat\":true}],\"Cosm\":69,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":30},\"Pri\":3},{\"Own\":1,\"Enu\":226,\"Lvl\":1,\"Hp\":{\"Perm\":2},\"At\":{\"Perm\":5},\"Abil\":[{\"Enu\":252,\"Lvl\":1,\"Nat\":true}],\"Cosm\":69,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":29},\"Pri\":3},{\"Own\":1,\"Enu\":264,\"Lvl\":1,\"Hp\":{\"Perm\":3},\"At\":{\"Perm\":3},\"Abil\":[{\"Enu\":289,\"Lvl\":1,\"Nat\":true}],\"Cosm\":69,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":32},\"Pri\":3},{\"Own\":1,\"Enu\":220,\"Lvl\":1,\"Hp\":{\"Perm\":2},\"At\":{\"Perm\":2},\"Abil\":[{\"Enu\":246,\"Lvl\":1,\"Nat\":true}],\"Cosm\":69,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":31},\"Pri\":3}],\"SpSC\":2,\"SpSh\":[{\"Enu\":109,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":33},\"Pri\":3},{\"Enu\":24,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":34},\"Pri\":3}],\"Adj\":\"Uninspired\",\"Nou\":\"Drivers\",\"PrOu\":2,\"PrEn\":[245,247,224,192,274],\"PrES2\":[{\"Enu\":274,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":1}},{\"Enu\":192,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":2}},{\"Enu\":224,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":3}},{\"Enu\":247,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":4}},{\"Enu\":245,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":5}}],\"SpPl\":[],\"Cosm\":69,\"Back\":27,\"Masc\":2,\"Entr\":2,\"Awar\":{\"Type\":10,\"PercentPosition\":0.0209,\"Year\":2025,\"Month\":8},\"Pack\":5,\"Rel\":{\"Size\":{\"x\":2,\"y\":1},\"Items\":[null,null]},\"Bul\":{},\"Hash\":1849045291},\"ChCo\":34}",
+            "Battle": "{\"Id\":\"5db96e2a-d3f5-4e17-ab8f-44316e7b788a\",\"Seed\":-1666360087,\"Outcome\":2,\"ResolvedOn\":\"2025-12-13T18:06:32.3294652+00:00\",\"User\":{\"Id\":\"9fe7d3b3-dbde-4301-be99-a20fa1abf493\",\"DisplayName\":\"MajorMinecraft\"},\"UserBoard\":{\"Id\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"UNC\":34,\"Sta\":4,\"LiMa\":6,\"Los\":6,\"LPM\":4,\"LoPs\":5,\"Rec\":1,\"Tur\":7,\"Go\":10,\"Ti\":4,\"BoCa\":99,\"Mins\":{\"Size\":{\"x\":5,\"y\":1},\"Items\":[null,null,null,null,null]},\"MiSC\":4,\"MSBo\":[],\"MiSh\":[{\"Own\":1,\"Enu\":224,\"Lvl\":1,\"Hp\":{\"Perm\":5},\"At\":{\"Perm\":5},\"Abil\":[{\"Enu\":250,\"Lvl\":1,\"Nat\":true}],\"Cosm\":69,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":30},\"Pri\":3},{\"Own\":1,\"Enu\":226,\"Lvl\":1,\"Hp\":{\"Perm\":2},\"At\":{\"Perm\":5},\"Abil\":[{\"Enu\":252,\"Lvl\":1,\"Nat\":true}],\"Cosm\":69,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":29},\"Pri\":3},{\"Own\":1,\"Enu\":264,\"Lvl\":1,\"Hp\":{\"Perm\":3},\"At\":{\"Perm\":3},\"Abil\":[{\"Enu\":289,\"Lvl\":1,\"Nat\":true}],\"Cosm\":69,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":32},\"Pri\":3},{\"Own\":1,\"Enu\":220,\"Lvl\":1,\"Hp\":{\"Perm\":2},\"At\":{\"Perm\":2},\"Abil\":[{\"Enu\":246,\"Lvl\":1,\"Nat\":true}],\"Cosm\":69,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":31},\"Pri\":3}],\"SpSC\":2,\"SpSh\":[{\"Enu\":109,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":33},\"Pri\":3},{\"Enu\":24,\"Id\":{\"BoId\":\"90bd2e39-bfe2-469d-b6c5-72c7a8af11da\",\"Uni\":34},\"Pri\":3}],\"Adj\":\"Uninspired\",\"Nou\":\"Drivers\",\"PrOu\":2,\"PrEn\":[245,245,260,192,247],\"PrES2\":[{\"Enu\":247,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":1}},{\"Enu\":192,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":2}},{\"Enu\":260,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":3}},{\"Enu\":245,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":4}},{\"Enu\":245,\"Id\":{\"BoId\":\"d936f67b-a10f-8e7b-65af-ccfa60b79904\",\"Uni\":5}}],\"SpPl\":[],\"Cosm\":69,\"Back\":27,\"Masc\":2,\"Entr\":2,\"Awar\":{\"Type\":10,\"PercentPosition\":0.0209,\"Year\":2025,\"Month\":8},\"Pack\":5,\"Rel\":{\"Size\":{\"x\":2,\"y\":1},\"Items\":[null,null]},\"Bul\":{},\"Hash\":1849045291},\"Opponent\":{\"Id\":\"b0cdf473-3218-4e74-ba9d-f5db74f0a6eb\",\"DisplayName\":\"Thimeson\"},\"OpponentBoard\":{\"Id\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"UNC\":105,\"Sta\":4,\"LiMa\":6,\"LPM\":4,\"Vic\":6,\"Tur\":7,\"GoSp\":15,\"Rold\":3,\"Ti\":4,\"BoCa\":99,\"Mins\":{\"Size\":{\"x\":5,\"y\":1},\"Items\":[{\"Own\":1,\"Enu\":245,\"Loc\":1,\"Exp\":2,\"Lvl\":2,\"Hp\":{\"Perm\":7},\"At\":{\"Perm\":5},\"Abil\":[{\"Enu\":270,\"Lvl\":2,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":44},\"Pri\":3},{\"Own\":1,\"Enu\":247,\"Loc\":1,\"Poi\":{\"x\":1},\"Lvl\":1,\"Hp\":{\"Perm\":8},\"At\":{\"Perm\":10},\"Perk\":7,\"Abil\":[{\"Enu\":272,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Rwrd\":true,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":16},\"Pri\":3},{\"Own\":1,\"Enu\":224,\"Loc\":1,\"Poi\":{\"x\":2},\"Lvl\":1,\"Hp\":{\"Perm\":6},\"At\":{\"Perm\":6},\"Abil\":[{\"Enu\":250,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"SpCT\":1,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":80},\"Pri\":3},{\"Own\":1,\"Enu\":192,\"Loc\":1,\"Poi\":{\"x\":3},\"Lvl\":1,\"Hp\":{\"Perm\":7},\"At\":{\"Perm\":4},\"Perk\":29,\"PeDu\":1,\"PeDM\":2,\"Abil\":[{\"Enu\":212,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Rwrd\":true,\"SpCT\":2,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":43},\"Pri\":3},{\"Own\":1,\"Enu\":274,\"Loc\":1,\"Poi\":{\"x\":4},\"Lvl\":1,\"Hp\":{\"Perm\":5},\"At\":{\"Perm\":11},\"Abil\":[{\"Enu\":300,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Rwrd\":true,\"SpCT\":1,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":87},\"Pri\":3}]},\"MiSC\":4,\"MSBo\":[],\"MiSh\":[{\"Own\":1,\"Enu\":247,\"Lvl\":1,\"Hp\":{\"Perm\":3},\"At\":{\"Perm\":3},\"Abil\":[{\"Enu\":272,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":101},\"Pri\":3,\"Fro\":true},{\"Own\":1,\"Enu\":264,\"Lvl\":1,\"Hp\":{\"Perm\":3},\"At\":{\"Perm\":3},\"Abil\":[{\"Enu\":289,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":102},\"Pri\":3},{\"Own\":1,\"Enu\":263,\"Lvl\":1,\"Hp\":{\"Perm\":3},\"At\":{\"Perm\":3},\"Abil\":[{\"Enu\":288,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":100},\"Pri\":3},{\"Own\":1,\"Enu\":210,\"Lvl\":1,\"Hp\":{\"Perm\":3},\"At\":{\"Perm\":1},\"Abil\":[{\"Enu\":236,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":103},\"Pri\":3}],\"SpSC\":2,\"SpSh\":[{\"Enu\":4,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":105},\"Pri\":3},{\"Enu\":109,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":104},\"Pri\":3}],\"Adj\":\"Elderly\",\"Nou\":\"Icecubes\",\"PrOu\":1,\"PrEn\":[],\"PrES2\":[{\"Enu\":245,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":44}},{\"Enu\":245,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":54}},{\"Enu\":260,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":10}},{\"Enu\":192,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":43}},{\"Enu\":247,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":16}}],\"MiSu\":2,\"SpPl\":[72,66],\"Cosm\":96,\"Back\":27,\"Masc\":17,\"Entr\":6,\"Awar\":{\"Type\":10,\"PercentPosition\":0.0035,\"Year\":2025,\"Month\":11},\"Pack\":5,\"Rel\":{\"Size\":{\"x\":2,\"y\":1},\"Items\":[null,null]},\"Bul\":{},\"Hash\":549277735},\"EndResult\":-2134753811}",
+            "Mode": null,
+            "CreatedOn": "2025-12-13T18:06:32.331738+00:00",
+            "BuildChangeCount": 34
+        },
+        {
+            "Type": 1,
+            "Turn": 7,
+            "Request": null,
+            "Response": null,
+            "Build": null,
+            "Battle": null,
+            "Mode": "{\"Opponents\":[{\"UserId\":\"b0cdf473-3218-4e74-ba9d-f5db74f0a6eb\",\"ParticipationId\":\"b71abf0c-a210-4528-bdb9-599b549ffb5b\",\"DisplayName\":\"Thimeson\",\"Pack\":5,\"Rank\":1721,\"BoardAdjective\":\"Elderly\",\"BoardNoun\":\"Icecubes\",\"Lives\":6,\"Minions\":[{\"Own\":1,\"Enu\":245,\"Loc\":1,\"Exp\":2,\"Lvl\":2,\"Hp\":{\"Perm\":7},\"At\":{\"Perm\":5},\"Abil\":[{\"Enu\":270,\"Lvl\":2,\"Nat\":true}],\"Cosm\":96,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":44},\"Pri\":3},{\"Own\":1,\"Enu\":247,\"Loc\":1,\"Poi\":{\"x\":1},\"Lvl\":1,\"Hp\":{\"Perm\":8},\"At\":{\"Perm\":10},\"Perk\":7,\"Abil\":[{\"Enu\":272,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Rwrd\":true,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":16},\"Pri\":3},{\"Own\":1,\"Enu\":224,\"Loc\":1,\"Poi\":{\"x\":2},\"Lvl\":1,\"Hp\":{\"Perm\":6},\"At\":{\"Perm\":6},\"Abil\":[{\"Enu\":250,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"SpCT\":1,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":80},\"Pri\":3},{\"Own\":1,\"Enu\":192,\"Loc\":1,\"Poi\":{\"x\":3},\"Lvl\":1,\"Hp\":{\"Perm\":7},\"At\":{\"Perm\":4},\"Perk\":29,\"PeDu\":1,\"PeDM\":2,\"Abil\":[{\"Enu\":212,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Rwrd\":true,\"SpCT\":2,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":43},\"Pri\":3},{\"Own\":1,\"Enu\":274,\"Loc\":1,\"Poi\":{\"x\":4},\"Lvl\":1,\"Hp\":{\"Perm\":5},\"At\":{\"Perm\":11},\"Abil\":[{\"Enu\":300,\"Lvl\":1,\"Nat\":true}],\"Cosm\":96,\"Rwrd\":true,\"SpCT\":1,\"Id\":{\"BoId\":\"4879c742-e12c-47de-aeea-5a32b808872a\",\"Uni\":87},\"Pri\":3}],\"Relics\":[null,null],\"Outcome\":1}],\"MaxLives\":6,\"CurrentTurn\":7,\"ActivePlayerCount\":1,\"MaxPlayerCount\":2,\"TurnDuration\":90,\"Rank\":1721}",
+            "CreatedOn": "2025-12-13T18:06:32.339626+00:00",
+            "BuildChangeCount": 35
+        },
+        {
+            "Type": 2,
+            "Turn": 7,
+            "Request": null,
+            "Response": "{\"Outcome\":2,\"PointsGained\":0,\"PlayerPoints\":399739,\"MatchPoints\":[],\"QuestPoints\":{},\"NewRank\":{\"Pack\":5,\"Season\":6,\"Value\":1603,\"OldValue\":1611,\"CreatedOn\":\"2025-12-13T18:06:32.3324317+00:00\"}}",
+            "Build": null,
+            "Battle": null,
+            "Mode": null,
+            "CreatedOn": "2025-12-13T18:06:39.824787+00:00",
+            "BuildChangeCount": 36
+        }
+    ]
+}

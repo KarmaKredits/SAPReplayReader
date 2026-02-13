@@ -1,0 +1,367 @@
+{
+    "UserId": "e8c8e678-1eeb-4e16-b43d-42c82cb266b9",
+    "ParticipationId": "6167e7cd-4270-4962-b246-5ceecd9d927f",
+    "MatchId": "ef20727d-dab1-4a82-b8b0-1b4ac5a7b6b6",
+    "UserName": "tobayXD",
+    "CreatedOn": "2026-01-19T19:46:46.510638+00:00",
+    "GenesisBuildModel": {
+        "Id": "05b05dbf-2cf1-432b-bf44-581095872bb9",
+        "Bor": {
+            "SPow": null,
+            "Id": "74a8caf7-8aa5-4311-8946-825e2450bb2d",
+            "UNC": 4,
+            "Sta": 1,
+            "IsBa": null,
+            "LiMa": 5,
+            "Los": 0,
+            "LPM": 4,
+            "LCa": null,
+            "LoPs": 0,
+            "Vic": 0,
+            "ViMa": null,
+            "Rec": null,
+            "Tur": 0,
+            "Go": 10,
+            "GoGa": 0,
+            "FuGo": null,
+            "GoSp": 0,
+            "FrRo": 0,
+            "FuRo": null,
+            "Rold": 0,
+            "TrTT": 0,
+            "TiMi": null,
+            "Ti": 1,
+            "BoCa": 99,
+            "Mins": {
+                "Size": {
+                    "x": 5,
+                    "y": 1
+                },
+                "Items": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ]
+            },
+            "MiSC": 3,
+            "MSBo": [],
+            "MiSh": [
+                {
+                    "Own": 1,
+                    "Enu": 47,
+                    "Loc": 0,
+                    "Poi": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "Exp": 0,
+                    "Lvl": 1,
+                    "Hp": {
+                        "Perm": 2,
+                        "Temp": 0,
+                        "Max": null
+                    },
+                    "At": {
+                        "Perm": 2,
+                        "Temp": 0,
+                        "Max": null
+                    },
+                    "Mana": 0,
+                    "Cou": null,
+                    "CoBr": null,
+                    "LaPP": null,
+                    "Perk": null,
+                    "PeBo": false,
+                    "PeDu": null,
+                    "PeDM": null,
+                    "PeMu": null,
+                    "PeDr": 0,
+                    "Abil": [
+                        {
+                            "Enu": 55,
+                            "Lvl": 1,
+                            "Nat": true,
+                            "Dur": 0,
+                            "TrCo": 0,
+                            "Char": null,
+                            "Dis": false,
+                            "DisT": false,
+                            "AIML": false,
+                            "IgRe": false,
+                            "Grop": 0
+                        }
+                    ],
+                    "AbDi": false,
+                    "Cosm": 10,
+                    "Dead": false,
+                    "Dest": false,
+                    "DeBy": null,
+                    "Link": null,
+                    "Pow": null,
+                    "SeV": null,
+                    "Rwds": 0,
+                    "Rwrd": false,
+                    "MiMs": null,
+                    "SpMe": null,
+                    "Tri": null,
+                    "AtkC": 0,
+                    "HrtC": 0,
+                    "SpCT": 0,
+                    "OlTs": null,
+                    "LastTargetsThisTurn": null,
+                    "Id": {
+                        "BoId": "74a8caf7-8aa5-4311-8946-825e2450bb2d",
+                        "Uni": 1
+                    },
+                    "Pri": 3,
+                    "Fro": false,
+                    "WFro": false,
+                    "AFro": false
+                },
+                {
+                    "Own": 1,
+                    "Enu": 559,
+                    "Loc": 0,
+                    "Poi": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "Exp": 0,
+                    "Lvl": 1,
+                    "Hp": {
+                        "Perm": 1,
+                        "Temp": 0,
+                        "Max": null
+                    },
+                    "At": {
+                        "Perm": 3,
+                        "Temp": 0,
+                        "Max": null
+                    },
+                    "Mana": 0,
+                    "Cou": null,
+                    "CoBr": null,
+                    "LaPP": null,
+                    "Perk": null,
+                    "PeBo": false,
+                    "PeDu": null,
+                    "PeDM": null,
+                    "PeMu": null,
+                    "PeDr": 0,
+                    "Abil": [
+                        {
+                            "Enu": 591,
+                            "Lvl": 1,
+                            "Nat": true,
+                            "Dur": 0,
+                            "TrCo": 0,
+                            "Char": null,
+                            "Dis": false,
+                            "DisT": false,
+                            "AIML": false,
+                            "IgRe": false,
+                            "Grop": 0
+                        }
+                    ],
+                    "AbDi": false,
+                    "Cosm": 10,
+                    "Dead": false,
+                    "Dest": false,
+                    "DeBy": null,
+                    "Link": null,
+                    "Pow": null,
+                    "SeV": null,
+                    "Rwds": 0,
+                    "Rwrd": false,
+                    "MiMs": null,
+                    "SpMe": null,
+                    "Tri": null,
+                    "AtkC": 0,
+                    "HrtC": 0,
+                    "SpCT": 0,
+                    "OlTs": null,
+                    "LastTargetsThisTurn": null,
+                    "Id": {
+                        "BoId": "74a8caf7-8aa5-4311-8946-825e2450bb2d",
+                        "Uni": 2
+                    },
+                    "Pri": 3,
+                    "Fro": false,
+                    "WFro": false,
+                    "AFro": false
+                },
+                {
+                    "Own": 1,
+                    "Enu": 51,
+                    "Loc": 0,
+                    "Poi": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "Exp": 0,
+                    "Lvl": 1,
+                    "Hp": {
+                        "Perm": 4,
+                        "Temp": 0,
+                        "Max": null
+                    },
+                    "At": {
+                        "Perm": 1,
+                        "Temp": 0,
+                        "Max": null
+                    },
+                    "Mana": 0,
+                    "Cou": null,
+                    "CoBr": null,
+                    "LaPP": null,
+                    "Perk": null,
+                    "PeBo": false,
+                    "PeDu": null,
+                    "PeDM": null,
+                    "PeMu": null,
+                    "PeDr": 0,
+                    "Abil": [
+                        {
+                            "Enu": 73,
+                            "Lvl": 1,
+                            "Nat": true,
+                            "Dur": 0,
+                            "TrCo": 0,
+                            "Char": null,
+                            "Dis": false,
+                            "DisT": false,
+                            "AIML": false,
+                            "IgRe": false,
+                            "Grop": 0
+                        }
+                    ],
+                    "AbDi": false,
+                    "Cosm": 10,
+                    "Dead": false,
+                    "Dest": false,
+                    "DeBy": null,
+                    "Link": null,
+                    "Pow": null,
+                    "SeV": null,
+                    "Rwds": 0,
+                    "Rwrd": false,
+                    "MiMs": null,
+                    "SpMe": null,
+                    "Tri": null,
+                    "AtkC": 0,
+                    "HrtC": 0,
+                    "SpCT": 0,
+                    "OlTs": null,
+                    "LastTargetsThisTurn": null,
+                    "Id": {
+                        "BoId": "74a8caf7-8aa5-4311-8946-825e2450bb2d",
+                        "Uni": 3
+                    },
+                    "Pri": 3,
+                    "Fro": false,
+                    "WFro": false,
+                    "AFro": false
+                }
+            ],
+            "SpSC": 1,
+            "SpSh": [
+                {
+                    "Pow": null,
+                    "Sto": null,
+                    "Con": null,
+                    "Reli": null,
+                    "Buff": false,
+                    "Link": null,
+                    "Enu": 0,
+                    "Id": {
+                        "BoId": "74a8caf7-8aa5-4311-8946-825e2450bb2d",
+                        "Uni": 4
+                    },
+                    "Pri": 3,
+                    "Fro": false,
+                    "WFro": false,
+                    "AFro": false
+                }
+            ],
+            "Adj": null,
+            "Nou": null,
+            "Trum": 0,
+            "PrOu": 0,
+            "PrEn": null,
+            "PrES": null,
+            "PrES2": null,
+            "MiPl": 0,
+            "MiSu": 0,
+            "MSFL": 0,
+            "SpPl": [],
+            "SpCo": null,
+            "Mode": 0,
+            "Cosm": 10,
+            "CoMa": null,
+            "Back": 4,
+            "Masc": 0,
+            "Entr": 0,
+            "Awar": null,
+            "Pack": 0,
+            "Pcks": false,
+            "Taut": null,
+            "Deck": null,
+            "Rel": {
+                "Size": {
+                    "x": 2,
+                    "y": 1
+                },
+                "Items": [
+                    null,
+                    null
+                ]
+            },
+            "Bul": {
+                "Size": {
+                    "x": 0,
+                    "y": 0
+                },
+                "Items": null
+            },
+            "Choi": null,
+            "FuCh": null,
+            "Hash": 0,
+            "Diff": 0,
+            "ShRe": null,
+            "Clon": false,
+            "Wacky": null,
+            "WMPs": null,
+            "WMPb": false
+        },
+        "AvAd": [
+            "Improper",
+            "Offensive",
+            "Edible"
+        ],
+        "AvNo": [
+            "Birds",
+            "Muffins",
+            "Noses"
+        ],
+        "ChCo": 0
+    },
+    "GenesisModeModel": "{\"Opponents\":[{\"UserId\":\"2f49f4d6-b236-4db8-a925-ca04cf92d2ba\",\"ParticipationId\":\"97b93a54-8342-4a41-82cc-dda39a04ccb5\",\"DisplayName\":\"Sergionator100\",\"Rank\":1450,\"Lives\":5,\"Minions\":[null,null,null,null,null],\"Relics\":[null,null],\"Outcome\":0},{\"UserId\":\"3be9c76b-8819-4be8-a233-812c9506b744\",\"ParticipationId\":\"db40cc74-2f0e-4f97-9d57-3b281313bbfa\",\"DisplayName\":\"6___\",\"Rank\":1489,\"Lives\":5,\"Minions\":[null,null,null,null,null],\"Relics\":[null,null],\"Outcome\":0},{\"UserId\":\"70f80c12-3ef8-4628-a479-8e68d310483a\",\"ParticipationId\":\"12897b03-6d6a-4a9d-b5ec-601e83810246\",\"DisplayName\":\"Spowodle\",\"Pack\":6,\"Rank\":1502,\"Lives\":5,\"Minions\":[null,null,null,null,null],\"Relics\":[null,null],\"Outcome\":0},{\"UserId\":\"d5a5707f-88e1-4c99-9ee1-d78051ab8c97\",\"ParticipationId\":\"5b1a1610-692f-4846-a9f6-a8a63d9ddc11\",\"DisplayName\":\"xlliii\",\"Rank\":1531,\"Lives\":5,\"Minions\":[null,null,null,null,null],\"Relics\":[null,null],\"Outcome\":0},{\"UserId\":\"dbdd8c15-ddb0-49de-892d-9cd87b1ccb51\",\"ParticipationId\":\"d5e813b1-e633-4ef3-ae3f-ad3dafe3b30b\",\"DisplayName\":\"UnReaLX\",\"Rank\":1466,\"Lives\":5,\"Minions\":[null,null,null,null,null],\"Relics\":[null,null],\"Outcome\":0},{\"UserId\":\"e4cff035-0ff4-45da-b117-fa2172e55abc\",\"ParticipationId\":\"762761f4-e986-4608-bb1b-d6210ebb515a\",\"DisplayName\":\"Dzeko1907\",\"Rank\":1553,\"Lives\":5,\"Minions\":[null,null,null,null,null],\"Relics\":[null,null],\"Outcome\":0}],\"TurnEndTime\":\"2026-01-19T19:47:26.5009744Z\",\"MaxLives\":5,\"CurrentTurn\":1,\"ActivePlayerCount\":7,\"MaxPlayerCount\":8,\"PlayerMode\":1,\"TurnDuration\":90,\"Rank\":1466}",
+    "Outcome": 3,
+    "Mode": 0,
+    "LastTurn": 1,
+    "Actions": [
+        {
+            "Type": 3,
+            "Turn": 0,
+            "Request": null,
+            "Response": null,
+            "Build": null,
+            "Battle": null,
+            "Mode": null,
+            "CreatedOn": "2026-01-19T19:47:30.184036+00:00",
+            "BuildChangeCount": 1
+        }
+    ]
+}

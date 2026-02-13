@@ -12,7 +12,7 @@ load_dotenv()
 import os 
 # 
 DISCORDAUTH = os.getenv("DISCORDAUTH")
-max_messages = 630
+max_messages = 1360
 
 
 def retrieve_messages():
@@ -48,7 +48,7 @@ def retrieve_messages():
 
         if offsetnum>max_messages:
             break # break to prevent too many requests in one go
-        time.sleep(2)
+        time.sleep(5)
         r = requests.get(f'https://discord.com/api/v9/guilds/920457253541273670/messages/search?content=pid&sort_by=timestamp&sort_order=desc&offset={offsetnum}', headers=headers)
         jsonn = json.loads(r.text)
         

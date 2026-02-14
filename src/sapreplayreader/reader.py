@@ -12,7 +12,10 @@ import os
 
 import json
 import time
-import api_calls
+try:
+    from . import api_calls
+except ImportError:
+    import api_calls
 #from . import api_calls  # import module so tests can monkeypatch api_client.fetch_replay
 
 #from api_calls import download_replay # needed if process_from_df calls it here
@@ -32,12 +35,13 @@ def get_replay(pid: str):
     try:
         with open(full_path, 'r') as file:
             data = json.load(file)
-            # print('Replay Loaded!')
+            return data
     except FileNotFoundError:
-        print(f"Error: The file '{output_filename}' was not found.")
+        print(f"Error: The file '{output_filename}' was not found in '{output_directory}' directory.")
+        raise
     except json.JSONDecodeError:
         print(f"Error: The file '{output_filename}' contains invalid JSON.")
-    return data
+        raise
 
 def read_pid_df(filename: str):
     try:

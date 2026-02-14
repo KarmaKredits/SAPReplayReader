@@ -2,7 +2,7 @@
 name = "sapreplayreader"
 version = "0.1.0"
 description = "Utilities to read SAP replay files"
-requires-python = ">=3.11"
+requires-python = ">=3.7"
 
 [tool.pytest.ini_options]
 minversion = "6.2"

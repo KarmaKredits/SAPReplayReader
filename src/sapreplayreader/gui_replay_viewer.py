@@ -9,7 +9,7 @@ from datetime import datetime
 from PyQt5.QtWidgets import (
     QWidget, QVBoxLayout, QHBoxLayout, QLabel, QTextEdit,
     QComboBox, QScrollArea, QFrame, QGridLayout, QMessageBox,
-    QTableWidget, QTableWidgetItem, QHeaderView
+    QTableWidget, QTableWidgetItem, QHeaderView, QRadioButton, QButtonGroup
 )
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QFont, QColor
@@ -22,12 +22,40 @@ from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg
 from matplotlib.figure import Figure
 
 
+def parse_iso_timestamp(timestamp_str):
+    """Parse ISO format timestamp, handling variable decimal precision."""
+    try:
+        # Replace Z with +00:00 for compatibility
+        ts = timestamp_str.replace("Z", "+00:00")
+        return datetime.fromisoformat(ts)
+    except ValueError:
+        # Try truncating microseconds to 6 digits if needed
+        import re
+        ts = re.sub(r'(\.\d{6})\d+(\+|-)', r'\1\2', timestamp_str)
+        ts = ts.replace("Z", "+00:00")
+        try:
+            return datetime.fromisoformat(ts)
+        except ValueError:
+            # Last resort: try to parse manually
+            import re
+            match = re.match(r'(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2})\.(\d+)([\+\-]\d{2}:\d{2}|Z)', timestamp_str)
+            if match:
+                year, month, day, hour, minute, second, microsecond_str, tz_part = match.groups()
+                # Pad or truncate microseconds to 6 digits
+                microsecond = int(microsecond_str.ljust(6, '0')[:6])
+                tz_str = "+00:00" if tz_part == "Z" else tz_part
+                return datetime.fromisoformat(f"{year}-{month}-{day}T{hour}:{minute}:{second}.{microsecond}{tz_str}")
+            else:
+                raise ValueError(f"Cannot parse timestamp: {timestamp_str}")
+
+
 class ReplayTimelineVisualization:
     """Handles timeline visualization data and rendering."""
     
     def __init__(self):
         self.actions = []
         self.x_axis_mode = "turns"  # Can be "turns" or "timestamp"
+        self.y_axis_mode = "lives"  # Default Y-axis
     
     def load_actions(self, pid: str):
         """Load and process actions from a replay."""
@@ -38,41 +66,119 @@ class ReplayTimelineVisualization:
             print(f"Error loading actions: {e}")
             return False
     
-    def get_timeline_data(self, x_axis_mode="turns"):
+    def get_available_y_axes(self):
+        """Get list of available Y-axis options from actions."""
+        if not self.actions:
+            return ["Lives"]
+        
+        # Always include Lives
+        y_axes = ["Lives"]
+        
+        # Collect action breakdown items (exclude certain fields) - case insensitive matching
+        excluded_patterns = {"end turn", "game ready", "game watch", "name board", "start turn", "game mode"}
+        action_counts = {}
+        
+        for action in self.actions:
+            action_type = action.get("Action Type", "Unknown")
+            if action_type and action_type.lower() not in excluded_patterns:
+                action_counts[action_type] = action_counts.get(action_type, 0) + 1
+        
+        y_axes.extend(sorted(action_counts.keys()))
+        y_axes.append("Turn Time")
+        
+        return y_axes
+    
+    def get_timeline_data(self, x_axis_mode="turns", y_axis_mode="lives"):
         """Get timeline data for plotting."""
         self.x_axis_mode = x_axis_mode
+        self.y_axis_mode = y_axis_mode
         
         if not self.actions:
             return [], []
         
+        # Pre-process: build turn time map (turn_number -> seconds_elapsed)
+        turn_times = {}
+        if y_axis_mode == "turn time":
+            for action in self.actions:
+                turn_num = action.get("Turn", 0)
+                action_type = action.get("Action Type", "")
+                time_str = action.get("Time", "")
+                
+                if turn_num not in turn_times and action_type.lower() == "start turn" and time_str:
+                    turn_times[turn_num] = {"start": time_str}
+                elif turn_num in turn_times and action_type.lower() == "end turn" and time_str:
+                    turn_times[turn_num]["end"] = time_str
+                elif turn_num not in turn_times and action_type.lower() == "end turn" and time_str:
+                    turn_times[turn_num] = {"end": time_str}
+            
+            # Calculate elapsed seconds for each turn
+            for turn_num in turn_times:
+                if "start" in turn_times[turn_num] and "end" in turn_times[turn_num]:
+                    try:
+                        start_time = parse_iso_timestamp(turn_times[turn_num]["start"])
+                        end_time = parse_iso_timestamp(turn_times[turn_num]["end"])
+                        turn_times[turn_num]["elapsed"] = max(0, (end_time - start_time).total_seconds())
+                    except Exception as e:
+                        print(f"Warning: Failed to parse turn {turn_num} timestamps: {e}")
+                        turn_times[turn_num]["elapsed"] = 0
+                else:
+                    turn_times[turn_num]["elapsed"] = 0
+        
         x_values = []
         y_values = []
+        timestamp_base = None
+        current_turn = None
+        action_type_count = 0  # For count of specific action type in current turn
         
-        for action in self.actions:
+        for idx, action in enumerate(self.actions):
+            # X-axis
             if x_axis_mode == "turns":
                 x = action.get("Turn", 0)
             else:  # timestamp
-                # Parse timestamp to a numeric value (seconds since start)
                 time_str = action.get("Time", "")
-                if x_values and "timestamp_base" in locals():
-                    # Calculate seconds from first timestamp
+                if idx == 0 and time_str:
                     try:
-                        current_time = datetime.fromisoformat(time_str.replace("Z", "+00:00"))
+                        timestamp_base = parse_iso_timestamp(time_str)
+                    except Exception as e:
+                        print(f"Warning: Failed to parse base timestamp: {e}")
+                
+                if timestamp_base and time_str:
+                    try:
+                        current_time = parse_iso_timestamp(time_str)
                         x = (current_time - timestamp_base).total_seconds()
-                    except:
+                    except Exception as e:
+                        print(f"Warning: Failed to parse current timestamp: {e}")
                         x = len(x_values)
                 else:
-                    if not x_values and time_str:
-                        try:
-                            timestamp_base = datetime.fromisoformat(time_str.replace("Z", "+00:00"))
-                        except:
-                            pass
                     x = len(x_values)
             
-            lives = action.get("Lives", 0)
+            # Y-axis
+            if y_axis_mode == "lives":
+                y = int(action.get("Lives", 0))
+            elif y_axis_mode == "turn time":
+                # Get elapsed seconds for this turn from pre-computed map
+                turn_num = action.get("Turn", 0)
+                y = int(turn_times.get(turn_num, {}).get("elapsed", 0))
+            else:
+                # Per-turn count of specific action type (resets each turn)
+                action_turn = action.get("Turn", 0)
+                
+                # Reset count when we enter a new turn
+                if action_turn != current_turn:
+                    current_turn = action_turn
+                    action_type_count = 0
+                
+                action_type = action.get("Action Type", "Unknown")
+                if action_type.lower() == y_axis_mode.lower():
+                    # For Buy Food, increment by the Amount field; otherwise increment by 1
+                    if action_type.lower() == "buy food" and "Amount" in action:
+                        action_type_count += int(action.get("Amount", 1))
+                    else:
+                        action_type_count += 1
+                y = int(action_type_count)
             
             x_values.append(x)
-            y_values.append(lives)
+            y_values.append(y)
         
         return x_values, y_values
     
@@ -92,6 +198,7 @@ class ReplayTimelineVisualization:
             "max_turn": max((a.get("Turn", 0) for a in self.actions), default=0),
             "final_lives": self.actions[-1].get("Lives", 0) if self.actions else 0
         }
+
 
 
 class ReplayViewerTab(QWidget):
@@ -208,6 +315,23 @@ class ReplayViewerTab(QWidget):
         self.timeline_view = TimelineChartView()
         main_layout.addWidget(self.timeline_view)
         
+        # Y-axis selector (radio buttons)
+        y_axis_label = QLabel("Y-Axis:")
+        y_axis_label_font = QFont("Arial", 9, QFont.Weight.Bold)
+        y_axis_label.setFont(y_axis_label_font)
+        
+        self.y_axis_button_group = QButtonGroup()
+        y_axis_layout = QHBoxLayout()
+        y_axis_layout.addWidget(y_axis_label)
+        
+        # Will be populated dynamically when replay loads
+        self.y_axis_radio_buttons = {}
+        self.y_axis_layout_container = y_axis_layout
+        
+        y_axis_widget = QWidget()
+        y_axis_widget.setLayout(y_axis_layout)
+        main_layout.addWidget(y_axis_widget)
+        
         # Action summary
         summary_label = QLabel("Action Summary:")
         summary_font = QFont("Arial", 10, QFont.Weight.Bold)
@@ -244,7 +368,7 @@ class ReplayViewerTab(QWidget):
             
             # Load summary row for this replay
             try:
-                summary_df = pd.read_csv('summary.csv')
+                summary_df = pd.read_csv('data/summary.csv')
                 self.summary_row = summary_df[summary_df['pid'] == pid].iloc[0] if pid in summary_df['pid'].values else None
             except:
                 self.summary_row = None
@@ -252,6 +376,8 @@ class ReplayViewerTab(QWidget):
             # Load and process actions
             try:
                 self.timeline.load_actions(pid)
+                # Populate Y-axis buttons based on loaded actions
+                self.populate_y_axis_buttons()
             except Exception as e:
                 print(f"Warning: Failed to load actions: {e}")
                 # Continue anyway, actions won't display but facts will
@@ -401,6 +527,40 @@ class ReplayViewerTab(QWidget):
             pack_item.setFont(QFont("Courier", 7))
             self.opponent_table.setItem(i, 1, pack_item)
     
+    def populate_y_axis_buttons(self):
+        """Populate Y-axis radio buttons based on available action types."""
+        # Clear existing buttons
+        for button in self.y_axis_radio_buttons.values():
+            button.deleteLater()
+        self.y_axis_radio_buttons.clear()
+        
+        # Get available Y-axis options
+        y_axes = self.timeline.get_available_y_axes()
+        
+        for idx, y_axis in enumerate(y_axes):
+            radio_btn = QRadioButton(y_axis)
+            radio_btn.setFont(QFont("Arial", 8))
+            radio_btn.toggled.connect(self.on_y_axis_selected)
+            
+            # Check the first button (Lives) by default
+            if idx == 0:
+                radio_btn.setChecked(True)
+            
+            self.y_axis_radio_buttons[y_axis.lower()] = radio_btn
+            self.y_axis_button_group.addButton(radio_btn, idx)
+            self.y_axis_layout_container.addWidget(radio_btn)
+        
+        self.y_axis_layout_container.addStretch()
+    
+    def on_y_axis_selected(self):
+        """Handle Y-axis radio button selection."""
+        # Find which button is selected
+        for key, button in self.y_axis_radio_buttons.items():
+            if button.isChecked():
+                self.timeline.y_axis_mode = key
+                self.update_timeline()
+                break
+    
     def update_timeline(self):
         """Update the timeline visualization."""
         if not self.timeline.actions:
@@ -409,15 +569,30 @@ class ReplayViewerTab(QWidget):
         # Get x-axis mode from combo box
         x_axis_mode = "turns" if self.x_axis_combo.currentIndex() == 0 else "timestamp"
         
+        # Get y-axis mode from selected radio button
+        y_axis_mode = self.timeline.y_axis_mode.lower()
+        
         # Get timeline data
-        x_values, y_values = self.timeline.get_timeline_data(x_axis_mode)
+        x_values, y_values = self.timeline.get_timeline_data(x_axis_mode, y_axis_mode)
+        
+        # Determine Y-axis label
+        if y_axis_mode == "lives":
+            y_axis_label = "Lives"
+        elif y_axis_mode == "turn time":
+            y_axis_label = "Turn Time"
+        else:
+            y_axis_label = f"{y_axis_mode.title()} Count"
         
         # Update chart
         self.timeline_view.plot_timeline(
             x_values,
             y_values,
             x_label="Turns" if x_axis_mode == "turns" else "Time (seconds)",
-            title="Lives Over Time"
+            y_label=y_axis_label,
+            title=f"{y_axis_label} Over Time",
+            x_axis_mode=x_axis_mode,
+            y_axis_mode=y_axis_mode,
+            actions=self.timeline.actions
         )
     
     def display_action_summary(self):
@@ -445,7 +620,8 @@ class TimelineChartView(FigureCanvasQTAgg):
         super().__init__(self.figure)
         self.setParent(parent)
     
-    def plot_timeline(self, x_values, y_values, x_label="Turns", title="Lives Over Time"):
+    def plot_timeline(self, x_values, y_values, x_label="Turns", y_label="Lives", title="Lives Over Time", 
+                      x_axis_mode="turns", y_axis_mode="lives", actions=None):
         """Plot timeline data."""
         self.ax.clear()
         
@@ -457,20 +633,107 @@ class TimelineChartView(FigureCanvasQTAgg):
             self.draw()
             return
         
-        # Plot the line
-        self.ax.plot(x_values, y_values, 'b-', marker='o', markersize=4, linewidth=2)
+        # Determine if this is a histogram (action count with turn x-axis) or line chart
+        is_histogram = (x_axis_mode == "turns" and y_axis_mode not in ["lives", "turn time"])
+        
+        if is_histogram:
+            # Create histogram for action counts per turn
+            self.ax.bar(x_values, y_values, color='steelblue', edgecolor='navy', alpha=0.7)
+        else:
+            # Plot line chart
+            self.ax.plot(x_values, y_values, 'b-', marker='o', markersize=4, linewidth=2)
+        
+        # Add turn interval background bands when using timestamp x-axis
+        if x_axis_mode == "timestamp" and actions:
+            self._add_turn_interval_bands(actions)
         
         # Configure axes and labels
         self.ax.set_xlabel(x_label)
-        self.ax.set_ylabel('Lives')
+        self.ax.set_ylabel(y_label)
         self.ax.set_title(title)
         self.ax.grid(True, alpha=0.3)
         
-        # Set y-axis limits
+        # Set y-axis limits with minimum always at 0
         if y_values:
             y_min = min(y_values)
             y_max = max(y_values)
-            self.ax.set_ylim(max(0, y_min - 1), y_max + 1)
+            # Ensure Y-axis minimum is always 0
+            self.ax.set_ylim(0, y_max + 1)
+            
+            # For action count Y-axes (Buy Pet, Buy Food, etc.), use integer ticks
+            if y_label not in ["Lives", "Turn Time (seconds)"]:
+                from matplotlib.ticker import MaxNLocator
+                self.ax.yaxis.set_major_locator(MaxNLocator(integer=True))
         
         self.figure.tight_layout()
         self.draw()
+    
+    def _add_turn_interval_bands(self, actions):
+        """Add alternating background bands to indicate turn intervals."""
+        if not actions:
+            return
+        
+        try:
+            from matplotlib.patches import Rectangle
+            
+            # Find turn start and end times
+            turn_intervals = {}
+            for action in actions:
+                turn = action.get("Turn", 0)
+                time_str = action.get("Time", "")
+                
+                if time_str:
+                    try:
+                        timestamp = parse_iso_timestamp(time_str)
+                    except:
+                        continue
+                    
+                    if turn not in turn_intervals:
+                        turn_intervals[turn] = {"start": timestamp, "end": timestamp}
+                    else:
+                        turn_intervals[turn]["end"] = timestamp
+            
+            if not turn_intervals:
+                return
+            
+            # Get x-axis limits
+            x_min, x_max = self.ax.get_xlim()
+            y_min, y_max = self.ax.get_ylim()
+            
+            # Calculate timestamps to seconds for x-axis positioning
+            min_timestamp = None
+            for turn in turn_intervals:
+                ts = turn_intervals[turn]["start"]
+                if min_timestamp is None or ts < min_timestamp:
+                    min_timestamp = ts
+            
+            if not min_timestamp:
+                return
+            
+            # Add alternating bands
+            colors = ['white', '#AAAAAA']  # white and darker gray
+            color_index = 0
+            
+            for turn in sorted(turn_intervals.keys()):
+                start_ts = turn_intervals[turn]["start"]
+                end_ts = turn_intervals[turn]["end"]
+                
+                # Convert to seconds for x-axis
+                start_x = (start_ts - min_timestamp).total_seconds()
+                end_x = (end_ts - min_timestamp).total_seconds()
+                
+                # Add a small padding to separate turns slightly
+                end_x = end_x + 0.5
+                
+                # Create rectangle for this turn
+                rect = Rectangle((start_x, y_min), end_x - start_x, y_max - y_min,
+                               facecolor=colors[color_index % 2], edgecolor='none', alpha=0.3, zorder=0)
+                self.ax.add_patch(rect)
+                
+                color_index += 1
+            
+            # Reapply grid on top
+            self.ax.set_axisbelow(True)
+            
+        except Exception as e:
+            print(f"Warning: Failed to add turn interval bands: {e}")

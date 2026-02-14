@@ -59,7 +59,7 @@ class ProcessingThread(QObject):
                         self.output.emit(f"Processing {file} ({idx}/{total_files})...\n")
                     summary_df = __import__('pandas').concat([summary_df, reader.get_summary(file)], ignore_index=True)
                 
-                summary_df.to_csv('summary.csv', index=False)
+                summary_df.to_csv('data/summary.csv', index=False)
                 self.output.emit(f"Summary DB generated with {len(summary_df)} entries!\n")
                 self.progress.emit(100)
                 

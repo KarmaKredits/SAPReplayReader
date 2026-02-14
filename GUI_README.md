@@ -200,6 +200,7 @@ For adding new visualizations or analysis features to the timeline, see the `Rep
 
 ### "summary.csv not found" error
 - Run "Generate Summary DB" from the Data Processing tab first
+- CSV files are stored in the `data/` folder
 
 ### No replay data showing up
 - Ensure replay JSON files are in the `Replays/` folder

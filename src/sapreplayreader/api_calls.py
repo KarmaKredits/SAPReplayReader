@@ -114,7 +114,7 @@ def download_replay(pid: str, auth: Optional[str] = None, api_version: int = API
 def process_from_df(api_version: int = API_VERSION,reprocess: int = 0):
     print("---process_from_df()---")
     TOKEN = login(api_version=api_version)["Token"]
-    pid_df = read_pid_df('pid_df.csv')    
+    pid_df = read_pid_df('data/pid_df.csv')    
     for i in range(len(pid_df)):
         # print("=========================================")
         # print(pid_df.iloc[i])
@@ -129,7 +129,7 @@ def process_from_df(api_version: int = API_VERSION,reprocess: int = 0):
             pid_df.at[i,["failure","processdate"]] = [1,int(time.time())]
             #pid_df.at[i,"processdate"] = int(time.time())
             #save df here
-            pid_df.to_csv('pid_df.csv', index=0)
+            pid_df.to_csv('data/pid_df.csv', index=0)
             # get replay from url # save replay occures in download
 
             replay = download_replay(pid=pid_df.at[i,"pid"],auth=TOKEN,api_version=api_version)
@@ -147,14 +147,14 @@ def process_from_df(api_version: int = API_VERSION,reprocess: int = 0):
 
                 #print(pid_df.iloc[i])
                 # save df
-                pid_df.to_csv('pid_df.csv', index=0)
+                pid_df.to_csv('data/pid_df.csv', index=0)
                 print("Saving Entry:",pid_df.at[i,"pid"])
             else:
                 print("Replay failure")
                 
             time.sleep(1)
         #break
-    #pid_df.to_csv('pid_df.csv', index=False)
+    #pid_df.to_csv('data/pid_df.csv', index=False)
     print("----process_from_df() COMPLETE----")
     return None
 
@@ -178,7 +178,7 @@ if __name__== "__main__":
     # ## update the process df with all replay files as processed and version number.
     # update_process_db(pid_list)
     # ## save process file
-    #pid_df = read_pid_df('pid_df.csv')   
+    #pid_df = read_pid_df('data/pid_df.csv')   
     # print(pid_df.iloc[0])
     # print(pid_df.iloc[0]["pid"])
     # condition = pid_df["pid"] == pid_df.iloc[0]["pid"]

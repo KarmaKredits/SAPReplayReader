@@ -101,7 +101,7 @@ def update_process_db(file_names: list):
     #pid,processed,version
     ver = 0
     # read df
-    pid_df = read_pid_df('pid_df.csv')
+    pid_df = read_pid_df('data/pid_df.csv')
     print(pid_df)
 
     # Only check unprocessed
@@ -127,7 +127,7 @@ def update_process_db(file_names: list):
             pid_df.loc[len(pid_df)] = [file,ver,1,0,int(time.time()),gamedate] 
             print("NEW ROW INSERTED")
     #save df
-    pid_df.to_csv('pid_df.csv', index=False)
+    pid_df.to_csv('data/pid_df.csv', index=False)
     return None
 
 # get replay from opponent perspective; opponent Pids from all existing replay files
@@ -157,7 +157,7 @@ def extract_pids(list_of_pids: list = [] ):
 def add_to_pid_df(pids: list):
 
     print("Adding new pids",len(pids))
-    pid_df = read_pid_df('pid_df.csv')
+    pid_df = read_pid_df('data/pid_df.csv')
     for pid in pids:
         if pid in pid_df["pid"].values:
             print("pid exists:",pid)
@@ -165,7 +165,7 @@ def add_to_pid_df(pids: list):
         else:
             print("new pid:",pid)
             pid_df.loc[len(pid_df)] = [pid,0,0,0,None,None] 
-    pid_df.to_csv('pid_df.csv', index=False)
+    pid_df.to_csv('data/pid_df.csv', index=False)
     return None
 
 # summary df
@@ -320,7 +320,13 @@ def extract_actions(pid: str):
         build_count = action["BuildChangeCount"]
         time_stamp = action["CreatedOn"]
         turn = action["Turn"]
-        action_list.append({
+        
+        # Extract amount for Buy Food actions
+        amount = None
+        if action_type == 8 and request:  # BUY FOOD
+            amount = int(request.get("Cost", 0)) if "Cost" in request else None
+        
+        action_entry = {
             "Action Type": action_type_names[action_type],
             "BuildCount": build_count,
             "Time": time_stamp,
@@ -330,7 +336,12 @@ def extract_actions(pid: str):
             "PreviousResult": outcome_names[previous_turn_outcome] if previous_turn_outcome is not None else None,
             #"PreviousResult": previous_turn_outcome,
             "Lives": lives
-        })
+        }
+        
+        if amount is not None:
+            action_entry["Amount"] = amount
+        
+        action_list.append(action_entry)
     return action_list
 
 # Use when a new pid list has been scraped from discord
@@ -371,7 +382,7 @@ def check_summary_for_opp_pids():
     print("check_summary_for_opp_pids")
     # read summary df
     try:
-        summary_df = pd.read_csv('summary.csv',)
+        summary_df = pd.read_csv('data/summary.csv',)
     except FileNotFoundError:
         print("No summary.csv file found.")
         return None
@@ -414,7 +425,7 @@ def generate_summarydb_from_files():
         else:
             print(file,' | ',cnt,'/',total)
             summary_df = pd.concat([summary_df, get_summary(file)], ignore_index=True)
-    summary_df.to_csv('summary.csv',index=False)
+    summary_df.to_csv('data/summary.csv',index=False)
     print("---- SUMMARY DB GENERATED AND SAVED ----")
 
 
@@ -446,7 +457,7 @@ if __name__ == "__main__":
     #     print(action)
     # actions_df = pd.DataFrame(test_actions) 
     # print(actions_df)
-    # actions_df.to_csv('action_test.csv',index=False)
+    # actions_df.to_csv('data/action_test.csv',index=False)
 
 
     """

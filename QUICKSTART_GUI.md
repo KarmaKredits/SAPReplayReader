@@ -105,8 +105,9 @@ SAPReplayReader/
 │   ├── api_calls.py             # API interaction utilities
 │   └── __main__.py              # Entry point
 ├── Replays/                     # JSON replay files
-├── summary.csv                  # Generated replay summary (created by GUI)
-├── pid_df.csv                   # Process tracking database
+├── data/                        # Data folder
+│   ├── summary.csv              # Generated replay summary (created by GUI)
+│   └── pid_df.csv               # Process tracking database
 ├── requirements.txt             # Python dependencies
 ├── GUI_README.md                # Detailed GUI documentation
 └── test_gui.py                  # GUI validation tests

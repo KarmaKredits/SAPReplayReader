@@ -162,7 +162,7 @@ class ReplaySummaryTab(QWidget):
     def load_summary_data(self):
         """Load summary data from CSV file."""
         try:
-            self.summary_df = pd.read_csv('summary.csv')
+            self.summary_df = pd.read_csv('data/summary.csv')
             self.filtered_df = self.summary_df.copy()
             self.populate_table()
         except FileNotFoundError:

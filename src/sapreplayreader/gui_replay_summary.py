@@ -7,10 +7,117 @@ import pandas as pd
 from PyQt5.QtWidgets import (
     QWidget, QVBoxLayout, QHBoxLayout, QLineEdit, QPushButton,
     QTableWidget, QTableWidgetItem, QComboBox, QLabel, QSpinBox,
-    QCheckBox, QMessageBox, QHeaderView
+    QCheckBox, QMessageBox, QHeaderView, QDialog, QProgressBar
 )
-from PyQt5.QtCore import Qt, pyqtSignal
+from PyQt5.QtCore import Qt, pyqtSignal, QThread, QObject, pyqtSlot
 from PyQt5.QtGui import QFont
+from sapreplayreader import reader
+
+
+class SummaryWorker(QObject):
+    finished = pyqtSignal()
+    error = pyqtSignal(str)
+    progress = pyqtSignal(int, int)
+
+    @pyqtSlot()
+    def run(self):
+        try:
+            def _cb(proc, total):
+                try:
+                    self.progress.emit(proc, total)
+                except Exception:
+                    pass
+
+            reader.generate_summarydb_from_files(progress_callback=_cb)
+            self.finished.emit()
+        except Exception as e:
+            self.error.emit(str(e))
+
+
+class SummaryUpdateDialog(QDialog):
+    """Confirmation dialog that runs summary generation with a progress bar."""
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.setWindowTitle("Confirm Update Summary")
+        self.setModal(True)
+        self.resize(360, 120)
+
+        layout = QVBoxLayout()
+        self.label = QLabel("This will regenerate the summary database from all replay files. Continue?")
+        layout.addWidget(self.label)
+
+        self.progress = QProgressBar()
+        self.progress.setVisible(False)
+        layout.addWidget(self.progress)
+
+        btn_layout = QHBoxLayout()
+        self.confirm_btn = QPushButton("Confirm")
+        self.cancel_btn = QPushButton("Cancel")
+        self.confirm_btn.clicked.connect(self._on_confirm)
+        self.cancel_btn.clicked.connect(self._on_cancel)
+        btn_layout.addWidget(self.confirm_btn)
+        btn_layout.addStretch()
+        btn_layout.addWidget(self.cancel_btn)
+        layout.addLayout(btn_layout)
+
+        self.setLayout(layout)
+
+        self.thread = None
+        self.worker = None
+
+    def _on_cancel(self):
+        # If operation running, ignore cancel; otherwise close
+        if self.thread and self.thread.isRunning():
+            # disallow cancel during run
+            return
+        self.reject()
+
+    def _on_confirm(self):
+        # Start worker thread and show indeterminate progress
+        self.progress.setVisible(True)
+        self.progress.setRange(0, 0)  # initially indeterminate until we get totals
+        self.confirm_btn.setEnabled(False)
+        self.cancel_btn.setEnabled(False)
+
+        self.thread = QThread()
+        self.worker = SummaryWorker()
+        self.worker.moveToThread(self.thread)
+        self.thread.started.connect(self.worker.run)
+        self.worker.finished.connect(self._on_finished)
+        self.worker.error.connect(self._on_error)
+        self.worker.progress.connect(self._on_progress)
+        self.worker.finished.connect(self.thread.quit)
+        self.worker.finished.connect(self.worker.deleteLater)
+        self.thread.finished.connect(self.thread.deleteLater)
+        self.thread.start()
+
+    def _on_progress(self, processed: int, total: int):
+        # Switch from indeterminate to determinate once we have totals
+        if total and (self.progress.maximum() == 0 or self.progress.maximum() is None):
+            try:
+                self.progress.setRange(0, total)
+            except Exception:
+                pass
+        try:
+            self.progress.setValue(processed)
+        except Exception:
+            pass
+
+    def _on_error(self, msg: str):
+        QMessageBox.warning(self, "Update Table", f"Failed to update summary table: {msg}")
+        self.progress.setVisible(False)
+        self.reject()
+
+    def _on_finished(self):
+        # Reload parent table if possible
+        parent = self.parent()
+        if parent and hasattr(parent, 'load_summary_data'):
+            try:
+                parent.load_summary_data()
+            except Exception:
+                pass
+        # auto-close
+        self.accept()
 
 
 class ReplaySummaryTab(QWidget):
@@ -151,7 +258,28 @@ class ReplaySummaryTab(QWidget):
                 background-color: #229954;
             }
         """)
-        right_layout.addWidget(view_btn)
+        # Place view and update buttons on same horizontal layer
+        buttons_row = QHBoxLayout()
+        buttons_row.addWidget(view_btn)
+        buttons_row.addStretch()
+
+        update_btn = QPushButton("Update Table")
+        update_btn.clicked.connect(self.on_update_table_clicked)
+        update_btn.setStyleSheet("""
+            QPushButton {
+                background-color: #2980b9;
+                color: white;
+                border: none;
+                padding: 8px;
+                border-radius: 3px;
+                font-weight: bold;
+            }
+            QPushButton:hover {
+                background-color: #1f6fa5;
+            }
+        """)
+        buttons_row.addWidget(update_btn)
+        right_layout.addLayout(buttons_row)
         
         layout.addWidget(left_panel)
         layout.addLayout(right_layout, 1)
@@ -303,3 +431,9 @@ class ReplaySummaryTab(QWidget):
                 self.on_replay_selected_callback(pid)
             else:
                 self.replay_selected.emit(pid)
+
+    def on_update_table_clicked(self):
+        """Show confirmation dialog and, if confirmed, regenerate the summary DB."""
+        dlg = SummaryUpdateDialog(self)
+        # exec_ will run its own event loop; the dialog auto-closes when generation finishes
+        dlg.exec_()

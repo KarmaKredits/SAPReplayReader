@@ -217,12 +217,21 @@ def get_summary(pid: str):
             #opp_deck_list[i] = []
 
     lastactionresponse = json.loads(replay["Actions"][-1]["Response"]) if replay["Actions"][-1]["Response"] not in [None,""] else {}
+    # in actions type 11
+    # 
+    version = None
+    
+    try:
+        version = [json.loads(replay['Actions'][0]['Request'])["Version"]] if replay['Actions'][0]['Request'] not in [None,""] else None
+    except (KeyError, json.JSONDecodeError):
+        version = None
+        pass
 
     d = {
         "matchid": [replay["MatchId"]],
         "datestart": [replay["CreatedOn"]],
         "dateend": [replay["Actions"][-1]["CreatedOn"]],
-        "version": [json.loads(replay['Actions'][0]['Request'])["Version"]] if replay['Actions'][0]['Request'] not in [None,""] else None,
+        "version":  version,
         "turns": [replay["LastTurn"]],
         "outcome": [replay["Outcome"]], #0=draw, 1=win, 2=loss, 3=abandoned
         "gamemode": [replay["Mode"]], #0=vs, 1=arena
@@ -238,7 +247,7 @@ def get_summary(pid: str):
         "opp_namelist": [str(opp_name_list)],
         "opp_ranklist": [str(opp_rank_list)],
         "opp_packlist": [str(opp_pack_list)],
-        "opp_pidlist": [str(opp_pid_list)]
+        "opp_pid_list": [str(opp_pid_list)]
         
     }
     return pd.DataFrame(data=d)
@@ -412,20 +421,44 @@ def check_summary_for_opp_pids():
     return None
 
 
-def generate_summarydb_from_files():
+def generate_summarydb_from_files(progress_callback=None):
+    """Generate summary DB from replay files.
+
+    If `progress_callback` is provided, it will be called as
+    `progress_callback(processed_count, total_count)` after each file is processed.
+    """
     print("---- GENERATING SUMMARY DB FROM FILES ----")
     files = read_replay_filenames()
-    summary_df = get_summary(files[0])
     total = len(files)
-    cnt = 0
-    for file in files:
+
+    if total == 0:
+        # write empty dataframe
+        pd.DataFrame().to_csv('data/summary.csv', index=False)
+        if progress_callback:
+            progress_callback(0, 0)
+        print("---- SUMMARY DB GENERATED AND SAVED (no files) ----")
+        return
+
+    # Initialize with first file
+    summary_df = get_summary(files[0])
+    cnt = 1
+    if progress_callback:
+        progress_callback(cnt, total)
+
+    for file in files[1:]:
         cnt += 1
-        if (file == files[0]):
-            pass
-        else:
-            print(file,' | ',cnt,'/',total)
+        print(file, ' | ', cnt, '/', total)
+        try:
             summary_df = pd.concat([summary_df, get_summary(file)], ignore_index=True)
-    summary_df.to_csv('data/summary.csv',index=False)
+        except Exception as e:
+            print(f"Warning: failed to process {file}: {e}")
+        if progress_callback:
+            try:
+                progress_callback(cnt, total)
+            except Exception:
+                pass
+
+    summary_df.to_csv('data/summary.csv', index=False)
     print("---- SUMMARY DB GENERATED AND SAVED ----")
 
 
@@ -438,7 +471,7 @@ if __name__ == "__main__":
     """
 
     # RUN AFTER SCRAPING NEW PID LIST FROM DISCORD
-    etl_newlist_download("pids_full.txt")
+    #etl_newlist_download("pids_full.txt")
 
     # RUN AFTER ETL_NEWLIST_DOWNLOAD to capture opponent pids
     #check_summary_for_opp_pids()
@@ -448,7 +481,7 @@ if __name__ == "__main__":
 
  
     # GENERATE SUMMARY DB FROM ALL REPLAY FILES
-    # generate_summarydb_from_files()
+    generate_summarydb_from_files()
 
 
     """ other """

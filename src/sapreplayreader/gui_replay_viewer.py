@@ -9,7 +9,8 @@ from datetime import datetime
 from PyQt5.QtWidgets import (
     QWidget, QVBoxLayout, QHBoxLayout, QLabel, QTextEdit,
     QComboBox, QScrollArea, QFrame, QGridLayout, QMessageBox,
-    QTableWidget, QTableWidgetItem, QHeaderView, QRadioButton, QButtonGroup
+    QTableWidget, QTableWidgetItem, QHeaderView, QRadioButton, QButtonGroup,
+    QPushButton, QListWidget, QListWidgetItem
 )
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QFont, QColor
@@ -129,6 +130,10 @@ class ReplayTimelineVisualization:
         timestamp_base = None
         current_turn = None
         action_type_count = 0  # For count of specific action type in current turn
+        last_turn_x = 0
+        
+        # Determine if this is action count mode (needs aggregation per turn)
+        is_action_count = y_axis_mode not in ["lives", "turn time"]
         
         for idx, action in enumerate(self.actions):
             # X-axis
@@ -155,19 +160,28 @@ class ReplayTimelineVisualization:
             # Y-axis
             if y_axis_mode == "lives":
                 y = int(action.get("Lives", 0))
+                x_values.append(x)
+                y_values.append(y)
             elif y_axis_mode == "turn time":
                 # Get elapsed seconds for this turn from pre-computed map
                 turn_num = action.get("Turn", 0)
                 y = int(turn_times.get(turn_num, {}).get("elapsed", 0))
+                x_values.append(x)
+                y_values.append(y)
             else:
                 # Per-turn count of specific action type (resets each turn)
                 action_turn = action.get("Turn", 0)
                 
-                # Reset count when we enter a new turn
-                if action_turn != current_turn:
+                # Record previous turn's count when entering a new turn
+                if action_turn != current_turn and current_turn is not None:
+                    x_values.append(current_turn if x_axis_mode == "turns" else last_turn_x)
+                    y_values.append(int(action_type_count))
                     current_turn = action_turn
                     action_type_count = 0
+                elif current_turn is None:
+                    current_turn = action_turn
                 
+                last_turn_x = x
                 action_type = action.get("Action Type", "Unknown")
                 if action_type.lower() == y_axis_mode.lower():
                     # For Buy Food, increment by the Amount field; otherwise increment by 1
@@ -175,11 +189,112 @@ class ReplayTimelineVisualization:
                         action_type_count += int(action.get("Amount", 1))
                     else:
                         action_type_count += 1
-                y = int(action_type_count)
-            
-            x_values.append(x)
-            y_values.append(y)
         
+        # For action counts, append the final turn's count after loop
+        if is_action_count and current_turn is not None:
+            x_values.append(current_turn if x_axis_mode == "turns" else last_turn_x)
+            y_values.append(int(action_type_count))
+        
+        return x_values, y_values
+
+    @staticmethod
+    def get_timeline_data_from_actions(actions, x_axis_mode="turns", y_axis_mode="lives"):
+        """Compute timeline x/y values from a provided actions list (independent of instance)."""
+        if not actions:
+            return [], []
+
+        # Pre-process: build turn time map (turn_number -> seconds_elapsed)
+        turn_times = {}
+        if y_axis_mode == "turn time":
+            for action in actions:
+                turn_num = action.get("Turn", 0)
+                action_type = action.get("Action Type", "")
+                time_str = action.get("Time", "")
+
+                if turn_num not in turn_times and action_type.lower() == "start turn" and time_str:
+                    turn_times[turn_num] = {"start": time_str}
+                elif turn_num in turn_times and action_type.lower() == "end turn" and time_str:
+                    turn_times[turn_num]["end"] = time_str
+                elif turn_num not in turn_times and action_type.lower() == "end turn" and time_str:
+                    turn_times[turn_num] = {"end": time_str}
+
+            # Calculate elapsed seconds for each turn
+            for turn_num in turn_times:
+                if "start" in turn_times[turn_num] and "end" in turn_times[turn_num]:
+                    try:
+                        start_time = parse_iso_timestamp(turn_times[turn_num]["start"])
+                        end_time = parse_iso_timestamp(turn_times[turn_num]["end"])
+                        turn_times[turn_num]["elapsed"] = max(0, (end_time - start_time).total_seconds())
+                    except Exception:
+                        turn_times[turn_num]["elapsed"] = 0
+                else:
+                    turn_times[turn_num]["elapsed"] = 0
+
+        x_values = []
+        y_values = []
+        timestamp_base = None
+        current_turn = None
+        action_type_count = 0
+        last_turn_x = 0
+
+        # Determine if this is action count mode (needs aggregation per turn)
+        is_action_count = y_axis_mode not in ["lives", "turn time"]
+
+        for idx, action in enumerate(actions):
+            # X-axis
+            if x_axis_mode == "turns":
+                x = action.get("Turn", 0)
+            else:
+                time_str = action.get("Time", "")
+                if idx == 0 and time_str:
+                    try:
+                        timestamp_base = parse_iso_timestamp(time_str)
+                    except Exception:
+                        timestamp_base = None
+
+                if timestamp_base and time_str:
+                    try:
+                        current_time = parse_iso_timestamp(time_str)
+                        x = (current_time - timestamp_base).total_seconds()
+                    except Exception:
+                        x = len(x_values)
+                else:
+                    x = len(x_values)
+
+            # Y-axis
+            if y_axis_mode == "lives":
+                y = int(action.get("Lives", 0))
+                x_values.append(x)
+                y_values.append(y)
+            elif y_axis_mode == "turn time":
+                turn_num = action.get("Turn", 0)
+                y = int(turn_times.get(turn_num, {}).get("elapsed", 0))
+                x_values.append(x)
+                y_values.append(y)
+            else:
+                action_turn = action.get("Turn", 0)
+                if action_turn != current_turn and current_turn is not None:
+                    # Record previous turn's count when entering a new turn
+                    x_values.append(current_turn if x_axis_mode == "turns" else last_turn_x)
+                    y_values.append(int(action_type_count))
+                    current_turn = action_turn
+                    action_type_count = 0
+                elif current_turn is None:
+                    current_turn = action_turn
+
+                last_turn_x = x
+                action_type = action.get("Action Type", "Unknown")
+                if action_type.lower() == y_axis_mode.lower():
+                    if action_type.lower() == "buy food" and "Amount" in action:
+                        action_type_count += int(action.get("Amount", 1))
+                    else:
+                        action_type_count += 1
+
+        # For action counts, append the final turn's count after loop
+        if is_action_count and current_turn is not None:
+            x_values.append(current_turn if x_axis_mode == "turns" else last_turn_x)
+            y_values.append(int(action_type_count))
+
         return x_values, y_values
     
     def get_action_summary(self):
@@ -210,6 +325,9 @@ class ReplayViewerTab(QWidget):
         self.replay_data = None
         self.summary_row = None
         self.timeline = ReplayTimelineVisualization()
+        # Opponent replays mapping: pid -> {name, available(bool), data(dict)}
+        self.opp_replays = {}
+        self.selected_opp_pid = None
         self.init_ui()
     
     def init_ui(self):
@@ -284,6 +402,43 @@ class ReplayViewerTab(QWidget):
             }
         """)
         opponent_section_layout.addWidget(self.opponent_table)
+        # Opponent selection combo (for overlay/comparison and opening opponent replay)
+
+        # Row: single-select combobox (for opening) + multi-select visibility list (for overlays)
+        controls_row = QHBoxLayout()
+
+        self.opp_combo = QComboBox()
+        self.opp_combo.addItem("None", None)
+        self.opp_combo.setMaximumWidth(160)
+        self.opp_combo.currentIndexChanged.connect(self.on_opp_selected)
+        controls_row.addWidget(self.opp_combo)
+
+        # Multi-select list for opponent visibility (controls which opponent graphs are shown)
+        self.opp_visibility_list = QListWidget()
+        self.opp_visibility_list.setMaximumWidth(200)
+        self.opp_visibility_list.setMaximumHeight(120)
+        self.opp_visibility_list.itemChanged.connect(self.on_opp_visibility_changed)
+        controls_row.addWidget(self.opp_visibility_list)
+
+        opponent_section_layout.addLayout(controls_row)
+
+        # Select All / Deselect All buttons for visibility list
+        vis_btns = QHBoxLayout()
+        self.select_all_btn = QPushButton("All")
+        self.deselect_all_btn = QPushButton("None")
+        self.select_all_btn.setMaximumWidth(60)
+        self.deselect_all_btn.setMaximumWidth(60)
+        self.select_all_btn.clicked.connect(self.select_all_opponents)
+        self.deselect_all_btn.clicked.connect(self.deselect_all_opponents)
+        vis_btns.addWidget(self.select_all_btn)
+        vis_btns.addWidget(self.deselect_all_btn)
+        opponent_section_layout.addLayout(vis_btns)
+
+        self.open_opp_button = QPushButton("Open Opponent Replay")
+        self.open_opp_button.setMaximumWidth(160)
+        self.open_opp_button.clicked.connect(self.open_selected_opponent)
+        opponent_section_layout.addWidget(self.open_opp_button)
+
         opponent_section_layout.addStretch()
         
         details_container_layout.addWidget(opponent_section, 1, Qt.AlignmentFlag.AlignTop)
@@ -378,6 +533,80 @@ class ReplayViewerTab(QWidget):
                 self.timeline.load_actions(pid)
                 # Populate Y-axis buttons based on loaded actions
                 self.populate_y_axis_buttons()
+                # Load opponent pids and try to preload opponent replays
+                try:
+                    # initialize opp_replays mapping, combo and visibility list
+                    self.opp_replays.clear()
+                    self.opp_combo.clear()
+                    self.opp_combo.addItem("None", None)
+                    self.opp_visibility_list.clear()
+
+                    if self.summary_row is not None:
+                        def clean_list_value(value):
+                            v = str(value)
+                            if v.startswith('[') and v.endswith(']'):
+                                v = v[1:-1]
+                            return v
+
+                        opp_pid_raw = self.summary_row.get("opp_pid_list") or self.summary_row.get("opp_pid") or ""
+                        opp_name_raw = self.summary_row.get("opp_namelist") or self.summary_row.get("opponent") or ""
+                        opp_pid_str = clean_list_value(str(opp_pid_raw))
+                        opp_name_str = clean_list_value(str(opp_name_raw))
+
+                        opp_pids = [p.strip().strip("'\"") for p in opp_pid_str.split(',') if p.strip()]
+                        opp_names = [n.strip().strip("'\"") for n in opp_name_str.split(',') if n.strip()]
+
+                        # align lengths
+                        maxlen = max(len(opp_pids), len(opp_names))
+                        for i in range(maxlen):
+                            name = opp_names[i] if i < len(opp_names) else f"Opponent {i+1}"
+                            pid_val = opp_pids[i] if i < len(opp_pids) else None
+
+                            if not pid_val:
+                                display = f"{name} (no pid)"
+                                self.opp_combo.addItem(display, None)
+                                # add disabled visibility item
+                                item = QListWidgetItem(display)
+                                item.setData(Qt.UserRole, None)
+                                item.setFlags(item.flags() & ~Qt.ItemIsEnabled)
+                                item.setCheckState(Qt.Unchecked)
+                                self.opp_visibility_list.addItem(item)
+                                continue
+
+                            # try to preload replay/actions for opponent
+                            available = False
+                            opp_actions = None
+                            try:
+                                opp_replay = reader.get_replay(pid_val)
+                                if opp_replay:
+                                    try:
+                                        opp_actions = reader.extract_actions(pid_val)
+                                        available = True if opp_actions and len(opp_actions) > 0 else False
+                                    except Exception:
+                                        available = False
+                                else:
+                                    available = False
+                            except Exception:
+                                available = False
+
+                            self.opp_replays[pid_val] = {"name": name, "available": available, "actions": opp_actions}
+                            display = f"{name} ({pid_val[:8]})"
+                            if not available:
+                                display = f"{name} ({pid_val[:8]}) - missing"
+                            self.opp_combo.addItem(display, pid_val)
+
+                            # add to visibility list (checked by default if available)
+                            vis_item = QListWidgetItem(display)
+                            vis_item.setData(Qt.UserRole, pid_val)
+                            vis_item.setFlags(vis_item.flags() | Qt.ItemIsUserCheckable)
+                            if available:
+                                vis_item.setCheckState(Qt.Checked)
+                            else:
+                                vis_item.setCheckState(Qt.Unchecked)
+                                vis_item.setFlags(vis_item.flags() & ~Qt.ItemIsEnabled)
+                            self.opp_visibility_list.addItem(vis_item)
+                except Exception:
+                    pass
             except Exception as e:
                 print(f"Warning: Failed to load actions: {e}")
                 # Continue anyway, actions won't display but facts will
@@ -560,6 +789,50 @@ class ReplayViewerTab(QWidget):
                 self.timeline.y_axis_mode = key
                 self.update_timeline()
                 break
+
+    def on_opp_selected(self):
+        """Handle opponent selection from combo box (overlay)."""
+        pid = self.opp_combo.currentData()
+        # Save selected pid (None if 'None' or missing)
+        self.selected_opp_pid = pid
+        # Refresh timeline to show/hide overlay
+        self.update_timeline()
+
+    def on_opp_visibility_changed(self, item):
+        """Handle changes to opponent visibility checkboxes."""
+        # simply refresh overlays when visibility toggles
+        self.update_timeline()
+
+    def select_all_opponents(self):
+        for i in range(self.opp_visibility_list.count()):
+            item = self.opp_visibility_list.item(i)
+            if item.flags() & Qt.ItemIsEnabled and item.flags() & Qt.ItemIsUserCheckable:
+                item.setCheckState(Qt.Checked)
+
+    def deselect_all_opponents(self):
+        for i in range(self.opp_visibility_list.count()):
+            item = self.opp_visibility_list.item(i)
+            if item.flags() & Qt.ItemIsEnabled and item.flags() & Qt.ItemIsUserCheckable:
+                item.setCheckState(Qt.Unchecked)
+
+    def open_selected_opponent(self):
+        """Open the selected opponent's replay as the active replay (if available)."""
+        pid = self.opp_combo.currentData()
+        if not pid:
+            QMessageBox.information(self, "Opponent Replay", "Opponent replay missing or not selected.")
+            return
+
+        # If opponent data is available, switch to it
+        opp_entry = self.opp_replays.get(pid)
+        if not opp_entry or not opp_entry.get('available'):
+            QMessageBox.information(self, "Opponent Replay", "Opponent replay file is not available locally.")
+            return
+
+        # Load opponent replay
+        try:
+            self.load_replay(pid)
+        except Exception as e:
+            QMessageBox.warning(self, "Open Replay", f"Failed to open opponent replay: {e}")
     
     def update_timeline(self):
         """Update the timeline visualization."""
@@ -583,6 +856,43 @@ class ReplayViewerTab(QWidget):
         else:
             y_axis_label = f"{y_axis_mode.title()} Count"
         
+        # Prepare overlays based on visibility list (default: show all opponents)
+        overlays = []
+        try:
+            from matplotlib import cm, colors as mcolors
+            palette = cm.get_cmap('tab10')
+        except Exception:
+            palette = None
+
+        for i in range(self.opp_visibility_list.count()):
+            item = self.opp_visibility_list.item(i)
+            if not item or item.checkState() != Qt.Checked:
+                continue
+            pid = item.data(Qt.UserRole)
+            if not pid:
+                continue
+            opp_entry = self.opp_replays.get(pid)
+            if not opp_entry or not opp_entry.get('available') or not opp_entry.get('actions'):
+                continue
+            opp_actions = opp_entry.get('actions')
+            opp_x, opp_y = ReplayTimelineVisualization.get_timeline_data_from_actions(opp_actions, x_axis_mode, y_axis_mode)
+            color = None
+            try:
+                if palette is not None:
+                    color = mcolors.to_hex(palette(hash(pid) % 10))
+            except Exception:
+                color = None
+
+            overlays.append({
+                'x': opp_x,
+                'y': opp_y,
+                'label': f"{opp_entry.get('name', 'Opponent')} ({str(pid)[:8]})",
+                'color': color
+            })
+
+        if not overlays:
+            overlays = None
+
         # Update chart
         self.timeline_view.plot_timeline(
             x_values,
@@ -592,7 +902,8 @@ class ReplayViewerTab(QWidget):
             title=f"{y_axis_label} Over Time",
             x_axis_mode=x_axis_mode,
             y_axis_mode=y_axis_mode,
-            actions=self.timeline.actions
+            actions=self.timeline.actions,
+            overlays=overlays
         )
     
     def display_action_summary(self):
@@ -621,7 +932,7 @@ class TimelineChartView(FigureCanvasQTAgg):
         self.setParent(parent)
     
     def plot_timeline(self, x_values, y_values, x_label="Turns", y_label="Lives", title="Lives Over Time", 
-                      x_axis_mode="turns", y_axis_mode="lives", actions=None):
+                      x_axis_mode="turns", y_axis_mode="lives", actions=None, overlays=None):
         """Plot timeline data."""
         self.ax.clear()
         
@@ -633,15 +944,54 @@ class TimelineChartView(FigureCanvasQTAgg):
             self.draw()
             return
         
-        # Determine if this is a histogram (action count with turn x-axis) or line chart
-        is_histogram = (x_axis_mode == "turns" and y_axis_mode not in ["lives", "turn time"])
+        # Determine if this is action count mode (scatter dots) or line chart
+        is_action_count = (x_axis_mode == "turns" and y_axis_mode not in ["lives", "turn time"])
         
-        if is_histogram:
-            # Create histogram for action counts per turn
-            self.ax.bar(x_values, y_values, color='steelblue', edgecolor='navy', alpha=0.7)
+        # Marker types to cycle through (player first, then opponents)
+        markers = ['o', 's', '^', 'D', 'v', '<', '>', 'p', '*', '+']
+        marker_idx = 0
+
+        if is_action_count:
+            # Plot action counts as scatter (dots) for player
+            self.ax.scatter(x_values, y_values, color='steelblue', marker=markers[marker_idx % len(markers)], 
+                          s=60, alpha=0.7, edgecolor='navy', linewidth=1, zorder=2, label='Player')
+            marker_idx += 1
         else:
-            # Plot line chart
-            self.ax.plot(x_values, y_values, 'b-', marker='o', markersize=4, linewidth=2)
+            # Plot main line chart (for Lives, Turn Time, etc.)
+            self.ax.plot(x_values, y_values, color='b', marker='o', markersize=4, linewidth=2, zorder=2, label='Player')
+
+        # Plot overlay series (opponents) if provided
+        if overlays:
+            try:
+                from matplotlib import cm, colors as mcolors
+                palette = cm.get_cmap('tab10')
+                for idx, ov in enumerate(overlays):
+                    ox = ov.get('x') or ov.get('x_values') or ov.get('x_values', [])
+                    oy = ov.get('y') or ov.get('y_values') or ov.get('y_values', [])
+                    label = ov.get('label', f'Overlay {idx+1}')
+                    color = ov.get('color')
+                    if not color:
+                        # deterministic color per index
+                        color = mcolors.to_hex(palette(idx % 10))
+
+                    if is_action_count:
+                        # For action counts, use distinct marker per opponent
+                        try:
+                            marker = markers[marker_idx % len(markers)]
+                            self.ax.scatter(ox, oy, color=color, marker=marker, s=60, alpha=0.7, 
+                                          edgecolor='none', linewidth=1, zorder=3, label=label)
+                            marker_idx += 1
+                        except Exception:
+                            continue
+                    else:
+                        # For line charts, use dashed line with 'x' markers
+                        try:
+                            self.ax.plot(ox, oy, linestyle='--', marker='x', markersize=4, linewidth=1.5, 
+                                       color=color, zorder=3, label=label)
+                        except Exception:
+                            continue
+            except Exception:
+                pass
         
         # Add turn interval background bands when using timestamp x-axis
         if x_axis_mode == "timestamp" and actions:
@@ -657,6 +1007,18 @@ class TimelineChartView(FigureCanvasQTAgg):
         if y_values:
             y_min = min(y_values)
             y_max = max(y_values)
+            
+            # Include all overlay maximum values in y-axis scaling
+            if overlays:
+                try:
+                    for ov in overlays:
+                        oy = ov.get('y') or ov.get('y_values', [])
+                        if oy:
+                            overlay_max = max(oy)
+                            y_max = max(y_max, overlay_max)
+                except Exception:
+                    pass
+            
             # Ensure Y-axis minimum is always 0
             self.ax.set_ylim(0, y_max + 1)
             
@@ -665,6 +1027,13 @@ class TimelineChartView(FigureCanvasQTAgg):
                 from matplotlib.ticker import MaxNLocator
                 self.ax.yaxis.set_major_locator(MaxNLocator(integer=True))
         
+        # Show legend for overlays if any
+        if overlays:
+            try:
+                self.ax.legend(loc='best', fontsize='small')
+            except Exception:
+                pass
+
         self.figure.tight_layout()
         self.draw()
     
